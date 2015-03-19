@@ -1,0 +1,90 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.40.47;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php global $base_url;
+ 
+    $vgvr = views_get_view_result('archive_popular', 'default');
+    $node_status = "";
+    foreach($vgvr as $vresult) {
+       if($vresult->nid == $node->nid) $node_status = "Popular!";
+    }
+ 
+ ?>
+ 
+<div class="gridview-image">
+   <?php if($node->field_image[0]['view']) {
+       print $node->field_image[0]['view'];
+     } ?>
+</div>
+ 
+ 
+<div class="show teaser teaser-archive">
+ 
+  <div class="gridview-pointy-arrow">&#9650;</div>
+  <div class="wrapper">
+ 
+     <div class="header">
+       <div class="type"><?php print l($node->type, "archive/" . $node->type); ?></div>
+       <div class="node-status"><?php print $node_status; ?></div>
+     </div>
+ 
+     <div class="inner"> <?php // this is so that the listen link stays at the right place ?>
+       <div class="title">
+         <?php print l($node->title, "node/" . $node->nid); ?>
+       </div>
+ 
+       <div class="info">
+           <div class="hosts">
+             Hosted by
+             <?php foreach ($node->field_host as $one_host) { ?>
+               <span class="host"><?php print $one_host['view']; ?></span>
+             <?php } ?>
+           </div>
+           <?php if($node->type == "show") { ?>
+           <div class="aired_date">
+             Aired on
+             <span class="aired_date_itself"><?php print $node->field_aired_date[0]['view']; ?></span>
+           </div>
+           <?php } ?>
+       </div>
+       
+       <div class="image">
+         <?php if($node->field_image[0]['view']) {
+          print $node->field_image[0]['view'];
+	 } ?> 
+        </div> 
+ 
+       <div class="content"> 
+	  <?php print $node->field_summary[0]['safe']; ?>
+       </div> 
+    </div> 
+ 
+    <div class="links"> 
+      <span class="read-more"><?php print l("Read More", $node->path);?></span> or <span class="listen"><?php print l("&#9654; Listen!", "listen/" . $node->nid, array('html' => true)); ?></span> 
+    </div> 
+ 
+  </div> <!-- wrapper --> 
+ 
+
+</div>
+@

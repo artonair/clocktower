@@ -1,0 +1,45 @@
+<?php include_once('sites/all/themes/artonair/custom_functions/string_truncate.php');  /* function for truncating strings */ ?>
+<?php include_once('sites/all/themes/artonair/custom_functions/default_image.php');  /* function for displaying default images */ ?>
+
+<div class="exhibition-teaser teaser">
+  <div class="image">
+    <?php if($node->field_image[0]['filepath']) { ?>
+	<a href=<?php print url($node->path); ?>><?php print $node->field_image[0]['view']; ?></a>
+    <?php } ?>
+  </div>
+
+  <div class="title">
+    <a href=<?php print url($node->path); ?>><?php print $node->title; ?></a>
+  </div>
+
+  <div class="info">
+      <?php if($node->field_artists[0]['value']) {  ?>
+	  <div class="artists-list">By
+	    <?php $artistcount = 0;
+	      foreach($node->field_artists as $one_artist) {
+	      if($artistcount++ > 0) print ", ";
+	      print $one_artist['view'];
+	    } ?>
+	  </div> 
+	<?php
+	} 
+	if($node->field_dates[0]['value']) { ?>
+	<div class="exhibited_date">
+	  On exhibition from 
+	  <span class="exhibited_date_itself"><?php print_r($node->field_dates[0]['view']); ?></span>
+	</div>
+	<?php } ?>
+  </div> <!-- info end --> 
+
+
+  <div class="content"> 
+	  <?php if($node->field_summary[0]['safe']) {
+	    print htmlspecialchars_decode($node->field_summary[0]['safe']);  /* dangerous but has to be done for now */
+	  } else {
+	    print stringTruncate($node->content['body']['#value'], 400, " ", "..."); 
+	  } ?>
+  </div> 
+  <div class="read-more">
+	<a href=<?php print url($node->path); ?>>Read More</a>
+  </div>
+</div>

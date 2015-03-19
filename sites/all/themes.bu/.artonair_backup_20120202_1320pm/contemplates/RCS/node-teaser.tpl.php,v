@@ -1,0 +1,288 @@
+head	1.6;
+access;
+symbols;
+locks
+	dan:1.6; strict;
+comment	@# @;
+
+
+1.6
+date	2010.11.02.05.51.10;	author geops1;	state Exp;
+branches;
+next	1.5;
+
+1.5
+date	2010.10.22.15.30.33;	author geops1;	state Exp;
+branches;
+next	1.4;
+
+1.4
+date	2010.08.28.21.15.27;	author geops1;	state Exp;
+branches;
+next	1.3;
+
+1.3
+date	2010.08.26.06.42.33;	author geops1;	state Exp;
+branches;
+next	1.2;
+
+1.2
+date	2010.08.26.04.52.40;	author geops1;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.08.25.21.38.32;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.6
+log
+@*** empty log message ***
+@
+text
+@<?php include_once('sites/all/themes/artonair/custom_functions/string_truncate.php');  /* function for truncating strings */ ?>
+<?php include_once('sites/all/themes/artonair/custom_functions/default_image.php');  /* function for displaying default images */ ?>
+<?php $listen_url = "http://staging.artonair.org/play/" . $node->nid . "/" . $node->path; ?> 
+<?php
+
+  /* this is done so that the defaultImag isn't loaded twice, and thusso that the default image isn't changed twice. */
+
+  if($node->field_image[0]['view']) {
+      $image_display_text = $node->field_image[0]['view'];
+   } else { 
+      $image_display_text = defaultImage($node->type, "teaser", $node->nid);
+   } 
+
+?>
+
+
+<?php global $base_url;
+
+    /* this checks each node against a views to get popular results. this may be expensive - but I think views caches this. */ 
+
+    $vgvr = views_get_view_result('archive', 'page_2');
+    $node_status = "";
+    foreach($vgvr as $vresult) {
+       if($vresult->nid == $node->nid) $node_status = "Popular!";
+    }
+ 
+ ?>
+ 
+<div class="gridview-image">
+   <?php print $image_display_text; ?>
+</div>
+ 
+ 
+<div class="<?php print $node->type?>-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+     <div class="header">
+        <div class="header-inner">
+	  <?php if($node->field_series[0]['view']) { ?><div class="series"><?php print $node->field_series[0]['view']; ?></div><?php } ?>
+	   <div class="type">
+	       >> <?php print l(node_get_types('name', $node), "archive", array('query' => 'keys=&type[]=' . $node->type)); ?>
+</div> 
+	   <?php if($node_status) { ?><div class="node-status"><?php print l($node_status, "archive/most_viewed/week"); ?></div><?php } ?>
+        </div>
+     </div>
+
+     <div class="inner"> <?php // this is so that the listen link stays at the right place ?>
+       <div class="title">
+	   <span class="listen"><a href="<?php print $listen_url; ?>" onclick="popUpAIR(this.href,'fixed', 570, 400); return false;" target="artonair_music_popup">&#9654;</a></span> 
+         <?php print l($node->title, "node/" . $node->nid); ?>
+       </div>
+ 
+       <div class="info">
+           <?php if($node->field_host[0]['view']) { ?>
+           <div class="hosts">
+             Hosted by
+	     <?php $hostno = 0; foreach ($node->field_host as $one_host) { ?>
+	       <?php if($hostno > 0) print "<span class='comma'>,</a>"; ?>
+               <span class="host"><?php print $one_host['view']; ?></span>
+	     <?php $hostno++; } ?>
+           </div>
+	   <?php } ?>
+           <?php if($node->field_aired_date[0]['view']) {  ?>
+           <div class="aired_date">
+             Originally aired on
+             <span class="aired_date_itself"><?php print $node->field_aired_date[0]['view']; ?></span>
+           </div>
+           <?php } ?>
+       </div>
+
+       <div class="image">
+	  <?php print $image_display_text; ?>
+       </div> 
+ 
+       <div class="content"> 
+	  <?php if($node->field_summary[0]['safe']) {
+	    print $node->field_summary[0]['safe']; 
+	    ?><span class="read-more"><?php print l("Read More", "node/" . $node->nid);?></span><?php
+	  } else {
+	    print stringTruncate($node->content['body']['#value'], 220, " ", "..."); 
+	    //  print $node->content['body']['#value']; 
+	    ?><span class="read-more"><?php print l("Read More", "node/" . $node->nid);?></span><?php
+	  } ?>
+       </div> 
+    </div> 
+
+     <?php /* ?> 
+    <div class="links"> 
+    <span class="read-more"><?php print l("Read More", "node/" . $node->nid);?></span><span class="or-listen"> or <span class="listen"><a href="<?php print $listen_url; ?>" onclick="popUpAIR(this.href,'fixed', 570, 400); return false;" target="artonair_music_popup">&#9654; Play!</a></span></span>  
+    </div> 
+<?php */ ?>
+ 
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+@
+
+
+1.5
+log
+@*** empty log message ***
+@
+text
+@d4 12
+d30 1
+a30 5
+   <?php if($node->field_image[0]['view']) {
+       print $node->field_image[0]['view'];
+   } else { 
+      print defaultImage($node->type, "teaser", $node->nid);
+   } ?>
+d74 2
+a75 6
+         <?php if($node->field_image[0]['view']) {
+          print $node->field_image[0]['view'];
+	 } else {
+          print defaultImage($node->type, "teaser", $node->nid);
+	} ?> 
+        </div> 
+@
+
+
+1.4
+log
+@*** empty log message ***
+@
+text
+@d1 4
+a4 2
+<?php include_once('sites/all/themes/artonair/string_truncate.php');  /* function for truncating strings */ ?>
+<?php include_once('sites/all/themes/artonair/default_image.php');  /* function for displaying default images */ ?>
+d6 4
+a9 2
+ 
+    $vgvr = views_get_view_result('archive_most_viewed_week', 'default');
+d26 1
+a26 1
+<div class="show teaser">
+d28 1
+a28 1
+  <div class="gridview-pointy-arrow">&#9650;</div>
+d32 7
+a38 2
+       <div class="type"><?php print l($node->type, "archive", array('query' => 'keys=&type[]=' . $node->type)); ?></div> 
+       <div class="node-status"><?php print l($node_status, "archive/most_viewed/week"); ?></div>
+d40 1
+a40 1
+ 
+d43 1
+d48 1
+a48 1
+           <?php if($node->field_host) { ?>
+d51 2
+a52 1
+             <?php foreach ($node->field_host as $one_host) { ?>
+d54 1
+a54 1
+             <?php } ?>
+d59 1
+a59 1
+             Aired on
+d76 1
+d78 3
+a80 1
+	    print stringTruncate($node->content['body']['#value'], 350, " "); 
+d84 2
+a85 1
+ 
+d87 1
+a87 1
+      <span class="read-more"><?php print l("Read More", "node/" . $node->nid);?></span> or <span class="listen"><a href=<?php print url("listen/" . $node->nid, array('html' => true)); ?> onclick="popUpAIR(this.href,'fixed',130,420); return false;" target="artonair_music_popup">&#9654; Listen!</a></span> 
+d89 1
+d92 1
+@
+
+
+1.3
+log
+@aug26
+@
+text
+@d1 2
+d5 1
+a5 1
+    $vgvr = views_get_view_result('archive_popular', 'default');
+d16 2
+d29 1
+a29 1
+       <div class="node-status"><?php print $node_status; ?></div>
+d46 1
+a46 1
+           <?php if($node->type == "show") { ?>
+d53 1
+a53 1
+       
+d57 3
+a59 1
+	 } ?> 
+d63 5
+a67 1
+	  <?php print $node->field_summary[0]['safe']; ?>
+d72 1
+a72 1
+      <span class="read-more"><?php print l("Read More", "node/" . $node->nid);?></span> or <span class="listen"><?php print l("&#9654; Listen!", "listen/" . $node->nid, array('html' => true)); ?></span> 
+@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@d14 1
+a14 1
+     } ?>
+d24 1
+a24 1
+       <div class="type"><?php print l($node->type, "archive/" . $node->type); ?></div>
+d34 1
+d41 1
+d62 1
+a62 1
+      <span class="read-more"><?php print l("Read More", $node->path);?></span> or <span class="listen"><?php print l("&#9654; Listen!", "listen/" . $node->nid, array('html' => true)); ?></span> 
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@d18 1
+a18 1
+<div class="show teaser teaser-archive">
+@

@@ -1,0 +1,40 @@
+<?php
+
+
+/**
+ * Implementation of hook_uninstall().
+ *
+ * Remove variables handled by this module.
+ */
+function xspf_playlist_node_uninstall() {
+  // Clean up variables set by content type.
+  $types = _node_types_build();
+  if ($enabled_types = array_filter(variable_get('xspf_playlist_node_types', FALSE))) {
+    foreach ($enabled_types as $type) {
+      $variables[] = 'xspf_' . $type . '_use';
+      $variables[] = 'xspf_playlist_'. $type .'_fields';
+      $variables[] = 'xspf_'. $type .'_thumb';
+      $variables[] = 'xspf_'. $type .'_thumb_first';
+    }
+  }
+  foreach ($variables as $name) {
+    variable_del($name);
+  }
+}
+
+
+/**
+ * Update existing data to new format
+ *
+ */
+function xspf_playlist_node_install_6101 () {
+  $types = variable_get('xspf_playlist_node_types', false);
+  if ($types) {
+    variable_del('xspf_playlist_node_types');
+    foreach ($types as $type) {
+      variable_set('xspf_playlist_node_enabled_type_' . $type);
+      variable_del('xspf_'. $type . '_use', '');
+      variable_del('xspf_use_files_' . $type);
+    }
+  }
+}

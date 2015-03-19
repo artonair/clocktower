@@ -1,0 +1,60 @@
+head	1.1;
+access;
+symbols;
+locks
+	dan:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2011.01.20.23.22.54;	author dan;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@@@font-face {
+	font-family: 'MuseoSlab500';
+	src: url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.eot');
+	src: local('☺'), url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.woff') format('woff'), url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.ttf') format('truetype'), url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.svg#webfont6SOzaXof') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@@font-face {
+	font-family: 'MuseoSlab500';
+	src: url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.eot');
+	src: local('☺'), url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.woff') format('woff'), url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.ttf') format('truetype'), url('http://staging.artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.svg#webfont9cvMU13i') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+.playlistbody {
+  background-image: none !important; 
+  background-color: transparent !important;
+  width: 260px;
+}
+
+#branding_area {
+  display: none;
+}
+
+.playlist .doneplaying img, .playlist .nowplaying img {
+  display: none;
+}
+
+.nowplaying {
+  color: #323232 !important; 
+  font-weight: normal !important; 
+  font-family:  'MuseoSlab500', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif !important; 
+}
+.doneplaying { color: #BCF !important; display: none; }
+@

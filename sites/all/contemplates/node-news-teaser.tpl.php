@@ -1,0 +1,1 @@
+node-teaser.tpl.php

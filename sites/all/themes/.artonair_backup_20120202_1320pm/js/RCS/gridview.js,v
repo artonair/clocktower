@@ -1,0 +1,73 @@
+head	1.2;
+access;
+symbols;
+locks
+	geops1:1.2; strict;
+comment	@# @;
+
+
+1.2
+date	2010.08.28.21.15.55;	author geops1;	state Exp;
+branches;
+next	1.1;
+
+1.1
+date	2010.08.25.21.59.35;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.2
+log
+@*** empty log message ***
+@
+text
+@// this script is called for GRIDVIEW 
+// an exists() function already defined in script.js, which is called on every page.
+
+$(document).ready(function() {
+
+// if you're hovering over thumbnails for the gridview teasers, display the teaser content
+
+  $(".gridview-image").hover(function() {  /* get thumbnail */
+
+      $(this).parent().addClass('hovering'); /* mark teaser as hovering/displayable */ 
+      var pos = $(this).position(); var height = $(this).width(); /*calculate height and width of thumbnail */
+      /* add offset and position teaser underneath thumbnail */
+      $(this).parent().children(".teaser").css({"left": (pos.left - 5) + "px", "top": (pos.top + height) + "px" }); /* the 5 is the border-left of the image */
+
+    }, function() { 
+      $(this).parent().removeClass('hovering');
+    });
+
+/*
+  $(".gridview .teaser-archive").hover(function() {  // get thumbnail 
+      gridhoverteaser = true;
+alert(gridhoverimage + " " + gridhoverteaser);
+  }, function() {
+      gridhoverteaser = false;
+      if(gridhoverimage == false && gridhoverteaser == false) $(this).parent().removeClass('hovering');
+alert(gridhoverimage + " " + gridhoverteaser);
+  });
+*/
+
+});
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@a6 1
+  $(".gridview .gridview-image").hover(function() {  /* get thumbnail */
+d8 1
+d13 1
+a13 1
+      $(this).parent().children(".teaser-archive").css({"left": (pos.left - 5) + "px", "top": (pos.top + height) + "px" }); /* the 5 is the border-left of the image */
+@

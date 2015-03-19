@@ -1,0 +1,2 @@
+<i>In the Hopper: </i><b>Kick-Ass House</b>:<br />
+This is no substitute for the real thing, but, in this mix, DJ Jeannie Hopper offers a little glimpse of some of the more recent tunes she's played at her big booming club gigs. Between tracks by the likes of Alistair Albrecht, Groove Junkies, Wil Milton and many more, every house sub-genre has ample room to wend its way in. Don't listen to this instead of going out--listen to it when you haven't had enough.

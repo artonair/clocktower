@@ -1,0 +1,95 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.40.47;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial.
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php global $base_url; ?>
+
+<div class="playlist-body bodyview">
+
+  <div class="title body-title">
+    <a href="<?php print $base_url . '/' . $node->path; ?>" title="<?php print $node->title ?>"><?php print $node->title; ?></a>
+  </div>
+  <?php if($node->field_playlist_image[0]) { ?>
+    <div class="image-section">
+      <?php print $node->field_playlist_image[0]['view']; ?>
+    </div>
+  <?php } ?>
+
+   <div class="text-section">
+
+    <div class="metainfo">
+      <div class="metaheader">
+	<div class="type"><a href='<?php print $base_url . "/archive/" . $node->type; ?>'><?php print $node->type; ?></a></div>
+	<div class="node-status">Popular!</div>
+      </div>
+      <div class="producers">Produced by
+	<?php foreach ($node->field_playlist_producer as $oneproducer) { ?>
+	  <span class="producer"><?php print $oneproducer['view']; ?></span>
+	<?php } ?>
+      </div>
+      <div class="tags"><div class="tags-label">Tags:</div><?php print views_embed_view('tags_for_node', 'default', $node->nid); ?></div>
+
+    </div>
+
+    <div class="textcontent">
+      <?php print $node->content['body']['#value']; ?>
+    </div>
+
+  </div>
+
+  <div class="audio-section">
+    <div class="audio-embed">
+      <?php  
+	/* OKAY THIS HAS TO CHANGE WHEN THE FEED PATH FOR playlist_contents_xspf CHANGES 
+	 I MEAN TECHNICALLY I COULD GET THIS INFO BY CALLING THE VIEW BUT IT'S A BIT PRICEY AND THIS IS FASTER ANYWAYS. 
+	  ALSO IT'S NOT LIKE THIS IS A HIDDEN FILE SOMEWHERE -- IT'S THE MASTER NODE TEMPLATE. GRAR.
+	realistically, this won't change. ever.
+	 */
+	$audio_file_url = $base_url . "/playlist/" . $nid;
+	if($node->field_playlist_type[0]['safe'] == "normal") {
+	 $audio_file_url .= '/xspf.xml';
+	} else { /* random! */
+	 $audio_file_url .= '/xspf-random.xml';
+	}
+	
+	print swf($audio_file_url, array('othervars' => array('base' => $audio_file_url), 'flashvars' => array('height' => '190', 'playlistsize' => '150', 'playlist' => 'bottom')));
+
+?>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="playlist-listing">
+  <?php print views_embed_view('playlist_contents', 'default', $node->nid); ?>
+</div>
+
+@

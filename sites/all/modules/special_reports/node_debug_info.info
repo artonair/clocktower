@@ -1,0 +1,6 @@
+; $Id: node_debug_info.info,v .1a 2010/06/23 11:10:07 egerm Exp $
+name = Node Debug Information Report
+description = Assist in resolving the "warning: Invalid argument supplied for foreach() in [path to]/modules/taxonomy/taxonomy.module on line 1241." problem
+package = Special Reports
+version = VERSION
+core = 6.x

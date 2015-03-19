@@ -1,0 +1,1 @@
+Poetic waxing is afoot: DJ Jeannie Hopper plays the classics, back from the times when, beneath the gleaming of the disco ball, all became one. Between Eddy Grant's impassioned and mournful reggae rhythms and Edwin Starr's equally passionate ode to low riders, expect your neuromusical systems to be fully penetrated. 

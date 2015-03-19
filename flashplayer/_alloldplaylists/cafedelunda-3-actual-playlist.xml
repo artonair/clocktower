@@ -1,0 +1,70 @@
+<playlist version="1" xmlns="http://xspf.org/ns/0/"> 
+  <title>ArtOnAir.org :: ART INTERNATIONAL RADIO -  </title> 
+  <image>http://www.artonair.org/images/art_radio_logo.png</image>
+  <info>http://www.artonair.org</info>
+  <annotation>ART INTERNATIONAL RADIO PLAYLIST</annotation>
+ 
+  <tracklist>
+ 
+   <item> 
+    <title>Intro Host: Sean Carter</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk01_introhost.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Bread To The People: Action 13</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk02_breadtothepeople.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Eyi Su Ngaangaa: The Sweet Talks</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk03_eyisungaanga.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>OK Kjor Romskip: Rune Linbaek</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk04_okkjor.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Sang Pourpre: Igor Wakh&eacute;vitch</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk05_sangpourpre.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Unknown: Breakout</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk06_unknown.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Acid Rock: Funkees</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk07_acidrock.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>A Day In The City: Wojciech Karolak</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk08_adayinthecity.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Oh Kibino: Voodoo Family</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk09_ohkibino.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Dernier Souffle: Foehn</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk10_derniersoufflee.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Carmen, Carmen: unknown</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk11_carmencarmen.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Tes Yeux: Diane Tell</title>
+    <location>http://www.artonair.org/archives/mp3/sbmiw_cafeunda_globalgroove_tk12_tesyeux.mp3</location>
+   </item> 
+ 
+ </tracklist> 
+</playlist> 

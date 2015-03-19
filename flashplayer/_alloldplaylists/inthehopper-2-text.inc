@@ -1,0 +1,1 @@
+The second episode of <i>In the Hopper</i> will pull at your heart strings, but it's not cruel enough to leave them unmended: with music from the heights of Peru's Andes to the depths of Brooklyn basements, these variously Latin-tinged tunes will have you experiencing the full gamut of everything you may be capable of feeling in a single hour. So come wanting, and leave purged.

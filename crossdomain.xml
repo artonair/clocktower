@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!DOCTYPE cross-domain-policy 
+  SYSTEM "http://www.macromedia.com/xml/dtds/cross-domain-policy.dtd">
+<cross-domain-policy>
+  <allow-access-from domain="*" />
+  <allow-access-from domain="artonair.org" />
+  <allow-access-from domain="www.artonair.org" />
+  <allow-access-from domain="staging.artonair.org" />
+  <allow-access-from domain="artonair.el.net" />
+</cross-domain-policy>

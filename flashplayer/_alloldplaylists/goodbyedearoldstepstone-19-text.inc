@@ -1,0 +1,3 @@
+Goodbye Dear Old Stepstone: Music from the Axis of Evil and Other Thorns in America's Side 
+<br />
+Songs from Iraq (Choubi Choubi! Folk and Pop), Afghanistan (Traditional Music of Herat), folk music from Cuba, Syria and Venezuela, and The North Korean People's Army Concert Troupe. The Iranian love song contains the lyric: "Remove the scarf which you wear on your chest / So that I can touch your breasts. / What kind of politics are you doing now?" And regarding the inclusion of Jacques Brel on this program Mr. Salsburg writes, <i>Granted, Brel was Belgian. But Neil Young's Canadian. You know what I mean.</i>

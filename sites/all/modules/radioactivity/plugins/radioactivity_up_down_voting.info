@@ -1,0 +1,13 @@
+name = Radioactive up/down voting
+description = "VotingAPI up/down support for radioactive nodes and comments. Supports setting different energy values for positive and negative votes."
+dependencies[] = radioactivity
+dependencies[] = votingapi
+package = Radioactivity
+core = 6.x
+
+; Information added by drupal.org packaging script on 2012-11-05
+version = "6.x-1.4"
+core = "6.x"
+project = "radioactivity"
+datestamp = "1352102541"
+

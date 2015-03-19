@@ -1,0 +1,117 @@
+/*
+ * @file
+ * Style sheet for the views_accordion module
+ * 
+ * You can disable the loading of this file in your style options, just uncheck 'Use the module's default styling'
+ *
+ * .views-accordion-item wrappers get per-row classes like item-0, item-1 and so on
+ *  style each row independently like this:
+ * .views-accordion .item-1
+*/
+
+/* the whole accordion (only when js is enabled) */
+.accordion-active {
+margin-top: -10px;
+
+}
+
+/* all accordion sections */
+.views-accordion-item {
+overflow: hidden;
+}
+
+/* the content hidden/shown within each section (only when js is enabled) */
+.views-accordion-item .accordion-content {
+  background-color: #fff;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+.views-accordion-item .accordion-content p {
+  margin: 0px; /* so that the animation doesn't jump */
+}
+/* the header the user clicks to open sections (only when js is enabled)*/
+.accordion-header {
+  cursor: pointer;
+  color: #111;
+  display: block; /* we dont know what html tag it will be, otherwise spans will display weirdly */
+	clear:both;
+}
+h3.accordion-header {
+  margin-bottom:0;
+  
+}
+.views-accordion-item .accordion-header,
+h3.accordion-header {
+  background-color:    #EBEBEB;
+  border-radius: 7px 7px 7px 7px;
+
+}
+.accordion-item-even .accordion-header {
+  background-color:    #ddd;
+  }
+
+/*
+ * Don't use padding/margin top/bottom on .views-accordion-item, or the animation will jump for that ammount
+ * so apply it to the header and the first divs inside the accordion-content
+ */
+.views-accordion-item .accordion-content div,
+.views-accordion-item .accordion-header,
+h3.accordion-header {
+ padding: 0.5em 1em;
+}
+.views-accordion-item .accordion-content div div {
+  padding: 0;
+}
+
+/* header mouse-over and section-opened states (only when js is enabled)*/
+.views-accordion-item .accordion-header-hover,
+h3.accordion-header-hover {
+  border-color: #fff;
+  background-color: #eee;
+}
+.views-accordion-item .accordion-header-active,
+h3.accordion-header-active {
+  font-weight: bold;
+  border-bottom: 1px solid #eee;
+}
+
+h3.accordion-header-active .arrow {
+  border-left-color:transparent;
+  border-left-style:solid;
+  border-left-width:5px;
+  border-right-color:transparent;
+  border-right-style:solid;
+  border-right-width:5px;
+  border-top-color:#111;
+  border-top-style:solid;
+  border-top-width:9px;
+  height:0;
+  width:0;
+  float: left;
+  margin-right: 6px;
+  margin-top: 4px;
+}
+
+.arrow {
+  border-bottom-color:transparent;
+  border-bottom-style:solid;
+  border-bottom-width:5px;
+  border-left-color:#111;
+  border-left-style:solid;
+  border-left-width:9px;
+  border-top-color:transparent;
+  border-top-style:solid;
+  border-top-width:5px;
+  height:0;
+  width:0;
+  float: left;
+  margin-right: 6px;
+  margin-top: 3px;
+}
+
+/* Buttons */
+span.stop-accordion,
+span.toggleAccordion {
+  display: block;
+  text-align: right;
+}

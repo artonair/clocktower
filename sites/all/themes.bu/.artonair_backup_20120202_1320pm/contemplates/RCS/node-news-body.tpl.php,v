@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.40.47;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php global $base_url; ?>
+
+<div class="news">
+
+  <div class="title">
+    <a href="<?php print $base_url . '/' . $node->path; ?>" title="<?php print $node->title ?>"><?php print $node->title; ?></a>
+  </div>
+
+  <div class="textcontent">
+    <?php $this_node = node_load($node->nid); print $this_node->body; 
+      /* yeah, the reason I'm not doing $node->content['body']['#value']; is because for some reason this cuts off all text after an image. beats me. */
+    ?>
+  </div>
+
+</div>
+@

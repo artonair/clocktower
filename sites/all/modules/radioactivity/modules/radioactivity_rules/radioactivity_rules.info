@@ -1,0 +1,15 @@
+; $Id
+name = Radioactivity Rules Support
+description = "Provides rules support for Radioactivity."
+dependencies[] = radioactivity
+dependencies[] = rules
+package = Radioactivity
+core = 6.x
+
+
+; Information added by drupal.org packaging script on 2012-11-05
+version = "6.x-1.4"
+core = "6.x"
+project = "radioactivity"
+datestamp = "1352102541"
+

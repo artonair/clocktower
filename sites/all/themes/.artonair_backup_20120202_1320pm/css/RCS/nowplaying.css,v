@@ -1,0 +1,40 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.43.09;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@.playlistbody {
+  background-image: none !important; 
+  background-color: transparent !important;
+  width: 230px;
+}
+
+#branding_area {
+  display: none;
+}
+
+.playlist .doneplaying img, .playlist .nowplaying img {
+  display: none;
+}
+
+.nowplaying { color: #67A !important; font-weight: normal !important; }
+.doneplaying { color: #BCF !important; display: none; }
+@

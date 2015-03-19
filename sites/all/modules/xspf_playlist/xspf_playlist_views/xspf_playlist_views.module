@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Integrates XSPF playists with Views.
+ */
+
+/**
+ * Implementation of hook_views_api().
+ */
+function xspf_playlist_views_views_api() {
+  return array(
+   'api' => 2,
+   'path' => drupal_get_path('module', 'xspf_playlist_views') .'/views',
+  );
+}
+
+
+/**
+ * Helper function to build each item from a view result
+ * @param array $row
+ *  The returned row from the view results.
+ * @param array $actual_fields
+ *  The field options for the view.
+ * @return unknown_type
+ */
+function xspf_playlist_views_build_item($row, $actual_fields) {
+  if ($row) {
+    $item = array();
+    foreach ($row as $key => $value) {
+      // Check to make sure that our key is allowed.
+      // @TODO: We probably don't really want to second-guess the admin.
+      if (xspf_playlist_views_dissallowed_keys($key, $actual_fields)) {
+        // Look for the file path.
+        if (stristr($key, 'filepath')) {
+          // If we do not have a value for the file path, exit.
+          if (!$value) {
+            return;
+          }
+          // If our extension is not a supported mime type, do not use this file
+          if (!($mime = xspf_playlist_item_mime($value))) {
+            return;
+          }
+          xspf_playlist_item_set_value($item, array('key' => 'type', 'value' => $mime), FALSE);
+          // build the locaton
+          xspf_playlist_item_set_value($item, array('key' => 'location', 'value' => xspf_playlist_url($value)), FALSE);
+        }
+
+        // Now we just build what ever has been sent to us mapped to the label
+        // value in the view.
+        else {
+          xspf_playlist_item_set_value($item, array('key' => $actual_fields[$key]['label'], 'value' => $value), FALSE);
+        }
+      }
+    }
+    return $item;
+  }
+}
+
+
+/**
+ * Helper function to prevent pollution of the XML space with bad view data
+ * @param $key
+ * @param array $mapped_fields
+ * @return unknown_type
+ */
+function xspf_playlist_views_dissallowed_keys($key, $mapped_fields) {
+  $disallowed_keys = array(
+    'fid',
+    'nid',
+  );
+  if (! in_array($key, $disallowed_keys) || in_array($key, $mapped_fields)) {
+    return $key;
+  }
+}

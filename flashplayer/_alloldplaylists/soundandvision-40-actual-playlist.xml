@@ -1,0 +1,60 @@
+<playlist version="1" xmlns="http://xspf.org/ns/0/"> 
+  <title>ArtOnAir.org :: ART INTERNATIONAL RADIO -  </title> 
+  <image>http://www.artonair.org/images/art_radio_logo.png</image>
+  <info>http://www.artonair.org</info>
+  <annotation>ART INTERNATIONAL RADIO PLAYLIST</annotation>
+ 
+  <tracklist>
+ 
+   <item> 
+    <title>Show and Guest Inroduction: David Humphrey hosts artist James Siena</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk01.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Raimon, Qui Pregunta Ja Respon: Lliurament del Cant</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk02.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host and Guest Interview: David Humphrey hosts artist James Siena</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk03.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Fex. Caduc.: Furnish Time,</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk04.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host and Guest Interview: David Humphrey hosts artist James Siena</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk05.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Los Delinquentes: Veneno</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk06.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host and Guest Interview: David Humphrey hosts artist James Siena</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk07.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Haika, Mutil: Mikel Laboa</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk08.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host and Guest Interview: David Humphrey hosts artist James Siena</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk09.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Negu Gorriak, Oliver Iparra: Oliver North, Idea Zabaldu</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_40_tk10.mp3</location>
+   </item> 
+ 
+ </tracklist> 
+</playlist> 

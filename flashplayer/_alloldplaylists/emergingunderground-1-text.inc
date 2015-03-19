@@ -1,0 +1,2 @@
+<b>Emerging Underground: <i>Organized Confusion</i></b>
+This is AIR's first program dedicated exclusively to music sent to us by listeners, record labels and guileless cyber-passersby. This sterling collection of coherently mismatched songs is suited to accompany you through a diversity of tasks as varied as the tunes themselves: you can listen to it while making your bed, while preparing for a first date or while slicing through a pineapple with a chainsaw.

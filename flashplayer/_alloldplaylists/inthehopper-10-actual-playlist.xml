@@ -1,0 +1,65 @@
+<playlist version="1" xmlns="http://xspf.org/ns/0/"> 
+  <title>ArtOnAir.org :: ART INTERNATIONAL RADIO -  </title> 
+  <image>http://www.artonair.org/images/art_radio_logo.png</image>
+  <info>http://www.artonair.org</info>
+  <annotation>ART INTERNATIONAL RADIO PLAYLIST</annotation>
+ 
+  <tracklist>
+ 
+   <item> 
+    <title>Colors: Pharoah Sanders</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk01_karma.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Blues After All: Jimmy Smith</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk02_BluesAfterAll.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Obeah Woman: Nina Simone</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk03_ObeahWoman.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host: Jeannie Hopper</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk04_host.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Shut Up And Learn: Shawn Lee</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk05_ShutUp.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Bill Of Rights/ Separation Of Church And State [Live]: Emily XYZ</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk06_BillOfRights.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Ann Buchanan Theme: Dean and Britta</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk07_AnnBuchanan.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Etwaraar: Lagerfeltz</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk08_Etwaraar.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Half Circle: Graham Haynes</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk09_HalfCircle.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Voodoo Logic -Ramadanman refix: Sonarpilot</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk10_VoodooLogic.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Demoncrazy: Hess is More</title>
+    <location>http://www.artonair.org/archives/mp3/sbmhopper10_tk11_Demoncrazy.mp3</location>
+   </item> 
+ 
+ </tracklist> 
+</playlist> 

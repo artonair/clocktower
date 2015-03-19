@@ -1,0 +1,44 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.48.07;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php
+// $Id: views-bonus-export-txt.tpl.php,v 1.1 2008/10/08 05:50:10 neclimdul Exp $
+/**
+ * @@file views-view-table.tpl.php
+ * Template to display a view as a table.
+ *
+ * - $title : The title of this group of rows.  May be empty.
+ * - $rows: An array of row items. Each row is an array of content
+ *   keyed by field ID.
+ * - $header: an array of haeaders(labels) for fields.
+ * - $themed_rows: a array of rows with themed fields.
+ * @@ingroup views_templates
+ */
+
+foreach ($themed_rows as $count => $row):
+  foreach ($row as $field => $content):
+?>
+<?php print strip_tags($content); /* strip html so its plain txt. */ ?>
+
+<?php endforeach; ?>
+<?php endforeach; ?>
+@

@@ -1,0 +1,16 @@
+.playlistbody { background: #FFF; }
+.playlistbody {
+	height: 95px;
+	overflow: hidden;
+	font-family: 'Lato', sans-serif;
+	margin-bottom: 10px;
+}
+.playlistbody .playlistdata {
+	 height:  85px;
+	 overflow: hidden;
+}
+.nowplaying { color: #000 !important;  }
+.nowplaying_Track .artist { font-size:  1.2em; }
+.nowplaying_Track .title { font-size:  1em; }
+.live365-player iframe { height: 1000px; }
+

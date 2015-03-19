@@ -1,0 +1,62 @@
+@font-face {
+	font-family: 'MuseoSlab500';
+	src: url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.eot');
+	src: local('☺'), url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.woff') format('woff'), url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.ttf') format('truetype'), url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500-webfont.svg#webfont6SOzaXof') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'MuseoSlab500';
+	src: url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.eot');
+	src: local('☺'), url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.woff') format('woff'), url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.ttf') format('truetype'), url('http://artonair.org/sites/all/themes/artonair/typography/museoslab/museo_slab_500italic-webfont.svg#webfont9cvMU13i') format('svg');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+    font-family: 'frankgoth_cn_btregular';
+    src: url('../typography/FranklinGothic/franklin_gothic_condensed_bt-webfont.eot');
+    src: url('../typography/FranklinGothic/franklin_gothic_condensed_bt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../typography/FranklinGothic/franklin_gothic_condensed_bt-webfont.woff') format('woff'),
+         url('../typography/FranklinGothic/franklin_gothic_condensed_bt-webfont.ttf') format('truetype'),
+         url('../typography/FranklinGothic/franklin_gothic_condensed_bt-webfont.svg#frankgoth_cn_btregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+  background: none repeat scroll 0 0 transparent;
+  margin: 0px;
+  padding: 0px;
+}
+
+.playlistbody {
+  width: 260px;
+}
+
+#branding_area {
+  display: none;
+}
+
+.playlist .doneplaying img, .playlist .nowplaying img {
+  display: none;
+}
+
+.nowplaying {
+ font-family: 'frankgoth_cn_btregular', "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; 
+}
+.doneplaying { color: #BCF !important; display: none; }
+
+.info {
+ font-family: 'frankgoth_cn_btregular', "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif; 
+ font-size: .795em;
+ line-height: 1.255em;
+ width: 100%;
+ padding-top: 2px;
+ color: #000;
+ font-weight: 300;
+ text-transform: uppercase;
+}
+.info .title { font-style: italic; }
+

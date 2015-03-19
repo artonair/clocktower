@@ -1,0 +1,39 @@
+head	1.1;
+access;
+symbols;
+locks
+	geops1:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.48.07;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php
+
+/* this is called by contemplate with <?php include_once('sites/all/themes/artonair/custom_variable.php'); ?>
+why don't I use template.php? well, template.php's custom variables only apply to page templates, etc, and won't work within contemplate. */
+
+
+/* these two variables are the absolute path / http url to the mp3 folder, respectively. */
+global $air_mp3s_path;
+global $air_mp3s_url;
+$air_mp3s_path = "/web/ps1/archives/mp3"; // no trailing slashes
+$air_mp3s_url = "http://www.artonair.org/archives/mp3";  // no trailing slashes
+
+?>
+
+@

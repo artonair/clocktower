@@ -1,0 +1,100 @@
+/* @override http://artonair.org/flashplayer/live365/live365-player.css */
+
+
+.streamtext {
+	font-family: 'Lato', sans-serif;
+}
+
+
+
+body { margin: 0px; background-color: #F7F7F7; }
+a { color: black; } a img { border: 0px; } 	
+#rectangleAd { position: absolute; top: 5px; left: 480px; visibility: visible; display: block }
+#bannerAd { position: absolute; top: 5px; left: 5px; visibility: visible; display: block }
+#widget { position: absolute; top: 226px; left: 405px; visibility: visible; display: block }
+#link1 { position: absolute; top: 226px; left: 425px; visibility: visible; display: block }
+#link2 { position: absolute; top: 226px; left: 445px; visibility: visible; display: block }
+#poweredBy { position: absolute; top: 192px; left: 408px; visibility: visible; display: block }
+
+#container {
+	border: 1px solid #ccc;
+	 width: 480px; 
+	 position: relative; margin-left: auto;margin-right: auto; 
+}
+
+#container-inner { overflow: hidden; -webkit-border-radius: 0px; -khtml-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px; background-color: white; padding: 2%; width: 96%;}
+
+
+#container .header {
+	height: 145px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	float: left;
+}
+
+#container .header .air_logo {
+	padding-bottom: 10px;
+	/*border-bottom: 1px dashed #CCC;*/
+	margin-bottom: 10px;
+	position: relative;
+}
+
+.logo-span {
+    height: 111px;
+    left: 11px;
+    opacity: 0.65;
+    position: absolute;
+    top: 8px;
+    width: 111px;
+	display: none;
+	}
+
+#container .header .air_logo:hover {
+	opacity: .65;
+	}
+
+#container .header .air_logo img {
+	height: 120px;
+	margin-right: 10px;
+}
+#container .header .streamheader {
+	overflow: hidden;
+	font-family: 'frankgoth_cn_btregular', "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+}
+#container .header .streamheader .streamlogo {
+	float: left;
+	width: 55px;
+}
+
+#container .header .streamheader .streamtitle {
+	float: left;
+}
+
+#container .header .streamheader .streamtitle .pointyarrow {
+	float: left;
+	color: #46C8DC;	
+	padding: 10px 0px;
+	margin-right: -5px;
+}
+
+#container .header .streamheader .streamtitle .streamtext {
+	float: left;
+	 background-color: #46C8DC; color: white; padding: 11px 2px; font-size: 1em; 
+	 -webkit-border-radius: 6px; -khtml-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px;
+	 width: 285px;
+	 text-align: center;
+	 }
+
+.live365-player { width: 300px; text-align:  center; display: inline-block; padding-top: 8px;}		
+.live365-player .controls-logo { /*border-top: 1px dashed #CCC;*/ padding-top: 10px; height: 40px;}
+.live365-player .air-logo { float: left; }
+.live365-player .table { height: 40px; position: relative; }
+.live365-player .table-inner { position: absolute; right: 0px; }
+.live365-player .controls-logo tr td img {
+	margin-left: 0px !important;
+}
+.live365-player iframe { height: 85px; overflow: hidden; }
+.live365-playlist iframe { width: 300px; height: 90px; overflow: hidden; } 
+
+.horiz-line { margin: 0px 15px; height: 1px; width: 360px; }
+

@@ -1,0 +1,48 @@
+
+.quicktabs_main.quicktabs-style-basic{
+  padding:20px;
+  clear:both;
+}
+ul.quicktabs_tabs.quicktabs-style-basic{
+  padding-left: 15px;
+  padding-bottom: 0;
+  padding-right: 5px;
+  padding-top: 30px;
+  border-bottom:3px double #999999;
+  font-size: 14px/19px;
+  font-family:MuseoSlab500, 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  font-weight:normal !important;
+  height:19px;
+  margin:0;
+  width: 630px;
+}
+ul.quicktabs_tabs.quicktabs-style-basic a{
+  font-size: 14px/19px;
+  font-family:MuseoSlab500, 'Helvetica Neue', Arial, Helvetica, Geneva, sans-serif;
+  font-weight:normal !important;
+  text-decoration:none;
+  color: #999;
+}
+ul.quicktabs_tabs.quicktabs-style-basic a:hover{
+  color:#000  !important;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li{
+  border:1px solid #ccc;
+  border-bottom:none;
+  padding:2px 5px;
+  margin:0 10px 0 0;
+  position:relative;
+  border-radius: 5px 5px 0 0;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li:hover{
+  border:1px solid #999;
+  border-bottom:none;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li.active{
+  border:1px solid #aaa;
+  border-bottom:3px solid #fff;
+  background-color:#fff;
+}
+ul.quicktabs_tabs.quicktabs-style-basic li.active a{
+  color:#000;
+}

@@ -1,0 +1,27 @@
+head	1.1;
+access;
+symbols;
+locks
+	geops1:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2010.10.26.19.30.52;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@$("div").click(function() {
+  alert("hey");
+});
+@

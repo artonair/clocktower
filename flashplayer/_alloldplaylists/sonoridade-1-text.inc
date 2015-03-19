@@ -1,0 +1,1 @@
+For the premiere episode of <i>Sonoridade</i>, host B&#233;co Dranoff has selected a blend of fresh and forward-thinking music created by young artists from Brazil's newest generation. Representing this amazing new crop are artists and producers from all over the country, from Fortaleza to S&#227;o Paulo, from Recife to Rio de Janeiro to Vit&#243;ria and Bel&#233;m do Par&#225;.

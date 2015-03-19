@@ -1,0 +1,3 @@
+Goodbye Dear Old Stepstone: The Music of Sodom Laurel, Madison County, North Carolina 
+<br />
+The ridges of Madison County in western North Carolina are home to an extended family that sings the old British ballads, as well as lyric songs and religious material, in an utterly unique and beautiful style. The Chandler, Wallin, and Norton clan has been the subject of several records, two films - John Cohen's </i>End of an Old Song<i> and Martha King and Rob Roberts' <a href="http://www.madisoncountyproject.org/"></i> Madison County Project: The Film<i></a> - and two photo essays, one by Harvey Wang and another by Rob Amberg, which was published by the University of North Carolina Press as the </i>Sodom Laurel Album,<i> with an accompanying CD. (32 minutes)

@@ -1,0 +1,15 @@
+<?php global $base_url; ?>
+
+<div class="news">
+
+  <div class="title">
+    <a href="<?php print $base_url . '/' . $node->path; ?>" title="<?php print $node->title ?>"><?php print $node->title; ?></a>
+  </div>
+
+  <div class="textcontent">
+    <?php $this_node = node_load($node->nid); print $this_node->body; 
+      /* yeah, the reason I'm not doing $node->content['body']['#value']; is because for some reason this cuts off all text after an image. beats me. */
+    ?>
+  </div>
+
+</div>

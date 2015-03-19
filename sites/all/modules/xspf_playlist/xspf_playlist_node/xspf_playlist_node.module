@@ -1,0 +1,447 @@
+<?php
+
+
+/**
+ * @FILE provides content level integration for XSPF
+ */
+
+
+/* ********************************************** */
+/* DRUPAL HOOKS                                   */
+/* ********************************************** */
+
+/**
+ * Implementation of hook_menu().
+ */
+function xspf_playlist_node_menu() {
+  $items = array();
+
+  // Display a xspf playlist per node
+  $items['node/%node/xspf'] = array(
+    'page callback' => 'xspf_playlist_node_view',
+    'page arguments' => array(1),
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+
+  // Allow users to edit xspf playlists
+  $items['node/%node/edit/xspf'] = array(
+    // @TODO build function
+    'page callback' => 'xspf_playlist_node_edit',
+    'page arguments' => array(1),
+    // @TODO figure out access
+    'access arguments' => array('access content'),
+    'type' => MENU_LOCAL_TASK,
+  );
+
+  return $items;
+}
+
+
+/**
+ * Implementation of hook_perm().
+ * @return array
+ */
+function xspf_playlist_node_perm() {
+  return array('build playlist on node');
+}
+
+
+/**
+ * Implementation of hook_form_alter().
+ * Display a playlist builder on the node edit form and add configuration fields
+ * to the XSPF Playlist admin settings form.
+ *
+ * @param string $form_id
+ * @param array $form
+ */
+function xspf_playlist_node_form_node_type_form_alter(&$form, &$form_state) {
+  // Get the current content type
+  $content_type = $form['#node_type']->type;
+  // Build the name of this variable
+  $variable_name = 'xspf_playlist_node_enabled_type';
+
+  // Use a custom submit function so we can save this data
+  $form['#submit'][] = 'xspf_playlist_node_type_settings_submit';
+
+  // modify the main XSPF form
+  $form['xspf_playlists'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('XSPF Playlists'),
+    '#collapsible' => TRUE,
+    '#collapsed' => variable_get($variable_name .'_'. $content_type, FALSE) ? FALSE : TRUE,
+  );
+
+  $form['xspf_playlists'][$variable_name] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Enabled'),
+    '#default_value' => variable_get($variable_name .'_'. $content_type, FALSE),
+    '#description' => t('Enable XSPF playlists on this content type'),
+  );
+
+  $form['xspf_playlists']['content'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Select Playlist Files'),
+  );
+  // select what options will be used to build the playlist
+  $form['xspf_playlists']['content']['xspf_use_files'] = array(
+    '#type' => 'select',
+    '#multiple' => TRUE,
+    '#title' => t('Build Playlist From Files'),
+    '#options' => module_invoke_all('xspf_playlist_use', 'define', null, $content_type),
+    '#default_value' => variable_get('xspf_use_files_' . $content_type, ''),
+    '#description' => t('XSPF playlist will build its playlist from files associated with the items that you have selected.'),
+  );
+
+  // Add any config items that we've got
+  // make an artifical node
+  $my_node = new StdClass();
+  $my_node->type = $content_type;
+  foreach (variable_get('xspf_'. $content_type .'_use', array()) as $extension) {
+    $form['xspf_playlists']['content'][] =  xspf_playlist_invoke_fire('xspf_playlist_use', 'config', $my_node, $extension);
+  }
+
+  $form['xspf_playlists']['playlists'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Playlist Settings'),
+  );
+
+  // settings for item duration. Images need duration tags so that they rotate in the playlist
+  $options = array_values(array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 30));
+  $form['xspf_playlists']['playlists']['xspf_playlist_duration'] = array(
+    '#type' => 'select',
+    '#title' => t('Image duration'),
+    '#options' => $options,
+    '#default_value' => variable_get('xspf_playlist_duration_'. $content_type, 10),
+    '#description' => t('Image files in a playlist need to have a duration (in seconds) for which they are shown.'),
+  );
+
+}
+
+/* ********************************************** */
+/* CONTRIB HOOKS                                  */
+/* ********************************************** */
+
+/**
+ * Implementation of hook_xspf_playlist_use().
+ * @param string $op
+ * @param object $node
+ * @param $config
+ * @param $limit
+ *   limits the number of returns
+ */
+function xspf_playlist_node_xspf_playlist_use($op, $node, $config, $data = null) {
+  switch($op){
+    case 'define':
+      $types = array();
+      if (module_exists('upload')) {
+        $types['xspf_playlist_node--1'] = t('Drupal: Upload attached files.');
+      }
+      return $types;
+      break;
+
+    case 'config':
+      switch($config) {
+        case 1:
+        break;
+      }
+    break;
+
+    case 'views':
+      switch ($config) {
+        case 'playlist_file_source':
+        case 'playlist_count' :
+          $conditions = '%s.nid = upload.nid';
+          return array('tablename' => 'upload', 'conditions' => $conditions);
+        break;
+      }
+    break;
+
+    case 'return':
+      switch($config) {
+        case 1:
+          if ($node->files) {
+            $items = xspf_playlist_node_get_files_from_node($node);
+          }
+        break;
+      }
+      if ($items) {
+        return $items;
+      }
+    break;
+  }
+}
+
+
+/**
+ * integrate XSPF with the flvmediaplayer module to provide urls
+ * @param string $op is the operation being called
+ * @param string $name is the action name being called
+ * @param array $config is an array of configuration values
+ */
+function xspf_playlist_node_flvmediaplayer_file_use($op, $name = NULL, $node = NULL, $config = NULL) {
+  switch ($op) {
+    case 'define':
+      return array('xspf_playlist_node--1' => t('XSPF Playlist for each node'));
+    break;
+    case 'file':
+      // make sure that there are files for this node
+      if (xspf_playlist_node_items($node)) {
+        return xspf_playlist_url('node/'. $node->nid .'/xspf');
+      }
+    break;
+  }
+}
+
+
+/* ******************************************************* */
+/* INTERNAL FUNCTIONS */
+/* ******************************************************* */
+
+/**
+ * Landing page for producing the XSPF data
+ * for a given node- node/X/xspf
+ * @param $nid is a node id
+ * @return string
+ *   XSPF XML
+ */
+function xspf_playlist_node_view($node) {
+  // Are playlists enabled on this node type?
+  if (variable_get('xspf_playlist_node_enabled_type_' . $node->type, FALSE)) {
+    // Get items for this node.
+    if ($items = xspf_playlist_node_items($node)) {
+      $playlist = array('title' => check_plain($node->title), 'items' => $items);
+      xspf_playlist_render($playlist, 'node', $node->type, $node);
+      return;
+    }
+  }
+  // No content found.
+  return drupal_not_found();
+}
+
+
+/**
+ * Gets item data from nodes, for building a node playlist
+ *
+ * @param object $node is a drupal node object
+ * @param int $limit
+ * @return array of item arrays
+ */
+function xspf_playlist_node_items($node, $limit = null) {
+  // Check to see if we should use any files
+  if ($modules = variable_get('xspf_use_files_' . $node->type, null) ) {
+    $items = array();
+    $nodes = array();
+    foreach (array_filter($modules) as $config) {
+      if ($item = xspf_playlist_invoke_fire('xspf_playlist_use', 'return', $node, $config, $limit)) {
+        // has a limit been set on how many items to return?
+        if ($limit) {
+          // correct the split for one off error
+          $item = array_slice($item, 0, $limit);
+          // increment our counter
+          $nodes[$node->nid] = $nodes[$node->nid] + 1;
+          if ($limit >= $nodes[$node->nid]) {
+            $items = array_merge($items, $item);
+          }
+        }
+        else {
+          $items = array_merge($items, $item);
+        }
+      }
+    }
+  }
+  return $items;
+}
+
+
+/**
+ * assigns file data into the items array to create the playlist
+ * @param $node
+ *   node object
+ * @param $filepath
+ *   string is the file path
+ * @retun array
+ *   xspf item
+ */
+function xspf_playlist_node_create_file_item($node, $filepath) {
+  $extension = pathinfo($filepath, PATHINFO_EXTENSION);
+  // if we do not have an extension, do not check to see if the file type is supported
+  if (_xspf_playlist_filetype_supported($extension) || ! $extension) {
+    return xspf_playlist_node_build_file_item($node, $filepath);
+  }
+}
+
+
+/**
+ * retrieves files from a node and places them in item
+ * format for playlist
+ * @param $node is a drupal node object
+ * @return array of items
+ */
+function xspf_playlist_node_get_files_from_node($node) {
+  $items = array();
+  // loop through files
+  if (isset($node->files)) {
+    foreach ($node->files as $file) {
+      // get file data
+      if ($item = xspf_playlist_node_create_file_item($node, file_create_url($file->filepath))) {
+        // set the title to the file name description only if it is different than
+        // the file name to force the description to be human set
+        if (isset($file->description) && ($file->description != $file->filename )) {
+          xspf_playlist_item_set_value($item, array('key' => 'title', 'value' => check_plain($file->description)), FALSE);
+        }
+        // Check for file type
+        // Drupal's mime type function does not support flv
+        if (pathinfo($file->filepath, PATHINFO_EXTENSION) == 'flv') {
+          $mime = 'video';
+        }
+        else {
+          $mime = file_get_mimetype($file->filepath);
+          $mime = explode('/', $mime);
+          $mime = $mime[0];
+        }
+        // is this a useable type?
+        if (in_array($mime, array('image', 'video', 'audio'))) {
+          xspf_playlist_item_set_value($item, array('key' => 'type', 'value' => $mime), FALSE);
+        }
+        $items[] =  $item;
+      }
+    }
+  }
+  return $items;
+}
+
+
+/**
+ * assigns file data into the items array to create the playlist
+ * this does not check incoming data so that other modules can
+ * use this format to build a playlist item w/o xspf interfeering
+ * @param $node
+ *   object, node
+ * @param $url
+ *   string, url to file that is being added to the items array
+ * @param $type
+ *   string, kind of file
+ */
+function xspf_playlist_node_build_file_item($node, $url, $type = null) {
+  $item = array();
+  $item[] = array(
+    'key' => 'creator',
+    'value' => check_plain($node->name),
+  );
+
+  $item[] = array(
+    'key' => 'location',
+    'value' => $url,
+  );
+
+  // Link to playlist item
+  $item[] = array(
+    'key' => 'info',
+    'value' => xspf_playlist_url('node/'. $node->nid),
+  );
+
+  // we need to see if we need to set the duration tag
+  if (in_array(strtolower($type), array('jpg', 'gif', 'png'))) {
+    $item[] = array(
+      'key' => 'duration',
+      'value' => variable_get('xspf_playlist_duration_'. $node->type, 10),
+    );
+  }
+
+  $item[] = array(
+    'key' => 'title',
+    'value' => check_plain($node->title),
+  );
+
+  $item[] = array(
+    'key' => 'identifier',
+    'value' => $node->nid,
+  );
+
+  // allow this item to be altered
+  xspf_playlist_build_item($item, $node, $url, $thumb, $meta);
+  return $item;
+}
+
+
+/* ******************************************************* */
+/* SETTINGS                                                */
+/* ******************************************************* */
+
+/**
+ * builds the options for a node to choose thumbnails per file
+ * @param array $form is a drupal form array
+ */
+function xspf_playlist_node_builder(&$form) {
+  // get all the thumbs
+  $thumbs = xspf_playlist_node_thumbs($form['#node']);
+  // make it obvious that we've got thumbnails
+  $form['xspf_thumbnails'] = array(
+    '#type' => 'value',
+    '#value' => $thumbs,
+  );
+  $form['xspf_playlist'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Playlist builder'),
+    '#description' => t('You can define options for the playlist (if any) on this node here'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+  );
+  // get all the files for this node
+  $items = xspf_playlist_node_get_files_from_node($form['#node']);
+  $form['xspf_thumbnails_items'] = array(
+    '#type' => 'value',
+    '#value' => $items,
+  );
+  foreach($items as $xid => $item) {
+    $file = pathinfo(_xspf_playlist_item_get_value($item, 'location'));
+    $form['xspf_playlist']['xspf_playlist_thumb_'. $xid] = array(
+      '#type' => 'select',
+      '#title' => $file['basename'],
+      '#options'  => $thumbs,
+      // Find default from the thumb if already set.
+      '#default_value' => array_search(_xspf_playlist_item_get_value($item, 'image'), $thumbs),
+      '#description' => t('Select a thumbnail for this file.'),
+      '#attributes' => array('class' => 'xspf_thumb_select'),
+    );
+
+    $form['xspf_playlist']['xspf_'. $xid] = array(
+      '#type' => 'markup',
+      '#value' => theme('xspf_playlist_thumbnailer_picker', $thumbs, $xid),
+    );
+  }
+}
+
+
+/**
+ * Build a list of content type names, either enabled types or all types
+ * @param $enabled
+ *   boolean FALSE returns all types; TRUE returns only enabled modules
+ * @return array
+ */
+function xspf_playlist_node_content_type_names($enabled = FALSE) {
+  static $content_types, $return_types;
+
+  if (! $content_types) {
+    // get all the content types and put them into an array
+    $types = _node_types_build();
+    foreach($types[0] as $type){
+      $content_types[$type->type] = $type->name;
+    }
+  }
+
+  if (! $enabled) {
+    return $content_types;
+  }
+
+  if (! $return_types) {
+    $return_types = array();
+    // get the enabled content types
+    $node_types = variable_get('xspf_playlist_node_types', array());
+    foreach ($node_types as $node_type) {
+      $return_types[$node_type] = $content_types[$node_type];
+    }
+  }
+  return $return_types;
+}

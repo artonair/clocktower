@@ -1,0 +1,465 @@
+@font-face {
+  font-family: "copy-bold";
+  src: url('fonts/Lato-Bold.woff') format('woff');
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "copy-bolditalic";
+  src: url('fonts/Lato-BoldItalic.woff') format('woff');
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "copy-italic";
+  src: url('fonts/Lato-Italic.woff') format('woff');
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "copy-regular";
+  src: url('fonts/Lato-Regular.woff') format('woff');
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "ui";
+  src: url('fonts/franklin_gothic_condensed_bt-webfont.woff') format('woff');
+}
+
+body {
+  display: flex;
+  display: -webkit-flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "ui", sans-serif;
+}
+
+#player {
+  position: relative;
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  background-color: rgb(233, 233, 233);
+  padding: 15px;
+  box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  display: none;
+  position: absolute;
+  font-family: "copy-regular", sans-serif;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  margin: 14px;
+  background-color: white;
+  padding-top: 18px;
+  height: 89%;
+  width: 92%;
+  overflow: hidden;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.overlay .embed {
+  font-family: 'ui';
+  margin: 18px;
+}
+
+.overlay .embed .social {
+  display: flex;
+  display: -webkit-flex;
+  margin-top: 20px;
+}
+
+.overlay textarea {
+  font-family: 'copy-regular';
+  font-size: 1em;
+  width: 100%;
+  resize: none;
+  height: 5.5em;
+  border: 1px solid black;
+  padding: 4px;
+}
+
+.twitter-share-button {
+  margin-left: 14px;
+}
+
+.overlay .embed h1 {
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.overlay .embed h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.overlay .copy {
+  display: none;
+  margin-top: 10px;
+  padding-bottom:10px;
+  margin-left: 4px;
+  margin-right: 8px;
+  height: 90%;
+  overflow-y: scroll;
+}
+
+.overlay .x {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('ui/buttons/x.png');
+  cursor: pointer;
+}
+
+.overlay p {
+  font-family: "copy-regular", sans-serif;
+  padding: 0 18px;
+  margin-top: 4px;
+}
+
+.overlay b
+{
+  font-family: "copy-bold", sans-serif;
+}
+.overlay i
+{
+  font-family: "copy-italic", sans-serif;
+}
+
+
+/* Top Section */
+
+section.top {
+  display: flex;
+  display: -webkit-flex;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.logo {
+  width: 213.5px;
+  height: 192.5px;
+}
+
+.popup-buttons {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  flex: 1;
+  -webkit-flex: 1;
+}
+
+.more-info, .share {
+  margin: auto;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.more-info div, .share div {
+  width: 23px;
+  height: 23px;
+  display: block;
+  margin: auto;
+  padding-bottom: 4px;
+}
+
+.more-info div {
+  background-image: url('ui/buttons/moreinfo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.share div {
+  background-image: url('ui/buttons/share.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.more-info div:hover {
+  background-image: url('ui/buttons/moreinfo_hovered.png');
+  cursor: pointer;
+}
+
+.share div:hover {
+  background-image: url('ui/buttons/share_hovered.png');
+  cursor: pointer;
+}
+
+/* Bottom Section */
+
+section.bottom {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+}
+
+#current-track {
+  display: none;
+}
+
+.total-time, .time-left {
+  cursor: pointer;
+}
+
+.time {
+  font-size: 13px;
+  display: flex;
+  display: -webkit-flex;
+  padding-bottom: 6px;
+  -webkit-user-select: none;
+}
+
+.time-elapsed {
+  margin: auto auto auto 0;
+  cursor: default;
+}
+
+.bar {
+  background-color: rgb(0, 0, 0);
+  height: 4px;
+  cursor: pointer;
+}
+
+.elapsed-bar {
+  position: relative;
+  background-color: rgb(255, 0, 0);
+  height: 100%;
+  width: 65%;
+}
+
+.scrubber {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.track-title .title {
+  padding-top: 20px;
+}
+
+.track-title .title, .track-series .series, .track-artist .artist, .track-host .host, .track-show .show {
+  max-width: 240px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+
+.track-count {
+  cursor: default;
+  -webkit-user-select: none;
+}
+
+.player-controls {
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  -webkit-user-select: none;
+}
+
+.previous.buttons {
+  margin: auto 0 auto auto;
+}
+
+.next.buttons {
+  margin: auto auto auto 0;
+}
+
+.previous-show, .next-show {
+  position: relative;
+  height: 2px;
+  width: 40px;
+  top: 25px;
+  background: #000;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+}
+
+.previous-show div, .next-show div {
+  position: absolute;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border-left: 2px solid #000;
+  border-top: 2px solid #000;
+  left: 1px;
+  top: -8px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.previous-show {
+  left: -47px;
+  cursor: pointer;
+}
+
+.next-show {
+  top: -25px;
+  right: -50px;
+  -webkit-transform: rotate(180deg) scale(0.75);
+  -moz-transform: rotate(180deg) scale(0.75);
+  transform: rotate(180deg) scale(0.75);
+  cursor: pointer;
+}
+
+.next-track, .previous-track {
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  cursor: pointer;
+}
+
+.previous-track {
+  position: relative;
+  top: -2px;
+  margin: auto;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 43.3px 25px 0;
+  border-color: transparent #000 transparent transparent;
+}
+
+.next-track, .play {
+  position: relative;
+  margin: auto;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 25px 0 25px 43.3px;
+  border-color: transparent transparent transparent #000;
+}
+
+.previous-track div {
+  position: absolute;
+  top: -21px;
+  left: 3px;
+  margin: auto;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 21px 38.3px 21px 0;
+  border-color: transparent #fff transparent transparent;
+}
+
+.next-track div, .play div {
+  position: absolute;
+  top: -21px;
+  right: 3px;
+  margin: auto;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 21px 0 21px 38.3px;
+  border-color: transparent transparent transparent #fff;
+}
+
+.play {
+  position: absolute;
+  top: 0;
+  left: 8px;
+  -webkit-transform: scale(0.75);
+  -moz-transform: scale(0.75);
+  transform: scale(0.75);
+  cursor: pointer;
+}
+
+
+.play-mode {
+  position: relative;
+  margin: auto 10px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50px;
+  border: 2px solid #000;
+}
+
+.play-mode.paused {
+  border: 2px solid rgba(0, 0, 0, 0);
+  background: none;
+}
+
+.pause {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  cursor: pointer;
+  width: 36px;
+  height: 28px;
+}
+
+.pause .box {
+  position: absolute;
+  width: 5px;
+  height: 28px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+.pause .right {
+  margin-left: 16px;
+}
+
+.volume {
+  cursor: pointer;
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  width: 28px;
+  height: 26px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.volume.medium {
+  background-image: url('ui/volume/medium.png');
+}
+
+.volume.quiet {
+  background-image: url('ui/volume/quiet.png');
+}
+
+.volume.loud {
+  background-image: url('ui/volume/loud.png');
+}
+
+/* Utility Classes */
+
+.hide {
+  display: none;
+}
+
+.disabled {
+  opacity: 0.25;
+  cursor: default !important;
+}
+
+

@@ -1,0 +1,2 @@
+Sound and Vision: James Siena<br />
+<a href="http://www.pacewildenstein.com/Artists/ViewArtist.aspx?artist=JamesSiena&type=Artist&guid=3ea168fd-3f23-409f-8d04-31264511d179">James Siena's</a> paintings squeeze an unexpected amount of information into tight spaces. The Basque, Catalan and Castilian songs on his playlist compress a startling range of sentiments from the Iberian peninsula into a short half hour.  

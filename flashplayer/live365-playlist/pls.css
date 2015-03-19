@@ -1,0 +1,18 @@
+.playlistbody {
+  background-image: none !important; 
+  background-color: white;
+  width: 300px;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+}
+
+#branding_area {
+  display: none;
+}
+
+.playlist .doneplaying img, .playlist .nowplaying img {
+  display: none;
+}
+
+.nowplaying { color: #009ddc;  }
+.doneplaying { color: #000 !important; }

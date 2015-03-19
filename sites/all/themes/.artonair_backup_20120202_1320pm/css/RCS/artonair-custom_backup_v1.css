@@ -1,0 +1,2560 @@
+/* View this in CSSEdit for folders and stuff! */
+
+/* @override 
+	http://artonair.org/newsite.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?W
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?0
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?w
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?G
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?c
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?u
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?X
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?P
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?W
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?M
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?4
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?A
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?s
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?l
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?6
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?r
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?z
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?d
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?h
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?p
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?K
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?F
+	http://localhost:8888/artbook/sites/all/themes/artbook/css/artbook-custom.css?S
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?y
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?j
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?5
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?k
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?T
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?7
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?R
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?D
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?N
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?i
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?v
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?1
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?o
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?J
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?f
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?O
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?n
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?S
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?U
+	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?3
+*/
+
+/* @group **** HEADER CHANGE ** DEBUG ** DELETE ME  */
+
+#header {
+	height:  160px !important;
+}
+#header .air_header_menu { 
+	right: -20px !important;
+}
+#header .air_header_submenu {
+	top:  113px !important;
+	right: 140px !important;
+	width:  350px !important;
+	font-size: 0.9em !important;
+}
+#search-box {
+	top:  111px !important;
+}
+
+/* @end */
+
+
+/* Special Yellow
+#FFD200 
+Special Yellow (Darker)
+#ECC100
+Special Cyan (for on black)
+#78F0FF
+Special Cyan (for on white)
+#46C8DC
+Special Cyan (darker)
+#00A2B6
+Special Cyan (even darker)
+#007F93
+Special tinted cyan (darker)
+#A7D0EB 
+Special tinted cyan
+#E3F7FA
+Special black
+#323232
+Special gray
+#767676
+ */
+
+
+
+
+/* @group Overall */
+
+/* @group Styles */
+
+a 		{ color: #007F93; text-decoration: none; }
+a:hover { text-decoration: underline; color: #46C8DC; }
+img a:hover { text-decoration: none; }
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+td {	padding: 0px; }
+p {	margin-top: 0px; }
+
+
+
+/* @end */
+
+/* @group Fonts */
+#header .air_header_menu_link a .link_name,
+.teaser .wrapper .title,
+.bodyview .title,
+#header #nowplaying .nowplaying-ttenlink .link_name,
+.view-header .archive-view-header, .view-header .archive-view-title,
+.bodyview .also-in-the-series-section .series-title,
+.teaser .wrapper .header .series,
+.archive_with_menu .archive-logo-block,
+.breadcrumbs,
+.left-column .label,
+#disqus_thread h3,
+.gridlist-chooser,
+.block-inner .title,
+.header .type {
+		font-family:  'MuseoSlab500', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: normal !important;
+}
+
+
+/* @end */
+
+/* @group Throbber replace */
+
+html.js input.form-autocomplete, html.js a.views-throbbing,
+html.js span.views-throbbing , .ahah-progress .throbber {
+  background-image: url(/sites/all/themes/artonair/images/throbber.gif);
+}
+
+/* @end */
+
+/* @end */
+
+/* @group == Frontend Display */
+
+/* @group Front Page (Splash page) */
+
+body.page-frontpage-icons #header, 
+body.page-frontpage-icons #footer {
+	display: none;
+}
+
+body.page-frontpage-icons {
+	font-family:  MuseoSlab500;
+}
+body.page-frontpage-icons #content .title {
+	display: none;	
+}
+
+body.page-frontpage-icons,  body.page-frontpage-icons #page {
+}
+
+body.page-frontpage-icons .front_splash_floater {
+
+}
+
+body.page-frontpage-icons .front_splash_container {
+	position: absolute;
+	height:  420px;
+	width: 360px;
+	margin-top: -210px;
+	margin-left: -170px;
+	top:  50%;
+	left: 50%;
+}
+
+body.page-frontpage-icons .front_splash_position {
+}
+
+body.page-frontpage-icons .front_splash_page {
+	margin: auto;
+
+}
+
+body.page-frontpage-icons .front_splash_page .frontpage_icons {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 10px;
+	color: #ECC100;
+}
+
+
+body.page-frontpage-icons  .front_splash_page .frontpage_icons .icon {
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin: 0px 15px 30px 15px;
+	text-align: center;
+}
+
+body.page-frontpage-icons  .front_splash_page .frontpage_icons .icon .image {
+	width:  150px;
+	height:  150px;
+	background-color: #46C8DC;
+	margin-bottom: 3px;
+}
+
+body.page-frontpage-icons  .front_splash_page .logo {
+	text-align: center;
+}
+
+
+/* @end */
+
+/* @group Airstream Modal */
+
+#play_airstream_popup {
+	display: none;
+}
+
+#play_airstream_popup #play_airstream_overlay {
+	background-color: #000;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 100;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=8q0)"; /* IE8 */
+	filter: alpha(opacity=80); /* older internet explorer */
+	-khtml-opacity: 0.8;      /* khtml, old safari */
+	-moz-opacity: 0.8;       /* mozilla, netscape */
+	opacity: 0.8;           /* fx, safari, opera */
+}
+
+#play_airstream_popup #play_airstream_dialog {
+	position: fixed;
+	padding: 20px;
+	top: 50%;
+	left: 50%;
+	margin-top: -170px;
+	margin-left: -220px;
+	width: 400px;
+	height: 300px;
+	z-index: 100;
+	background-color: white;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;	
+	border-radius: 3px;
+}
+
+
+
+#play_airstream_popup #play_airstream_close_link {
+	font-size: .6em;
+	position: absolute;
+	bottom: 5px;
+	right: 10px;
+	width: 40px;
+	text-align: right;
+	cursor: pointer;
+}
+
+#play_airstream_popup #play_airstream_close_link span {
+	display: block;
+	font-size: 3em;
+	margin-right: 3px;
+}
+
+
+#play_airstream_dialog p {
+	margin-bottom: 0px;
+}
+
+#play_airstream_dialog .play_airstream_link {
+	text-align: right;
+	display: block;
+	margin: 0px;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+
+#play_airstream_dialog .play_airstream_link a:hover {
+	text-decoration: underline;
+	color:  #666;
+}
+
+
+/* @end */
+
+/* @group Help Box */
+
+#help_box {
+	padding: 20px;
+	background-color: #E3F7FA;
+	-webkit-border-radius: 20px; -khtml-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;
+	margin-bottom: 50px;
+	position: relative;
+	display: block;
+}
+
+
+#help_box.hide {
+}
+
+#help_box .help_text {
+	margin-bottom: 40px;
+	font-size: 1em;
+	line-height: 1.5em;
+	font-weight
+}
+
+#help_box .help_close {
+	-webkit-border-radius: 15px; -khtml-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;
+	font-weight: bold;
+	float: right;
+	text-align: right;
+	height: 20px;
+	margin-top: -30px;
+	padding: 5px 10px;
+	background-color: #46C8DC;
+	cursor: pointer;
+	color: white;
+}
+
+#help_box .help_close .X {
+	text-decoration: underline;
+	font-size: 1.2em;
+}
+
+#help_box_inner {
+	position: relative;
+	z-index: 100;
+}
+
+#help_box_highlight {
+	position: absolute;
+	display: none;
+	border: 6px solid #46C8DC;
+	height: 99%;
+	width: 99%;
+	margin-left: -23px;
+	margin-top: -23px;
+	-webkit-border-radius: 20px; -khtml-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;
+}
+
+/* @group icons inside help box */
+
+
+
+#help_box .helpbox_item {
+	padding-top: 15px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	
+}
+
+#help_box .icon {
+	float: left;
+	bottom: 0px;
+	margin-top: -15px;
+	margin-right: 10px;
+	font-size: .9em;
+	text-align: center;
+	width: 130px;
+}
+
+
+#help_box .icon .icon_name {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #ECC100;
+	margin-top: -5px;
+
+}
+
+#help_box .icon a:hover {
+	text-decoration: none;
+}
+
+#help_box .icon a:hover .icon_name {
+	color: #FFD200;
+}
+
+
+
+/* @end */
+
+/* @end */
+
+/* @group Related Nodes/Sidebarview */
+
+#sidebar-right-inner .sidebarview {
+	-webkit-border-radius: 10px; -khtml-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+	margin-top: 0px;
+}
+
+#sidebar-right-inner .sidebarview .view-header .archive-view-title {
+	font-weight: bold;
+	text-align: right;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #323232;
+	padding-bottom: 4px;
+}
+
+#sidebar-right-inner .sidebarview .view-header .archive-view-title .archive-link-box {
+	text-align: right;
+	padding: 2px 4px;
+	background-color: #46C8DC;
+	-webkit-border-radius: 5px; -khtml-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+}
+
+#sidebar-right-inner .sidebarview .view-header .archive-view-title .archive-link-box a {
+	color: white;
+}
+
+
+#sidebar-right-inner .sidebarview .teaser .hovering {
+	opacity: 0.5;
+}
+
+
+/* @end */
+
+/* @group Header (Top Menu) */
+
+/* because this is the header, and because certain menu items may be inserted or removed at will, the best way to do this is to position things absolutely within a relative header div. It may not be the best CSS practice, but it's better than doing float:left and having to adjust margins every time something is added/removed. */
+
+#header {
+	margin-bottom: 50px;
+	position: relative;
+	z-index: 100;
+	height: 100px;
+	background-color: white;		
+
+}
+
+
+/* @group Logo */
+
+#header .logo_block {
+	position: absolute;
+	top: 20px;
+	left: 0px;
+}
+
+/* @end */
+
+/* @group Now Playing */
+
+
+#header #nowplaying {
+	position: absolute;
+	top: 15px;
+	width: 300px;
+	height: 70px;
+	left: 200px;
+	background-color: #E3F7FA;
+	-webkit-border-radius: 10px; -khtml-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px;
+	padding: 5px;
+
+}
+
+#header #nowplaying .nowplaying-listenlink {
+	margin-top: 5px;
+	float: left;
+	text-align: center;
+	width: 70px;
+}
+
+#header #nowplaying .nowplaying-listenlink .link_name {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #ECC100;
+	margin-top: -5px;
+}
+
+#header #nowplaying .nowplaying-playinfo {
+	margin-left: 70px;
+}
+
+#header #nowplaying .nowplaying-title {
+	font-size: .8em;
+	font-weight: bold;
+	padding-left: 7px;
+	margin-bottom: -2px;
+	margin-top: -2px;
+}
+
+#header #nowplaying .nowplaying-iframe {
+	font-size: 10px;
+	font-weight: bold;
+	width: 220px;
+	height: 50px;
+	overflow: hidden;
+}
+
+#header #nowplaying .nowplaying-clickable-overlay {
+	background: none;
+	width: 300px;
+	height: 70px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 100;
+}
+
+/* @end */
+
+/* @group Menu */
+
+#header .air_header_menu {
+	position: absolute;
+	top: 10px;
+	right: 140px;
+	height: 90px;
+}
+
+#header .air_header_menu_link {
+	float: left;
+	bottom: 0px;
+	margin-top: -10px;
+	margin-right: 10px;
+	font-size: .9em;
+	text-align: center;
+}
+
+#header .air_header_menu_link a .link_name {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #ECC100;
+	margin-top: -5px;
+
+}
+
+#header .air_header_menu_link a:hover {
+	text-decoration: none;
+}
+
+#header .air_header_menu_link a:hover .link_name {
+	color: #FFD200;
+}
+
+/* @end */
+
+/* @group Sub Menu */
+
+/* @group Contents */
+
+.air_header_submenu .submenu_contents {
+	display: none;
+	float:  left;
+}
+
+/* @end */
+
+#header .air_header_submenu {
+	position: absolute;
+	top: 10px;
+	right: 0px;
+	width: 150px;
+	font-size: .8em;
+	line-height: 1.4em;
+	color: #767676;
+	text-align: right;;
+}
+
+#header .air_header_submenu .air_header_submenu_link {
+	float: right;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#header .air_header_submenu .air_header_submenu_link a {
+	color: #BBB;
+	font-weight: bold;
+}
+
+#header .air_header_submenu .air_header_submenu_link a:hover {
+	color: #46C8DC;
+}
+
+
+/* @end */
+
+/* @group Search Box */
+
+#search-box {
+	position: absolute;
+	top: 72px;
+	right: 200px;
+	width: 140px;
+	height: 25px;
+}
+
+#search-box .submit-button {
+	float: right;
+	margin-top: -1px;
+}
+
+#search-box .form-text {
+	height: 17px;
+	float: right;
+	width: 90px;
+	font-size: .7em;
+}
+
+#search-box .form-text.idleField {
+	color: #AAA;
+}
+
+
+
+/* @end */
+
+
+/* @end */
+
+/* @group Node View Modes (Teaser/Body)  */
+
+/* @group Teaser */
+
+
+
+/* @group VIEWS - ALL */
+
+.teaser {
+		font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif;
+}
+
+.teaser .wrapper {
+	font-size: .825em;
+
+}
+
+.teaser .gridview-pointy-arrow {
+	display: none;
+}
+
+/* @group Wrapper */
+
+/* @group Inner */
+
+.teaser .wrapper .inner {
+	overflow: hidden;
+}
+
+/* @group Content */
+
+.teaser .wrapper .inner .content {
+	line-height: 1.6em;
+	color: #323232;
+}
+
+
+
+.teaser .wrapper  .inner .content  .read-more {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 5px;
+	font-size: 0.9em;
+}
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Header */
+
+.teaser.hovering .wrapper .header  {
+	border-bottom: 3px double #323232;
+}
+
+.teaser .wrapper .header {
+	margin-bottom: 5px;
+	border-bottom: 3px double #999;
+	overflow: hidden;
+}
+
+.teaser .wrapper .header-inner {
+	padding: 0px 0px 2px 0px;
+	overflow: hidden;
+	line-height: 1.5em;
+}
+
+.teaser .wrapper .header .series {
+	font-size: 1em;
+	font-weight: bold;
+	float: left;
+	margin-right: 3px;
+}
+	
+	
+.teaser .wrapper .header a {
+	color:#323232;
+}
+
+.teaser .wrapper .header a:hover { 
+	color: #78F0FF;
+}
+
+
+.teaser .wrapper .header .type {
+	font-weight: bold;
+	float: left;
+}
+
+.teaser .wrapper .header .node-status {
+	float: right;
+	font-size: .8em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #ECC100;
+}
+
+.teaser .wrapper .header .node-status a {
+	color: #ECC100;
+	border: 1px solid #ECC100;
+	padding: 2px 3px;
+	-webkit-border-radius: 4px; -khtml-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;
+}
+
+.teaser .wrapper .header .node-status a:hover {
+	background-color: #ECC100;
+	color: white;
+}
+
+
+.teaser .wrapper .header .listen {
+	float: right;
+	font-weight: bold;
+	height: 17px;
+	margin-left:5px;
+}
+
+.teaser .wrapper .header .listen a {
+	color: #46C8DC;
+	padding: 2px 3px;
+}
+
+
+.teaser .wrapper .header .listen a:hover {
+	color: white;
+	
+	background-color: #46C8DC;
+	text-decoration: none;
+	-webkit-border-radius: 5px; -khtml-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+}
+
+
+
+/* @end */
+
+
+.teaser .wrapper .title {
+	font-weight: bold;
+	margin-bottom: 5px;
+	line-height: 1.3;
+	font-size: 1.6em;
+}
+
+/* @group Info */
+
+.teaser .wrapper .info {
+	font-size: .8em;
+	line-height: 1.6em;
+	margin-bottom: 5px;
+}
+
+.teaser .wrapper .info .hosts {
+	font-style: italic;
+}
+
+.teaser .wrapper .info .hosts .host {
+	font-weight: bold;
+}
+
+
+.teaser .wrapper .info .hosts .comma {
+	margin-left: -3px;
+}
+
+.teaser .wrapper .info .aired_date {
+}
+
+.teaser .wrapper .info .aired_date_itself {
+	font-weight: bold;
+}
+
+
+
+/* @end */
+
+/* @group Image */
+
+
+.teaser .wrapper .image {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+
+.teaser .wrapper .image img {
+	float: left;
+}
+
+
+/* @end */
+
+/* @group Links */
+
+.teaser .wrapper .links {
+	margin-top: 10px;
+	text-align: right;
+	font-size: .9em;
+	height: 20px;
+}
+
+.teaser .wrapper .links .read-more {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 5px;
+
+}
+
+.teaser .wrapper .links .read-more a {
+	color: #46C8DC
+}
+
+.teaser .wrapper .links .listen {
+	font-weight: bold;
+	background-color: #46C8DC;
+	padding: 3px;
+	-webkit-border-radius: 5px; -khtml-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+
+}
+
+.teaser .wrapper .links .listen a {
+	color: white;
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* For Exhibition, go below */
+
+/* @group VIEW - Sidebar */
+
+.sidebarview .teaser.hovering .wrapper {
+	opacity: 1.0 !important;
+}
+
+.sidebarview .teaser .wrapper {
+	font-size: .8em;
+	line-height: 1.6em;
+	overflow: hidden;
+	margin-bottom: 40px;
+	opacity: 0.5;
+}
+
+/* @group Wrapper */
+
+/* @group Image */
+
+
+.sidebarview .teaser .wrapper .image a img {
+	width: 75px; height: 75px; /* !!! this is where the size of the image for sidebarview is designated */
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group VIEW - Grid */
+
+.gridview .teaser {
+	position: absolute;
+	display: none;
+	width: 390px; /* width + padding + border */
+	/* height is done in the 'inner' div */
+	margin-top:0px;
+	margin-right: 30px;
+	margin-bottom: 40px;
+	z-index: 100; /*this is on top of everryyyyhthing! */
+}
+
+/* @group Hovering */
+
+
+.gridview .hovering .gridview-image {
+	border: 5px solid #46C8DC;
+	margin-top: -5px;
+	margin-left: -5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.gridview .hovering .teaser {
+	display: block;
+}
+
+
+
+/* @end */
+
+/* @group Gridview Image */
+
+.gridview-image {
+	display: none;
+	float: left;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.gridview-image img {
+	float: left;
+}
+
+.smallgrid .gridview-image img {
+	width: 75px; height: 75px; /* !!! this is where the size of the image for sidebarview is designated */
+}
+
+.gridview .gridview-image {
+	display: block;
+}
+
+
+
+/* @end */
+
+/* @group Pointy-Arrow */
+
+.archive .gridview .teaser .gridview-pointy-arrow {
+	margin-right: 5px; /* image border-width */
+	margin-left: auto;
+	width: 100px; /* image width */
+}
+
+.gridview .teaser .gridview-pointy-arrow {
+	color: #46C8DC;
+	font-size: 1.5em;
+	height: .75em;
+	width: 70px; /* image width */
+	text-align: center;
+	display: block;
+}
+
+.gridview .teaser .gridview-pointy-arrow.arrow-top {
+	margin-top: 5px;
+}
+
+.gridview .teaser .gridview-pointy-arrow.arrow-bottom {
+	margin-bottom: 5px;
+	margin-top: -5px;
+	display: none;
+}
+
+.archive .gridview .teaser .gridview-pointy-arrow.arrow-bottom {
+	display: block;
+}
+
+.archive .gridview .hover-above .teaser .gridview-pointy-arrow.arrow-bottom {
+	display: none;
+}
+
+.archive .gridview .hover-below .teaser .gridview-pointy-arrow.arrow-top {
+	display: none;
+}
+
+
+
+/* @end */
+
+/* @group Wrapper */
+
+.gridview .teaser .wrapper {
+	border: 5px solid #46C8DC;
+	background-color: white;
+	padding: 15px;
+}
+
+
+
+.gridview .teaser .wrapper .header .listen {
+	display: none;
+}
+
+.gridview .teaser  .wrapper .inner {
+	/* height is freeform for grid view */
+/*	height: 200px; // listview .teaser .wrapper height - header height - links height */
+	overflow: hidden;
+}
+
+.gridview .teaser .wrapper .image {
+	display: none;
+}
+
+
+.gridview .teaser .wrapper  .inner .content  .read-more {
+	display: none;
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group VIEW - List */
+
+/* @group Modes (archive, show page, etc) */
+
+/* @group Archive's List view */
+
+.archive .listview .teaser .wrapper {
+	 /* width is only limited for an archive page */
+
+	 width: 350px;
+ 	height: 270px;
+
+}
+
+.archive .listview .teaser .wrapper .inner {
+	height: 200px; /* listview .teaser .wrapper height - header height - links height */
+}
+
+
+
+/* @end */
+
+/* @end */
+
+.listview .teaser .wrapper {
+	float: left;
+	overflow: hidden;
+	margin-right: 30px;
+/*	margin-bottom: 30px; */
+	width: 100%;
+}
+
+
+.listview .teaser .wrapper .header {
+	height: 37px;
+	position: relative;
+}
+
+.listview .teaser .wrapper .header-inner {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+}
+
+/* @end */
+
+/* @group VIEW - Nodeplayer */
+
+.nodeplayer .teaser .wrapper .listen {
+	display: none;
+}
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Body View */
+
+.bodyview {
+	margin-bottom: 30px;
+}
+
+/* @group Columns */
+
+.bodyview .left-column {
+	float: left;
+	width: 250px;
+}
+
+.bodyview .left-column .label {
+	text-align: right;
+	padding: 4px 7px;
+	font-size: 1em;
+	font-weight: bold;
+	border-bottom: dotted 1px #999;
+}
+
+.bodyview .right-column {
+	margin-left: 270px; /*width of left-column + margin 20px*/
+}
+
+
+
+/* @end */
+
+/* @group header-section */
+
+/* @group Breadcrumbs */
+
+.bodyview .breadcrumbs {
+/*	background-color: #AAA;
+	color: #FFF; */
+	font-size: 1em;
+	font-weight: bold;
+	padding-bottom: 4px;
+	margin-bottom: 15px;
+	text-align: left;
+	border-bottom: double 3px #999;
+}
+
+.bodyview .breadcrumbs a {
+/*	color: #FFF; */
+	color: #323232;
+}
+
+.bodyview .breadcrumbs a:hover { 
+	color: #78F0FF;
+}
+
+.bodyview .breadcrumbs .crumb {
+	display: inline;
+}
+
+/* @end */
+
+.bodyview .title {
+	color:  #323232;
+	margin: -2px 0px 10px 0px;
+	line-height: 1.2;
+	font-size: 2em;
+}
+
+
+
+/* @end */
+
+/* @group content-section */
+
+.bodyview .content-section {
+	margin-bottom: 20px;
+	padding-bottom: 10px; 
+	/* the padding is to not have the overflow happen because images end up being surrounded with a strange few pixels of margin-bottom */
+	overflow: auto;
+	/* and this of course is a hack to stretch the div as high as the floats */
+
+}
+
+.bodyview .content-section .right-column {
+}
+	
+/* @group image-section */
+
+.bodyview .content-section .image-section {
+	text-align: right;	
+}
+
+.bodyview .content-section .image-section .image {
+	margin-bottom: 10px;
+}
+
+
+.bodyview .content-section .image-section .image .image-description {
+	font-size: .8em;
+	line-height: 1.5em;
+	color: #767676;
+	text-align: right;	
+	margin-top: 0px;
+}
+
+
+/* @end */
+
+/* @group Info */
+
+.bodyview .content-section .info {
+	font-size: .8em;
+	margin-top: -4px;
+	margin-bottom: 10px;
+}
+
+.bodyview .content-section .info .hosts {
+	font-style: italic;
+}
+
+.bodyview .content-section .info .hosts .host {
+	font-weight: bold;
+}
+
+.bodyview .content-section .info .hosts .comma {
+	margin-left: -3px;
+}
+
+.bodyview .content-section .info .aired_date {
+}
+
+.bodyview .content-section .info .aired_date_itself {
+	font-weight: bold;
+	
+}
+
+
+
+/* @end */
+
+/* @group Listen */
+
+.bodyview .content-section .listen {
+	margin: 10px 0px 10px 0px;
+	font-size: 2.2em;
+}
+
+.bodyview .content-section .listen .listen-button {
+}
+
+.bodyview .content-section .listen .listen-button a {
+	text-decoration: none;
+}
+
+/* @end */
+
+/* @group Content */
+
+.bodyview .content-section .content {
+	line-height: 1.6em;
+	margin-bottom: 20px;
+	font-size: .875em;
+}
+
+.bodyview .content-section .content a {
+	color:  #007F93;
+}
+
+.bodyview .content-section .content a:hover {
+	color:  #46C8DC;
+}
+
+
+
+/* @end */
+
+/* @group Share-Like */
+
+
+.bodyview .share-like {
+	text-align: left;
+	overflow: hidden;
+	padding-top: 2px;
+}
+
+
+.bodyview .share-like .addthis {
+	float: left;
+	font-size: .85em;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+
+.bodyview .share-like .twitter {
+	margin-bottom: 5px;
+	float: left;
+}
+
+
+.bodyview .share-like .fblike {
+	float: left;
+	font-size: .85em;
+	margin-right: 15px;
+	margin-top: -2px;
+}
+
+/* @end */
+
+
+
+
+/* @end */
+
+/* @group gridview-chooser */
+
+.bodyview .gridlist-chooser {
+	margin-top: 5px;
+	font-size: .85em;
+	text-align: right;
+}
+
+.bodyview .gridlist-chooser .choice {
+/*	font-weight: bold; */
+	color: #323232;
+	padding: 2px 5px;
+	-webkit-border-radius: 7px; -khtml-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+	cursor: pointer;
+}
+
+.bodyview .gridlist-chooser .chosen {
+	background-color: #46C8DC !important;
+	color:  white;	
+}
+
+
+.bodyview .gridlist-chooser a.choice:hover {
+	background-color: #B7F0F0;
+	text-decoration: none;
+}
+
+
+/* @end */
+
+/* @group also-in-the-series-section */
+
+/* for a series */ 
+
+.bodyview .also-in-the-series-section {
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 10px;
+}
+
+.bodyview .also-in-the-series-section .series-title {
+	padding: 4px 0px;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.bodyview .also-in-the-series-section .series-title a {
+	color: #323232;
+}
+
+
+.bodyview .also-in-the-series-section .series-title a:hover {
+	color:  #46C8DC;
+}
+
+
+.bodyview .also-in-the-series-section .also-in-the-series-browse {
+	overflow: hidden;
+	padding: 5px 5px;
+	margin: -5px -5px -5px -5px;
+}
+
+
+.bodyview .also-in-the-series-section .also-in-the-series-browse.gridview {
+	margin-right: -15px;
+}
+
+
+
+/* @end */
+
+/* @group in-this-series-section */
+
+.bodyview .in-this-series-section {
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.bodyview .in-this-series-section .series-title {
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.bodyview .in-this-series-section .series-title a {
+	color: #767676;
+}
+
+
+.bodyview .in-this-series-section .series-title a:hover {
+	color:  #46C8DC;
+}
+
+
+.bodyview .in-this-series-section .in-this-series-browse {
+	overflow: hidden;
+	padding: 5px 5px;
+	margin: -5px -5px;
+}
+
+
+/* @end */
+
+/* @group by-this-host-section */
+
+.bodyview .by-this-host-section {
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.bodyview .by-this-host-section .by-this-host-browse {
+	overflow: hidden;
+	padding: 5px 5px;
+	margin: -5px -5px;
+}
+
+
+/* @end */
+
+/* @group tags-section */
+
+
+
+.bodyview .tags-section {
+	margin-bottom: 40px;
+}
+
+.bodyview .tags-section .tags {
+	font-size: .85em;
+	overflow: hidden;
+	padding-top: 6px;
+}
+
+.bodyview .tags-section .tags .tag {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 3px;
+	color: #767676;
+border-bottom: 1px dotted #46C8DC;
+	padding: 1px 2px;
+
+}
+
+.bodyview .tags-section .tags a:hover {
+	text-decoration: none;
+}
+
+.bodyview .tags-section .tags a:hover .tag  {
+	background-color: #E3f7fA;
+	color: #323232;
+}
+
+
+
+
+/* @end */
+
+/* @group Comments */
+
+/* @group Disqus */
+
+#disqus_thread {
+	margin-left: 270px; /* width of .bodyview .right-column */
+}
+
+/* @end */
+
+/* @group Login to post */
+
+.node-inner ui.links  {
+	display: none !important;
+}
+
+li.comment_forbidden {
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* @end */
+
+/* @group Individual Comments */
+
+#comments #comments-title {
+	background-color: #767676;
+	color: #FFF;
+	text-align: right;
+	padding: 4px 7px;
+	font-size: 1em;
+	font-weight: bold;
+	width: 236px;
+	margin-bottom: 10px;
+}
+
+#comments .comment-inner-inner {
+	overflow: hidden;
+	position: relative;
+}
+
+/* @group Submitted-section */
+
+#comments .comment  {
+	margin-bottom: 15px;
+}
+
+#comments .comment .submitted-section {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+	font-size: .8em;
+	text-align: right;
+	line-height: 1.5em;
+
+}
+
+#comments .comment .submitted-section .posted-by-user {
+	display: inline;
+	font-weight: bold;
+}	
+
+#comments .comment .submitted-section .new {
+}
+
+.comments-section {
+}
+
+/* @end */
+
+/* @group content-section */
+
+#comments .comment .content-section {
+	margin-left: 270px;
+	min-height:40px;
+  	height:auto !important;
+  	height:40px;
+	font-size: .85em;
+	background-color: #DDD;
+	padding: 10px 10px 0px 10px;
+} 
+
+#comments .comment .content-section p {
+	margin: 0px 0px 0px 0px;
+	padding-bottom: 10px;
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Post New comment */
+
+#comments .box {
+	margin-left: 150px;
+	background-color: #DDD;
+	padding: 10px;
+}
+
+#comments .box-inner .resizable-textarea{
+	width: 100%;
+}
+
+/* @end */
+/* @end */
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Node Type */
+
+/* @group Exhibition */
+
+
+.node-type-exhibition #content-header {
+}
+
+.node-type-exhibition .content-section .content {
+	font: 14px/22px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+}
+
+.exhibition-teaser .title {
+	font-style: italic;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+/* @end */
+
+/* @group Page */
+
+.node-type-page #content-header {
+	margin-right: 400px;
+}
+
+.node-type-page .node-inner .content {
+	margin-right: 400px;
+	line-height: 22px;
+	font-size: 14px;
+}
+
+/* @end */
+
+/* @group Air Stream */
+
+/* @group Teaser */
+
+.view-airstream-related .view-header {
+	margin-bottom: 5px;
+	font-size: .85em;
+	font-weight: bold;
+}
+
+
+.airstream-teaser .airstream-listing {
+	margin-bottom: 5px;
+}
+
+.airstream-teaser .airstream-listing .rownumber {
+	float: left;
+	margin-right: 10px;
+}
+
+.airstream-teaser .airstream-listing .airstream-title {
+	font-size: .8em;
+	text-align: right;
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+.airstream-teaser .airstream-listing .producers {
+	font-size: .8em;
+	text-align: right;
+	font-style: italic;
+	color: #888;
+}
+
+.airstream-teaser .airstream-listing .producers a {
+	color: #888;
+}
+
+/* @end */
+
+/* @group Body */
+
+.airstream-body .airstream-textcontent {
+	font-size: .85em;
+	line-height: 1.7em;
+	margin: 20px 0px;
+}
+
+.airstream-body .airstream-list {
+	margin-top: 0px;
+}
+
+
+.airstream-body .airstream-listing .rownumber {
+	font-size: 1.5em;
+	margin: 10px 10px 0px 0px;
+	font-weight: bold;
+	float: left;
+	width: 10px; 
+}
+
+
+.node-type-airstream .airstream-body .airstream-box {
+	margin: 0px 0px 10px 20px; 
+	/*margin-left is width of rownumber + its margin */
+}
+
+.airstream-body .airstream-box {
+	padding: 10px;
+	border: 1px solid black;
+	font-size: .8em;
+	line-height: 1.5em;
+}
+
+.airstream-body .airstream-listing .image {
+	float: left;
+	width: 120px;
+	height: 80px; /* this is the size of airstream_list_thumbnail imagecache preset. */
+	margin-right: 10px;
+}
+
+.airstream-body .airstream-listing .type {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.airstream-body .airstream-listing  .title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+
+.airstream-body .airstream-listing .producers {
+	text-align: right;
+	font-size: .95em;
+	font-style: italic;
+}
+
+.airstream-body .airstream-listing .producer {
+	font-weight: bold;
+}
+
+
+.airstream-body .airstream-listing .series {
+	text-align: right;
+	font-style: italic;
+	font-size: .95em;
+}
+
+.airstream-body .airstream-listing .series a {
+	font-weight: bold;
+}
+
+.airstream-body .airstream-listing .textcontent {
+	margin: 10px 0px 0px 130px;
+}
+
+.airstream-body .airstream-listing .textcontent p {
+	margin-top: 0px;
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group News
+ */
+
+
+.node-type-news .bodyview .left-column {
+	display: none;
+}
+
+.node-type-news .bodyview .right-column {
+	margin-left: 0px !important; /*width of left-column + margin 20px*/
+}
+
+/* @group News Contents View */
+
+.news-body .view-news-contents {
+	text-align: left;
+}
+
+.news-body .nivo-caption {
+	font-family:  'MuseoSlab500', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;	
+}
+
+/* @end */
+/* @end */
+
+/* @group Playlist */
+
+/* @group Teaser */
+
+.playlist-teaserbox {
+	border: 5px double #666;
+	padding: 5px;
+}
+
+
+
+/* @end */
+
+/* @group Listing */
+
+playlist-listing {
+	margin-right: 20px;
+}
+
+.playlist-view {
+	margin-top: 40px;
+}
+
+
+.playlist-view .rownumber {
+	font-size: 2em;
+	margin: 10px 10px 0px 0px;
+	font-weight: bold;
+	float: left;
+	width: 20px; 
+}
+
+.playlist-view .playlist-view-item {
+	margin: 0px 20px 10px 30px; 
+	/*margin-left is width of rownumber + its margin */
+	padding: 10px;
+	border: 1px solid black;
+	font-size: .8em;
+	line-height: 1.5em;
+}
+
+.playlist-view .playlist-view-item  .image-section {
+	float: left;
+	width: 120px;
+	height: 80px;
+	margin-right: 10px;
+}
+
+.playlist-view .playlist-view-item  .type {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.playlist-view .playlist-view-item  .title {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+
+.playlist-view .playlist-view-item  .producers {
+	text-align: right;
+	font-size: .95em;
+	font-style: italic;
+}
+
+.playlist-view .playlist-view-item  .producer {
+	font-weight: bold;
+}
+
+
+.playlist-view .playlist-view-item  .series {
+	text-align: right;
+	font-style: italic;
+	font-size: .95em;
+}
+
+.playlist-view .playlist-view-item  .series a {
+	font-weight: bold;
+}
+
+.playlist-view .playlist-view-item .textcontent {
+	margin: 10px 0px 0px 130px;
+}
+
+.playlist-view .playlist-view-item .textcontent p {
+	margin-top: 0px;
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Series */
+
+.view-series-other-related .view-header {
+	font-size: .85em;
+	font-weight: bold;
+}
+
+.view-series-content .view-header {
+	margin-bottom: 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Views Pages (non-Archive) */
+
+/* @group New This Week */
+
+.view-new-this-week .newthisweek-title {
+	color: #00A2B6;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+	font-size: 1.8em;
+	line-height: 1.5em;
+}
+
+
+/* @end */
+
+/* @group Gallery-View */
+
+
+.view-gallery-view .gallery-title {
+	color: #00A2B6;
+	font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	font-weight: bold;
+}
+
+/* @group Gallery View Page */
+
+.view-gallery-view.view-display-id-page_1 .gallery-title {
+	font-size: 40px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+/* @end */
+
+/* @group Gallery View Block */
+
+.block .view-gallery-view .gallery-title {
+	color: white;
+	font-size: 1.8em;
+	line-height: 1.5em;
+}
+
+.block .view-gallery-view {
+	-webkit-border-radius: 15px; -khtml-border-radius: 15px; -moz-border-radius: 15px; border-radius: 15px;
+	background-color: #00A2B6;
+	padding: 5px 10px 15px 10px;
+	color: white;
+	font-size: .85em;
+}
+
+.block .view-gallery-view a {
+	color: white;
+}	
+
+.block .view-gallery-view a {
+	text-decoration: none;
+}
+
+
+/* @end */
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Archive */
+
+/* Really a view but BIG enough for its own group */
+
+/* @group Fixed Site Header and Sidebar */
+/*
+
+body.archive #header {
+	margin-bottom: 0px;
+	position: fixed;
+	z-index: 100;
+	height: 140px;
+	margin-top: -35px;
+	padding-top: 20px;
+	width: 960px; // width of page 
+	background-color: white;
+}
+
+body.archive #header #header-inner {
+	position: relative;
+}
+
+.view.archive {
+	position: relative;
+	margin-top: 150px;
+}
+
+.archive #sidebar-left { 
+	margin-top: 150px;
+	z-index: 99;
+}
+
+*/
+/* @end */
+
+/* @group Archive Header/Logo */
+
+.archive_with_menu .archive-logo-block {
+	font-weight: bold;
+	font-size: 1.5em;
+	padding: 10px;
+	background-color: #46C8DC;
+	color: white;
+	margin-bottom: 15px;
+	-webkit-border-radius: 7px; -khtml-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+}
+
+/* @group View-header */
+
+.archive .view-header {
+	border-bottom: 1px dotted #323232;
+	padding-bottom: 5px;
+	margin-top: 14px;
+	margin-bottom: 35px;	
+	height:  35px;
+	position: relative;
+}
+
+.archive .view-header .archive-view-header, .archive .view-header .archive-view-title  {
+	position: absolute;
+	bottom: 6px;
+}
+
+.archive .view-header .archive-view-header .search-types {
+	color: #999;
+	font-weight: normal;
+	display: inline;
+	margin-left: 5px;
+}
+
+.archive .view-header .archive-view-title, .archive-view-header {
+	color: #323232;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+
+.archive-view-header-type {
+	font-weight: bold;
+	font-style: italic;
+}	
+
+.archive-view-header-keys {
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+/* @group gridview-chooser */
+
+.archive .gridlist-chooser {
+	margin-top: 15px;
+	font-size: .85em;
+/*	font-weight: bold; */
+	position: absolute;
+	bottom: 5px;
+	right: 0px;
+}
+
+.archive .gridlist-chooser .choice {
+	color: #323232;
+	padding: 2px 5px;
+	-webkit-border-radius: 7px; -khtml-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+	cursor: pointer;
+	margin: 0px 4px;
+}
+
+.archive .gridlist-chooser .chosen {
+	background-color: #46C8DC !important;
+	color:  white !important;	
+}
+
+
+.archive .gridlist-chooser a.choice:hover {
+	background-color: #B7F0F0;
+	text-decoration: none;
+}
+
+
+/* @end */
+
+
+
+/* @end */	
+
+/* @end */
+
+/* @group Archive Menu */
+
+/* @group Browse Menu */
+
+/* @group Border and Title */
+
+
+#block-block-12 h2.title {
+	font-size: 1.2em;
+	color: #00A2B6;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #323232;
+}
+
+.archive-menu-block {
+	font-size: .85em;
+		-webkit-border-radius: 7px; -khtml-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+}
+
+.archive-menu-block .title {
+	font-weight: bold;
+}
+
+.archive-menu-block .archive-menu-inner {
+	margin: 0px;
+	padding: 10px 0px;
+}
+
+
+
+/* @end */
+
+/* @group Browse Items */
+
+.archive-menu-block .archive-menu-inner a {
+	display: block;
+	padding: 1px 5px;
+	
+}
+
+.archive-menu-block .archive-menu-inner a:hover {
+	background-color: #B7F0F0;
+	color: black;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;	
+	border-radius: 5px;
+}
+
+
+.archive-menu-block .archive-menu-inner a.active {
+	background-color: #46C8DC;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-khtml-border-radius: 5px;	
+	border-radius: 5px;
+	color: white;
+}
+
+
+/* @end */
+
+/* @group Hosts */
+
+
+.view-archive-hosts .view-content .views-summary {
+	font-size: .85em;
+	display: block;
+}
+.view-archive-hosts .view-content .views-summary a {
+	display: inline;
+}
+
+.archive-menu-block .hosts-content {
+	display: none;
+	margin-left: 5px;
+	font-size: .9em;
+	line-height: 1.4em;
+	height: 300px;
+	overflow: auto;
+	border-left: 4px solid #00A2B6;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.archive-menu-block .archive-menu-link .hosts-status {
+	margin-left: 4px;
+}
+
+/* @end */
+
+/* @group Series */
+
+
+.view-archive-series .view-content .views-summary {
+	font-size: .85em;
+	display: block;
+}
+.view-archive-series .view-content .views-summary a {
+	display: inline;
+}
+
+.archive-menu-block .series-content {
+	display: none;
+	margin-left: 5px;
+	font-size: .9em;
+	line-height: 1.4em;
+	height: 300px;
+	overflow: auto;
+	border-left: 4px solid #00A2B6;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.archive-menu-block .archive-menu-link .series-status {
+	margin-left: 4px;
+}
+
+/* @end */
+
+/* @group Categories */
+
+
+.view-archive-categories .view-content .views-summary {
+	font-size: .85em;
+	display: block;
+}
+.view-archive-categories .view-content .views-summary a {
+	display: inline;
+}
+
+.archive-menu-block .categories-content {
+	display: none;
+	margin-left: 5px;
+	font-size: .9em;
+	line-height: 1.4em;
+	height: 300px;
+	overflow: auto;
+	border-left: 4px solid #00A2B6;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.archive-menu-block .archive-menu-link .category-status {
+	margin-left: 4px;
+}
+
+/* @end */
+
+/* @group Tags */
+
+.archive-menu-block .tags-content {
+	display: none;
+	margin-left: 5px;
+	font-size: .9em;
+	height: 300px;
+	overflow: auto;
+	border-left: 4px solid #00A2B6;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.archive-menu-block .archive-menu-link .tags-status {
+	margin-left: 4px;
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Search Menu (Exposed from archive_audio) */
+
+/* @group Border and Title */
+
+
+
+#block-views--exp-archive-page_1 h2.title {
+	font-size: 1.2em;
+	color: #00A2B6;
+	padding-bottom: 5px;
+	border-bottom: 1px dotted #323232;
+}
+
+#views-exposed-form-archive-page-1 {
+	padding: 5px 0px 0px 5px;
+	font-size: .85em;
+	-webkit-border-radius: 7px; -khtml-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px;
+
+}
+
+
+
+
+/* @end */
+
+/* @group Keywords Box */
+
+#views-exposed-form-archive-page-1 #edit-keys-wrapper {
+	margin-right: 10px;
+}
+
+#views-exposed-form-archive-page-1 #edit-keys {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+/* @end */
+
+/* @group Type */
+
+#views-exposed-form-archive-page-1 .bef-select-as-checkboxes {
+	margin: 0px;
+}
+
+#views-exposed-form-archive-page-1 .bef-checkboxes .form-item {
+	float: left;
+	margin-right: 10px;
+}
+
+#views-exposed-form-archive-page-1 .bef-checkboxes label {
+	padding: 4px;
+	color: #AAA;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;	
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+
+}
+
+
+#views-exposed-form-archive-page-1 .bef-checkboxes label.checked-label {
+	background-color: #46C8DC;
+	color: white;
+}
+
+
+#views-exposed-form-archive-page-1 .bef-checkboxes label.hovered-label {
+	background-color: #B7F0F0 !important;
+	color: #777;	
+}
+
+
+
+#views-exposed-form-archive-page-1 .bef-checkboxes label.checked-label.hovered-label {
+	background-color: #B7F0F0 !important;
+	color: #777;	
+}
+
+/* @end */
+
+/* @group Apply */
+
+
+#views-exposed-form-archive-page-1 .views-exposed-widget {
+	width: 100%;
+}
+
+#views-exposed-form-archive-page-1 .views-exposed-widget #edit-submit-archive {
+	float: right;
+	margin-top: 0px;
+	margin-right: 10px;
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @end */
+
+/* @group Archive View */
+
+/* @group Pager */
+
+.archive ul.pager {
+	text-align: right;
+	font-size: .9em;
+	border-top: 1px dotted #767676;
+	padding-top: 10px;
+}
+
+.archive ul.pager li {
+	padding: 0px;
+	color: white;
+	font-weight: bold;
+}
+
+.archive ul.pager li.pager-current, 
+.archive ul.pager li a, 
+.archive ul.pager li.pager-ellipsis {
+	color: white;
+	background-color: #00A2B6;
+	margin: 0px;
+	padding: 3px 4px;
+}
+
+.archive ul.pager li.pager-current {
+	background-color: #ECC100 !important;
+}
+.archive ul.pager li a:hover {
+	font-weight: bold;
+}
+
+
+
+
+
+/* @end */
+
+table.views-view-grid {
+	margin-top: 0px;
+}
+.view-archive .view-empty .empty-results {
+	border:1px solid #CCC;
+	padding: 10px;
+	margin-top: 15px;
+	text-align: center;
+	-webkit-border-radius: 7px;
+	-khtml-border-radius: 7px;	
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.view.archive .view-content {
+	margin-right: -30px; /* a hack so that the marign-right of the rightmost column doesn't break the float */ 
+}
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Drupal Backend */
+
+/* @group Messages */
+
+.messages {
+	font-size: .85em;
+}
+
+/* @end */
+
+/* @group Node Edit Form */
+
+/* @group Textarea */
+
+.form-textarea {
+	font-size: .9em;
+}
+
+
+/* @end */
+
+
+
+/* @end */
+
+
+
+/* @end */
+
+/* @group Footer (at the very very bottom) */
+
+/* @group login link */
+
+.login_link {
+	text-align: right;
+	font-size: .8em;
+}
+
+.login_link a {
+	color: #EEE;
+	text-decoration: underline;
+}
+
+.login_link a:hover {
+	color: #323232;
+}
+
+/* @end */
+
+.footer {
+	margin-top: 80px;
+	margin-bottom: 40px;
+	text-align: right;
+}
+
+.footer .footer_menu {
+	color: #767676;
+	padding: 10px 0px;
+	border-top: 1px dotted #AAA;
+	border-bottom: 1px dotted #AAA;
+	margin-bottom: 10px;
+}
+
+.footer .footer_menu a {
+	color: #767676;
+	font-weight: bold;	
+}
+
+.footer .footer_menu a:hover {
+	color: #46C8DC;
+}
+
+.footer .footer_menu a:hover img {
+	text-decoration: none;
+}
+.footer .footer_menu a img {
+	margin-bottom: -5px;
+}
+
+
+.footer .footer_text {
+	font-size: .7em;
+	color: #767676;
+	line-height: 1.5em;
+}
+
+
+/* @end */
+
+/* @group Lightbox */
+
+#lightbox #imageData {
+	margin-bottom: 10px;
+}
+
+#lightbox #imageData #imageDetails {
+	overflow: hidden;
+	margin-right: 0px;
+}
+#lightbox #imageData #imageDetails #caption {
+	font-weight: normal;
+	color: #767676;
+	float: right;
+}
+/* @end */
+
+
+
+/* @end */
+
+/* @group == Backend/Admin Display */
+
+/* @group Nodequeue Links */
+/* technically this isn't on the backend, but whatever. */
+
+.backend-nodequeue-add {
+	padding: 10px;
+	background-color: #787878;
+}
+
+.backend-nodequeue-add .backend-label {
+	
+}
+
+
+/* @end */
+
+
+
+/* @end */

@@ -1,0 +1,453 @@
+<?php
+
+// $Id$ node_debug_info.module,v .1a 2010/06/23 11:10:07 egerm Exp $
+
+
+
+/**
+
+* @file
+
+* Node Debug Report
+
+*
+
+* resovle the "warning: Invalid argument supplied for foreach() 
+
+*  in /[path to]/modules/taxonomy/taxonomy.module on 
+
+*  line 1241." issue.
+
+*
+
+*/
+
+
+
+/**
+
+* Dislplay in the Administrator menu
+
+* @return  :  array containing the information to display in menu
+
+*
+
+*/
+
+function node_debug_info_menu() {
+
+  $items = array();
+
+
+
+  // for the reports
+
+  $items['admin/reports/node_debug_info'] = array(
+
+    'title' => 'Node Debug Information Report',
+
+    'description' => 'Display possibles node and table discrepancies.',
+
+    'page callback' => 'node_debug_info_information',
+
+    'access arguments' => array('access system info'),
+
+  );
+
+
+
+  return ($items);
+
+}
+
+
+
+
+
+/**
+
+* Display the report
+
+*
+
+*/
+
+function node_debug_info_information() {
+
+  // get term_data information; note PK is tid, but vid is the vocab id used
+
+  $result = db_query("SELECT * FROM {term_data} ORDER BY tid");
+
+  while ($row = db_fetch_array($result)) {
+
+    $term_data[$row["tid"]] = array(
+
+      "vid" => $row["vid"], 
+
+      "name" => $row["name"], 
+
+      "description" => $row["description"]
+
+    );
+
+  }
+
+
+
+  // get term_node information; note PK is tid + vid
+
+  // tid = term_date.nid
+
+  // vid = node.vid
+
+  // nid = node.nid
+
+  $result = db_query("SELECT * FROM {term_node} ORDER BY nid");
+
+  while ($row = db_fetch_array($result)) {
+
+    $term_node[$row["nid"]] = array("vid" => $row["vid"], "tid" => $row["tid"]);
+
+  }
+
+
+
+  // get node information
+
+  $result = db_query("SELECT * FROM {node} ORDER BY vid");
+
+  while ($row = db_fetch_array($result)) {
+
+    $node_vid[$row["vid"]] = $row["title"];
+
+    $node[$row["nid"]] = array(
+
+      "vid" => $row["vid"],
+
+      "type" => $row["type"],
+
+      "title" => $row["title"],
+
+      "uid" => $row["uid"],
+
+      "created" => $row["created"],
+
+      "changed" => $row["changed"]
+
+    );
+
+  }
+
+
+
+  // get user information
+
+  $result = db_query("SELECT * FROM {users} ORDER BY uid");
+
+  while ($row = db_fetch_array($result)) {
+
+    $users[$row["uid"]] = $row["name"];
+
+  }
+
+
+
+  // get term_data information; note PK is tid, but vid is the vocab id used
+
+  $result = db_query("SELECT vid, name FROM {vocabulary} ORDER BY vid");
+
+  while ($row = db_fetch_array($result)) {
+
+    $vocabulary[$row["vid"]] = $row["name"];
+
+  }
+
+
+
+  $out = <<<TREE
+
+    <p>The following is a report that queries various tables: node, node_revisions, term_data,
+
+        term_node, users and vocabulary. This report does not offer "solutions"; it just provides
+
+        results that you need to interpret. Most of these can be resolved by modifying rows within
+
+        specific tables. This report does not tell you which rows within the tables to modify.</p>
+
+TREE;
+
+  // save out to compare later
+
+  $out_no_errors = $out;
+
+
+
+
+
+  //
+
+  // look for a term_node.tid that does not exist in term_data.tid
+
+  //
+
+  $heading_term = "<h3>Using a term_data that does not exist</h3>
+
+    <p>This issue can be resolved by either: 1)
+
+    creating a term_data.tid with the tid of the missing, or 2) delete any row contianing that
+
+    value in term_node.tid
+
+    with ";
+
+  foreach ($term_node as $index => $joint) {
+
+    if (!array_key_exists($joint["tid"], $term_data)) {
+
+      @$out .= $heading_term . "<p>{$joint["tid"]} does not exist in term_data.tid
+
+        <blockquote>
+
+        term_node index/key: $index<br />
+
+        nid: {$joint["nid"]} = {$term_data[$index]["name"]}<br />
+
+        vid: {$joint["vid"]} = {$node_vid[$joint["vid"]]}
+
+        </blockquote></p>";
+
+        unset($heading_term);
+
+  } }
+
+
+
+
+
+  //
+
+  // check the vocabulary
+
+  //
+
+  $heading_vocab = "<h3>Missing Vocabulary</h3><p>The following is a list of term_data.vid that are NOT in
+
+    the vocabulary.vid. If a new vocabulary.vid is created all will be well.</p>";
+
+  // look for missing vocabulary entries
+
+  foreach ($term_data as $index => $data) {
+
+    if (!array_key_exists($data["vid"], $vocabulary)) {
+
+      @$out .= $heading_vocab . "<p>this term_data.vid/vocabulary.vid {$data["vid"]} IS NOT in vocabulary</p>";
+
+      unset($heading_vocab);
+
+  } }
+
+
+
+
+
+  //
+
+  // look for gjunked up nodes
+
+  //
+
+  foreach ($node as $index => $data) {
+
+    //$dump = ecd_node_load($index, NULL, TRUE);
+
+    $dump = node_load($index, NULL, TRUE);
+
+    if (empty($dump->taxonomy)) {
+
+      if ($index != $dump->nid) {
+
+        $refurb[] = $index;
+
+  } } }
+
+  //e_r($node);
+
+  
+
+  // if there were errors loading nodes, determine why they were bad
+
+  if ($refurb) {
+
+    // loop through the bad nodes to figure out what is wrong with them
+
+    foreach ($refurb as $bad) {
+
+      //$result = db_query("SELECT * FROM {node_revisions} WHERE nid=$bad");
+
+      $result = db_query("SELECT * FROM {node_revisions} WHERE nid=%d", $bad);
+
+      $fetch = db_fetch_array($result);
+
+
+
+      // if no result was found
+
+      if (!$fetch) {
+
+        $result = db_query("SELECT * FROM {node_revisions} WHERE vid=%d", $node[$bad]["vid"]);
+
+        $fetch_vid = db_fetch_array($result);
+
+        if (!$fetch_vid) {
+
+          // if the node.nid cannot be found in node_revisions.nid, then there are greater forces at play
+
+          @$out .= "<h3>node.nid($bad) CANNOT be found in node_revisions.nid</h3>
+
+            <p>The node_revisions table lacks the row being called from node.nid($bad) with it's
+
+            matching node.vid. <em>There is also not a node_revisions.vid({$node[$bad]["vid"]}) in 
+
+            node_revisions.</em> One solution to resolve this is to insert a row into node_revisions where:
+
+            <blockquote>
+
+              node_revisions.nid = $bad<br />
+
+              node_revisions.vid = {$node[$bad]["vid"]}<br />
+
+              node_revisions.uid = {$node[$bad]["uid"]}<br />
+
+              node_revisions.title = {$node[$bad]["title"]}<br />
+
+              node_revisions.body = This is a recovery for lost content.<br />
+
+              node_revisions.teaser = This is a recovery for lost content.<br />
+
+            </blockquote>
+
+            </p>
+
+            ";
+
+        } 
+
+        else {
+
+          // if the node.nid cannot be found in node_revisions.nid, then there are greater forces at play
+
+          @$out .= "<h3>node.nid($bad) CANNOT be found in node_revisions.nid</h3>
+
+            <p>The node_revisions table lacks the row being called from node.nid($bad) with it's
+
+            matching node.vid.
+
+            There IS a node_revisions.vid({$node[$bad]["vid"]}) that exists and it does not belong
+
+            to the node.nid($bad) in question. This may prove to be
+
+            diffucult to resolve.</p>
+
+            <p>Information to assist in troubleshooting further:
+
+            <blockquote>
+
+              node.nid = $bad<br />
+
+              node.vid = {$node[$bad]["vid"]}<br />
+
+              node.title = {$node[$bad]["title"]}<br />
+
+              node_revisions.nid = DOES NOT EXIST<br />
+
+              node_revisions.vid = {$node[$bad]["vid"]}, EXISTS
+
+            </blockquote>
+
+            </p>
+
+            ";
+
+        } 
+
+      } 
+
+      elseif (!array_key_exists($fetch["uid"], $users)) {
+
+        // check to make sure a node_revisions.uid actually exists in the users.uid
+
+        // create users.uid 16 to resolve our problem
+
+        $bad_users[$fetch["uid"]][$fetch["nid"] . "_" . $fetch["vid"]]["nid"] = $fetch["nid"];
+
+        $bad_users[$fetch["uid"]][$fetch["nid"] . "_" . $fetch["vid"]]["vid"] = $fetch["vid"];
+
+    } }
+
+
+
+    // format the bad users
+
+    if ($bad_users) {
+
+      foreach ($bad_users as $index => $data) { 
+
+        if (is_numeric($index)) {
+
+          $temp_out = "<h3>Invalid user referenced: $index</h3><p><blockquote>";
+
+          
+
+          foreach ($data as $error) {
+
+          $temp_out .= "node_revisions.nid({$error[nid]})
+
+            & node_revisions.vid({$error[vid]}) 
+
+            uses node_revisions.<b>uid</b>($index), 
+
+            but users.uid($index) does NOT EXIST.<br />";
+
+        }
+
+        $temp_out .= "</blockquote></p>";
+
+        @$out .= $temp_out;
+
+  } } } }
+
+
+
+  if ($out == $out_no_errors) {
+
+    $out .= "<h3>No errors were found using this script, but that doesn't mean there are
+
+      some.</h3>";
+
+  }
+
+  return ($out);
+
+}
+
+
+
+
+
+/**
+
+* Special debuging function
+
+*
+
+*/
+
+/*
+
+function e_r($array, $title = "something important") {
+
+  echo "<h4>$title</h4><pre>"; print_r($array); echo "</pre></p><hr /><br /></br />";
+
+}
+
+*/

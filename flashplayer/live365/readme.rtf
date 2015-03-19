@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf949\cocoasubrtf540
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+\margl1440\margr1440\vieww21740\viewh18860\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+
+\f0\fs24 \cf0 ################################################################\
+#\
+# LIVE365 CLIENT DESIGNED EMBEDDED OR POP-UP PLAYER\
+#\
+# (c) Copyright 2003-10 Live365, Inc.\
+# 950 Tower Lane #1550\
+# Foster City, CA 94404.\
+# All rights reserved.\
+#\
+################################################################\
+\
+######### REQUIRED PARAMETERS #########\
+\
+station_broadcaster\
+station_id\
+stream_id\
+\
+You can find your unique IDs on our website, log-in and visit \
+\cf2 \ul \ulc2 http://www.live365.com/broadcast/broadcast.live?console=1#playerInfo\cf0 \ulnone \
+Configure these ID's in mini/index.html starting at line 37\
+\
+\
+######### OPTIONAL PARAMETERS #########\
+\
+Locate CSS Styles\
+Image Directory\
+Other Positioning and Colors Call-outs\
+\
+Configure these ID's in index.html starting at line 42\
+\
+\
+######### ADS #########\
+\
+This zip file has three configurations of the custom player:\
+\
+Custom player with 468x60 banner and 300x250 ad\
+- index.html\
+\
+Custom player with 468x60 banner\
+- 1_ad.html\
+\
+Custom player with no ads\
+- no_ads.html\
+\
+You can insert your own ads or branding in these spaces, or point to a 3rd party ad server to deliver your ads.\
+\
+\
+######### STYLES & COLORS #########\
+\
+mini.css dictates the outer shell, color.\
+pls.css dictates the playlist styles, including playlist background image\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
+\cf0 playlistbody\
+- Used in main <BODY> tag of HTML document. \
+\
+playlist\
+- Default style for player\
+\
+artist\
+- Type size, weight, and height for current track playing.\
+\
+A:link, A:visited, A:active, A:hover, A.embeddedlink:link, A.embeddedlink:visited, A.embeddedlink:active, A.embeddedlink:hover\
+- Since nearly everything in the playlist display is actually a link to another page, it is important to get the display of HTML anchors properly defined in the CSS file. \
+\
+nowplaying \
+- Color used for current track playing.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\ql\qnatural\pardirnatural
+\cf0 \
+######### IMAGES #########\
+\
+See folder, pretty self-explainatory\
+\
+Configure your image directory in mini/index.html starting at line 43\
+\
+\
+}

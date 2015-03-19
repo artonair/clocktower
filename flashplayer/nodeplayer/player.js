@@ -1,0 +1,305 @@
+$(function(){
+
+  //var base_url = "http://clocktower.org/drupal/play/";
+  var base_url = "/drupal/play/";
+
+  var body        = $('body'),
+      overlay     = $('.overlay'),
+      copy        = $('.overlay .copy'),
+      embed       = $('.overlay .embed'),
+      time_left   = $('.time-left'),
+      total_time  = $('.total-time'),
+      scrubber    = $('.scrubber'),
+      elapsed_bar = $('.elapsed-bar'),
+      bar         = $('.bar'),
+      play_mode   = $('.play-mode'),
+      next_track  = $('.next-track'),
+      prev_track  = $('.previous-track'),
+      next_show   = $('.next-show'),
+      prev_show   = $('.previous-show');
+
+  var scrubberIsMoving = false,
+      started_paused   = false,
+      pastX = 0;
+
+  var track_count = formatted_playlist.length,
+      current_track_index = 0,
+      volume = 0.5; // TODO: Load from a cookie, and update image accordingly.
+
+  var track_title     = $('.track-title .title'),
+      track_count_el  = $('.track-title .track-count'),
+      track_artist    = $('.track-artist .artist'),
+      track_series    = $('.track-series .series'),
+      track_host      = $('.track-host .host'),
+      current_track   = $('#current-track'),
+      audio           = current_track.get(0),
+      total_time_el   = $('.total-time'),
+      time_left_el    = $('.time-left'),
+      time_elapsed_el = $('.time-elapsed');
+
+  // Load the page
+  // Play button gets pressed
+
+  if(previous_node == -1){ prev_show.addClass('disabled'); }
+
+  if(next_node == -1){ next_show.addClass('disabled'); }
+
+  var present_track = function(tracks, index, noplay){
+
+    var track = tracks[index];
+    current_track_index = index;
+
+    // Replace track title
+    track_title.html(track.title);
+    track_title.attr('title', track.title);
+
+    // Replace track artist
+    track_artist.html(track.artist);
+    track_artist.attr('title', track.artist);
+
+    // Replace track count
+    track_count_el.html((index+1)+"/"+track_count);
+
+    // Add mp3 url to audio tag
+    current_track.attr('src', track.file);
+    audio.load();
+    audio.volume = volume;
+
+    // Maybe disable next or previous track buttons
+    if(index >= tracks.length - 1){
+      next_track.addClass('disabled');
+    } else {
+      next_track.removeClass('disabled');
+    }
+
+    if(tracks.length == 1 || index == 0){
+      prev_track.addClass('disabled');
+    } else {
+      prev_track.removeClass('disabled');
+    }
+
+    var first_time = true;
+
+    $(audio).off();
+
+    var canplay = function(){
+      var search = window.location.search;
+      var autoplay = search.indexOf('autoplay=false');
+
+      if (autoplay !== -1) {
+        noplay = true;
+      }
+
+      if(noplay){
+        return false;
+      }
+      audio.oncanplay = undefined;
+      audio.onload = undefined;
+      audio.oncanplaythrough = undefined;
+      clearTimeout(canplay_timer);
+      update_time_stamps(audio.duration, 0);
+      if(first_time){
+        play_mode.click();
+        if(!play_mode.hasClass('paused')){
+	  play_mode.click();
+        }
+        first_time = false;
+      }
+    }
+
+    audio.oncanplay = function(e){
+	canplay();
+    };
+
+    audio.onload = function(e){
+	canplay();
+    }
+
+    audio.oncanplaythrough = function(e){
+	canplay();
+    }
+    clearTimeout(canplay_timer);
+    var canplay_timer = setTimeout(function(){
+      audio.oncanplay();
+    }, 1000);
+
+    $(audio).bind('ended', function() {
+        if(index < tracks.length - 1){
+          present_track(tracks, index+1);
+        } else {
+          next_show.click();
+        }
+    });
+
+    $(audio).bind('timeupdate', function() {
+      update_time_stamps(audio.duration, audio.currentTime);
+      elapsed_bar.css({
+        width: ((audio.currentTime / audio.duration)*100)+'%'
+      });
+    });
+
+  };
+
+  var update_time_stamps = function(duration, position) {
+      total_time_el.html(formatted_time_from_duration(duration, duration));
+      time_left_el.html(formatted_time_from_duration(duration, duration - position));
+      time_elapsed_el.html(formatted_time_from_duration(duration, position));
+  }
+
+  var formatted_time_from_duration = function(duration, position) {
+
+      var total_hours         = Math.floor(Math.floor(duration)/3600),
+          position_in_seconds = Math.floor(position);
+
+      var sec = (position_in_seconds%3600)%60,
+          min = Math.floor((position_in_seconds%3600)/60),
+          hrs = Math.floor(position_in_seconds/3600);
+
+      var use_short_format = true;
+      var total_time;
+
+      var pad = function(n){
+        return ("0"+n).slice(-2);
+      }
+
+      if(total_hours > 0){
+        use_short_format = !use_short_format;
+      }
+
+      if(use_short_format){
+        total_time = min+":"+pad(sec);
+      } else {
+        total_time = hrs+":"+pad(min)+":"+pad(sec);
+      }
+
+      return total_time;
+  }
+
+  present_track(formatted_playlist, 0, navigator.userAgent.match(/iPhone|iPad/i));
+
+  $('.x').click(function(){
+    overlay.hide();
+  });
+
+  $('.more-info').click(function(){
+    embed.hide();
+    copy.show();
+    overlay.show();
+  });
+
+  $('.share').click(function(){
+      copy.hide();
+      embed.show();
+      overlay.show();
+  });
+
+  time_left.click(function(){
+      time_left.hide();
+      total_time.show();
+  });
+
+  total_time.click(function(){
+      total_time.hide();
+      time_left.show();
+  });
+
+  scrubber.mousedown(function(e){
+      scrubberIsMoving = true;
+      pastX = e.pageX;
+      started_paused = false;
+      if(audio.paused){ started_paused = true; }
+      audio.pause();
+  });
+
+  bar.mousedown(function(e) {
+      elapsed_bar.css({
+        width: e.pageX - bar.offset().left
+      });
+      pastX = e.pageX;
+      scrubberIsMoving = true;
+      if(!$(e.target).hasClass('scrubber')){
+        body.trigger('mouseup');
+      }
+  });
+
+  body.mousemove(function(e){
+    if(scrubberIsMoving){
+      var currentWidth = parseInt(elapsed_bar.css('width'));
+      var newWidth = (currentWidth + (e.pageX - pastX));
+      if(newWidth < 0){ newWidth = 0; } else if (newWidth > 320){ newWidth = 320; }
+      elapsed_bar.css({
+        width: newWidth
+      });
+      pastX = e.pageX;
+    }
+  });
+
+  body.mouseup(function(){
+      if(scrubberIsMoving){
+        scrubberIsMoving = false;
+        var new_position = audio.duration * (parseInt(elapsed_bar.css('width'))/parseInt(elapsed_bar.offsetParent().width()));
+        audio.currentTime = new_position;
+        setTimeout(function(){ audio.play(); }, 100)
+        if(started_paused){
+          play_mode.click();
+        }
+      }
+  });
+
+  play_mode.click(function(){
+      if($(this).hasClass('paused')){
+        play_mode.removeClass('paused');
+        play_mode.find('.pause').hide();
+        play_mode.find('.play').show();
+        audio.pause();
+      } else {
+        play_mode.addClass('paused');
+        play_mode.find('.play').hide();
+        play_mode.find('.pause').show();
+        audio.play();
+      };
+  });
+
+  prev_show.click(function(){
+      if(!$(this).hasClass('disabled')){
+        document.location.href = base_url+previous_node+'/';
+      }
+  });
+
+  next_show.click(function(){
+      if(!$(this).hasClass('disabled')){
+        document.location.href = base_url+next_node+'/';
+      }
+  });
+
+  next_track.click(function(){
+      if(!$(this).hasClass('disabled')){
+        present_track(formatted_playlist, current_track_index+1);
+      }
+  });
+
+  prev_track.click(function(){
+      if(!$(this).hasClass('disabled')){
+        present_track(formatted_playlist, current_track_index-1);
+      }
+  });
+
+  body.on('click', '.volume.quiet', function(){
+      $(this).removeClass("quiet").addClass("medium");
+      volume = 0.5; // TODO: Save to cookie.
+      audio.volume = volume;
+  });
+
+  body.on('click', '.volume.medium', function(){
+      $(this).removeClass("medium").addClass("loud");
+      volume = 1.0; // TODO: Save to cookie.
+      audio.volume = volume;
+  });
+
+  body.on('click', '.volume.loud', function(){
+      $(this).removeClass("loud").addClass("quiet");
+      volume = 0.25; // TODO: Save to cookie.
+      audio.volume = volume;
+  });
+
+});

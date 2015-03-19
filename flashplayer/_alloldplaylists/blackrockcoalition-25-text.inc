@@ -1,0 +1,1 @@
+Darrell McNeill sits and does a rearview dash with the ever-analytical Paul Miller, infamously known as DJ Spooky a.k.a That Subliminal Kid. The two wax groovy and philosophic about beats, rhymes and life and the theories behind beats rhymes and life.

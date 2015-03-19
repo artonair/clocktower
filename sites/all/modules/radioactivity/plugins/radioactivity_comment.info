@@ -1,0 +1,12 @@
+name = Comment radioactivity
+description = "Provides radioactivity support for comments. This is not useful by itself. Combine this with modules like radioactivity-votingapi."
+dependencies[] = radioactivity
+package = Radioactivity
+core = 6.x
+
+; Information added by drupal.org packaging script on 2012-11-05
+version = "6.x-1.4"
+core = "6.x"
+project = "radioactivity"
+datestamp = "1352102541"
+

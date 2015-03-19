@@ -1,0 +1,1588 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ART on AIR</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/sites/all/themes/artonair/favicon.ico" type="image/x-icon" />
+  <link type="text/css" rel="stylesheet" media="all" href="/modules/aggregator/aggregator.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/node/node.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/defaults.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/system/system-menus.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/modules/user/user.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/cck/theme/content-module.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/ctools/css/ctools.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/datepicker.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/date/date_popup/themes/jquery.timeentry.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/filefield/filefield.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/lightbox2/css/lightbox_alt.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/logintoboggan/logintoboggan.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/tagadelic/tagadelic.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/modules/views/css/views.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/nivo-slider/nivo-slider.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/nivo-slider/style-nivo-slider.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen/html-elements.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen/tabs.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen/messages.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen/block-editing.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen/wireframes.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/css/layout.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/css/html-elements.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/css/artonair.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/typography/museoslab/stylesheet.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/css/artonair-custom.css?H" />
+<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/zen/zen/zen/print.css?H" />
+<link type="text/css" rel="stylesheet" media="print" href="/sites/all/themes/artonair/css/print.css?H" />
+<!--[if IE]>
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/zen/zen/zen/ie.css?H" />
+<link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/artonair/css/ie.css?H" />
+<![endif]-->
+  <script type="text/javascript" src="/sites/all/modules/jquery_update/replace/jquery.min.js?H"></script>
+<script type="text/javascript" src="/misc/drupal.js?H"></script>
+<script type="text/javascript" src="/sites/all/modules/google_analytics/googleanalytics.js?H"></script>
+<script type="text/javascript" src="/sites/all/modules/lightbox2/js/lightbox.js?H"></script>
+<script type="text/javascript" src="/sites/all/modules/poormanscron/poormanscron.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/jquery.nivo.slider.pack.js?H"></script>
+<script type="text/javascript" src="/sites/all/modules/views/js/base.js?H"></script>
+<script type="text/javascript" src="/sites/all/modules/views/js/ajax_view.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/script.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/menu.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/search.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/jquery.cookie.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/popupair.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/playlist.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/gridview.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/related.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/gridlist-chooser.js?H"></script>
+<script type="text/javascript" src="/sites/all/themes/artonair/js/archive_series_overlay.js?H"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "basePath": "/", "googleanalytics": { "trackOutgoing": 1, "trackMailto": 1, "trackDownload": 1, "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip" }, "lightbox2": { "rtl": 0, "file_path": "/(\\w\\w/)sites/default/files", "default_image": "/sites/all/modules/lightbox2/images/brokenimage.jpg", "border_size": 10, "font_color": "000", "box_color": "fff", "top_position": "", "overlay_opacity": "0.6", "overlay_color": "FFFFFF", "disable_close_click": 1, "resize_sequence": 0, "resize_speed": 200, "fade_in_speed": 200, "slide_down_speed": 200, "use_alt_layout": 1, "disable_resize": 0, "disable_zoom": 1, "force_show_nav": 0, "show_caption": 1, "loop_items": 1, "node_link_text": "", "node_link_target": 0, "image_count": "Image !current of !total", "video_count": "Video !current of !total", "page_count": "Page !current of !total", "lite_press_x_close": "press \x3ca href=\"#\" onclick=\"hideLightbox(); return FALSE;\"\x3e\x3ckbd\x3ex\x3c/kbd\x3e\x3c/a\x3e to close", "download_link_text": "", "enable_login": false, "enable_contact": false, "keys_close": "c x 27", "keys_previous": "p 37", "keys_next": "n 39", "keys_zoom": "z", "keys_play_pause": "32", "display_image_size": "original", "image_node_sizes": "()", "trigger_lightbox_classes": "", "trigger_lightbox_group_classes": "", "trigger_slideshow_classes": "", "trigger_lightframe_classes": "", "trigger_lightframe_group_classes": "", "custom_class_handler": 0, "custom_trigger_classes": "", "disable_for_gallery_lists": true, "disable_for_acidfree_gallery_lists": true, "enable_acidfree_videos": true, "slideshow_interval": 5000, "slideshow_automatic_start": 0, "slideshow_automatic_exit": 0, "show_play_pause": 0, "pause_on_next_click": 1, "pause_on_previous_click": 1, "loop_slides": 0, "iframe_width": 600, "iframe_height": 400, "iframe_border": 1, "enable_video": 0 }, "cron": { "basePath": "/poormanscron", "runNext": 1330461405 }, "views": { "ajax_path": "/views/ajax", "ajaxViews": [ { "view_name": "in_this_news", "view_display_id": "default", "view_args": "10806", "view_path": "frontpage", "view_base_path": null, "view_dom_id": "in-this-news-default-1", "pager_element": 0 } ] }, "cssInit": { "aggregator.css": true, "node.css": true, "defaults.css": true, "system.css": true, "system-menus.css": true, "user.css": true, "content-module.css": true, "ctools.css": true, "date.css": true, "datepicker.css": true, "jquery.timeentry.css": true, "filefield.css": true, "lightbox_alt.css": true, "logintoboggan.css": true, "tagadelic.css": true, "views.css": true, "nivo-slider.css": true, "style-nivo-slider.css": true, "html-elements.css": true, "tabs.css": true, "messages.css": true, "block-editing.css": true, "wireframes.css": true, "zen.css": true, "layout.css": true, "artonair.css": true, "stylesheet.css": true, "artonair-custom.css": true }, "jsInit": { "misc/jquery.js": true, "misc/drupal.js": true, "sites/all/modules/google_analytics/googleanalytics.js": true, "sites/all/modules/lightbox2/js/lightbox.js": true, "sites/all/modules/poormanscron/poormanscron.js": true, "sites/all/themes/artonair/js/jquery.nivo.slider.pack.js": true, "sites/all/modules/views/js/base.js": true, "sites/all/modules/views/js/ajax_view.js": true, "sites/all/themes/artonair/js/script.js": true, "sites/all/themes/artonair/js/menu.js": true, "sites/all/themes/artonair/js/search.js": true, "sites/all/themes/artonair/js/jquery.cookie.js": true, "sites/all/themes/artonair/js/popupair.js": true, "sites/all/themes/artonair/js/playlist.js": true, "sites/all/themes/artonair/js/gridview.js": true, "sites/all/themes/artonair/js/related.js": true, "sites/all/themes/artonair/js/gridlist-chooser.js": true, "sites/all/themes/artonair/js/archive_series_overlay.js": true } });
+//--><!]]>
+</script>
+    <meta name="site_name" content="Art International Radio" />
+
+</head>
+<body class="front not-logged-in one-sidebar sidebar-right">
+
+  <div id="page"><div id="page-inner">
+
+    <a name="navigation-top" id="navigation-top"></a>
+    
+    <div id="header"><div id="header-inner" class="clear-block">
+
+      
+              <div id="header-blocks" class="region region-header">
+            <div id="block-block-27" class="block block-block region-odd even region-count-1 count-10"><div class="block-inner">
+
+  
+  <div class="content">
+    
+<div id="nowplaying-custom">
+
+
+<div class="nowplaying-image"><a href="http://artonair.org/flashplayer/live365" onclick="popUpAIR(this.href,'fixed',480,420);return false;" target="artonair_music_popup"><img src="/sites/all/themes/artonair/images/menu_play.png"></a></div>
+
+<a href="http://artonair.org/flashplayer/live365" onclick="popUpAIR(this.href,'fixed',480,420);return false;" target="artonair_music_popup"><div class="nowplaying-clickable-overlay"></div></a>
+
+<div class="nowplaying-playinfo">
+<div class="pointy-arrow">&#9664;</div>
+<div class="nowplaying-title">Play the Radio Stream</div><iframe class="nowplaying-iframe" marginwidth="0" marginheight="0" frameborder="no" src="/sites/all/themes/artonair/custom_functions/live365parser.php"></iframe>
+</div>
+
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-16" class="block block-block region-even odd region-count-2 count-11"><div class="block-inner">
+
+  
+  <div class="content">
+    <div id="search-box" class="container-inline">
+<form action="/archive/search"  accept-charset="UTF-8" method="get">
+<div class="submit-button"><input type="image" src="/sites/all/themes/artonair/images/menu_searchbutton.gif"  id="edit-submit" value="Search"  class="form-submit" /></div>
+ <div class="form-item" id="edit-search-theme-form-1-wrapper">
+ <input type="text" maxlength="128" name="keys" id="edit-search-theme-form-1" size="15" value="Search the Archive!" title="Enter the terms you wish to search for."  class="form-text" />
+ </div>
+ 
+ </form>
+ </div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-11" class="block block-block region-odd even region-count-3 count-12"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="air_header_menu">
+
+<div class="menu_images">
+<div class="air_header_menu_image" id="menuimage-radionew"><a href='/new-this-week'><img src="/sites/all/themes/artonair/images/menu_radionew.png"></a></div>
+<div class="air_header_menu_image" id="menuimage-radioarchive"><a href='/archive/recent-shows'><img src="/sites/all/themes/artonair/images/menu_radioarchive.png"></a></div>
+<div class="air_header_menu_image" id="menuimage-clocktowergallery"><a href='/clocktower-gallery'><img src="/sites/all/themes/artonair/images/menu_clocktowergallery.png"></a></div>
+</div>
+
+<div class="menu_links">
+
+<div class="air_header_menu_link withborder" id="menulink-radionew"><div class="pointy-arrow">&#9654;</div><a href='/new-this-week'><div class="link_name">Radio New</div></a></div>
+
+<div class="air_header_menu_link withborder" id="menulink-radioarchive"><div class="pointy-arrow">&#9654;</div><a href='/archive'><div class="link_name">Radio Archive</div></a></div>
+
+<div class="air_header_menu_link" id="menulink-clocktowergallery"><div class="pointy-arrow">&#9654;</div><a href='/clocktower-gallery'><div class="link_name">Clocktower Gallery</div></a></div>
+
+</div>
+
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-4" class="block block-block region-even odd region-count-4 count-13"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="logo_block">
+<a href='http://artonair.org'><img src="http://artonair.org/sites/all/themes/artonair/images/airlogo.png"></a>
+</div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-3" class="block block-block region-odd even region-count-5 count-14"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="air_header_submenu">
+<div class="air_header_submenu_link" id="air_header_submenu_link_about"><a href="/">Home</a> // </div>
+<div class="air_header_submenu_link" id="air_header_submenu_link_about"><a href="/about">About</a> // </div>
+<div class="air_header_submenu_link"><a href="/contact">Contact</a> // </div>
+<div class="air_header_submenu_link"><a href="/support">Support</a></div>
+<br />
+<div class="air_header_submenu_link"><a href="/events">Events</a> // </div>
+<div class="air_header_submenu_link"><a href="/podcasts">Podcasts</a> // </div>
+<div class="air_header_submenu_link" id="air_header_submenu_link_about"><a href="/press">Press</a></div>
+</div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+        </div> <!-- /#header-blocks -->
+      
+      
+
+    </div></div> <!-- /#header-inner, /#header -->
+    
+    
+
+    <div id="main"><div id="main-inner" class="clear-block">
+
+      <div id="content"><div id="content-inner">
+
+
+        
+                  <div id="content-top" class="region region-content_top">
+              <div id="block-block-22" class="block block-block region-odd even region-count-1 count-8"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="subsite-header">
+<div class="title">Clocktower Radio</div>
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-views-new_this_week-block_1" class="block block-views region-even odd region-count-2 count-9"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="view view-new-this-week view-id-new_this_week view-display-id-block_1 view-dom-id-new-this-week-block-1-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+    <div id="node-10806" class="node node-type-news"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+    
+ 
+
+
+
+<div class="news-body bodyview">
+
+
+  <div class="header-section">
+
+        <div class="breadcrumbs">
+	    <div class="crumb"><a href="/archive">Radio Archive</a></div>
+	    	    <div class="crumb">
+	      
+	      &raquo; <a href="/archive?keys=&amp;type[]=news">News</a>	    </div>
+      </div>
+  
+  </div> <!-- header-section -->
+
+  <div class="content-section">
+    <div class="left-column">
+
+
+      <div class="image-section">
+            </div>
+
+
+    </div> <!-- left-column -->
+
+    <div class="right-column">
+
+      
+      <div class="title">
+		<a href="/news/news-new-shows-27-february-5-march-2012">News &amp; New Shows 27 February - 5 March  2012</a>      </div>
+
+            <div class="news_slider">
+	<div class="view view-news-slider-shows view-id-news_slider_shows view-display-id-block_1 nivo-slider view-dom-id-news-slider-shows-block-1-1">
+    
+  
+  
+      <div class="view-content">
+      <script type="text/javascript">
+    $(window).load(function() {
+        $('#nivoslider').nivoSlider({
+	  effect:'fade',
+	  directionNavHide: false
+	});
+    });
+</script>
+
+<div id="nivoslider" class="nivoslider images">
+                                                                              </div>
+    </div>
+  
+  
+      <div class="attachment attachment-after">
+      <div class="view view-news-slider-shows view-id-news_slider_shows view-display-id-attachment_1 nivo-slider view-dom-id-news-slider-shows-attachment-1-1">
+    
+  
+  
+      <div class="view-content">
+                                                                                        </div>
+  
+  
+  
+  
+  
+  
+</div>     </div>
+  
+  
+  
+  
+</div>       </div>
+      
+      <div class="info">
+	  	  
+
+	  
+	  
+      </div>
+
+      <div class="content">
+	<p><b>Javelin's Canyon Candy Now on View</b> (Tues.-Fri., noon- 5pm) The Clocktower Gallery's current exhibition features a large screen viewing theater for the 16-minute film by Mike Anderson and Javelin alongside a winding walk through a maze of life size dioramas including a wind-washed cabin, termite hills and cactus fields with glimpses of coyotes, campsites, and lawless hijinx. Javelin has created a multi-channel surround-sound environment embedded in Anderson’s set with sounds of crickets, howling winds, mysterious voices, and drifting melodies. See photos from the exhibit's opening <a href="http://artonair.org/event/canyon-candy-opening">here</a>.</p>
+      </div>
+      
+
+       
+      <div class="share-like">
+	<div class="addthis">
+	  <!-- AddThis Button BEGIN -->
+	  <div class="addthis_toolbox addthis_default_style" addthis:url="http%3A%2F%2Fartonair.org%2Fnews%2Fnews-new-shows-27-february-5-march-2012">
+	    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	    <a class="addthis_button_tweet"></a>
+	    <a class="addthis_counter addthis_pill_style"></a>
+	  </div>
+	  <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+	  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=artonair"></script>
+	  <!-- AddThis Button END -->
+
+	</div>
+	<!--<div class="fblike">
+	  <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fartonair.org%2Fnews%2Fnews-new-shows-27-february-5-march-2012&amp;layout=standard&amp;show_faces=false&amp;width=250&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:35px;" allowTransparency="true"></iframe>
+	</div> -->
+
+      </div> <!-- share-like end -->
+
+
+    </div> <!-- right-column -->
+  </div> <!-- content-section -->
+
+    <div class="in_this_news">
+    <div class="view view-in-this-news view-id-in_this_news view-display-id-default view-dom-id-in-this-news-default-1">
+        <div class="view-header">
+      <div class="header-title">Programs For The Week</div>
+    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+    <div id="node-10700" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/oscar-special-harvey-weinstein-the-artist" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10700/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/beyond-the-subtitles">Beyond the Subtitles</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10700/show/oscar-special-harvey-weinstein-the-artist" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/oscar-special-harvey-weinstein-the-artist">Oscar Special Harvey Weinstein, The Artist</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/stephen-schaefer">Stephen Schaefer</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, December 5th, 2011</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/oscar-special-harvey-weinstein-the-artist" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10700/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>The Artist: legendary Hollywood producer, AIDS activist, and Miramax Films and The Weinstein Company co-founder (with his younger brother Bob), Harvey Weinstein discusses the 2012 Oscars with a focus on Marilyn, Margaret, and Meryl.</p>
+<span class="read-more"><a href="/show/oscar-special-harvey-weinstein-the-artist">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+    <div id="node-10807" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/regional-de-ny-brazilian-choro-and-samba" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10807/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/clocktower-exhibits-events">Clocktower Exhibits &amp; Events</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10807/show/regional-de-ny-brazilian-choro-and-samba" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/regional-de-ny-brazilian-choro-and-samba">Regional de NY (Brazilian Choro and Samba)</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/alanna-heiss">Alanna Heiss</a></span>
+	     	       <span class='comma'>,</a>               <span class="host"><a href="/person/natalia-mount">Natalia Mount</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 27th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/regional-de-ny-brazilian-choro-and-samba" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10807/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>A live set by the Brazlilian chorinho band, Regional de NY recorded during the Clocktower Gallery's Samba na Casa do Gato celebration for Valentine's Day 2012, an evening of food, music and love hosted by journalist/organizer Thiago Carrapatoso.</p>
+<span class="read-more"><a href="/show/regional-de-ny-brazilian-choro-and-samba">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+    <div id="node-10808" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/chris-martin-1" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10808/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/the-interview-show">The Interview Show</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10808/show/chris-martin-1" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/chris-martin-1">Chris Martin</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/will-corwin">Will Corwin</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 27th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/chris-martin-1" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10808/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Chris Martin stops by the Clocktower to fill in a few blank spaces in host Will Corwin's ongoing Williamsburg art scene oral history project. The artist also has an exhibit at New York's Mitchell-Inness and Nash through March 3, 2012.</p>
+<span class="read-more"><a href="/show/chris-martin-1">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+    <div id="node-10810" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/taco-truck-torta" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10810/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/joe-ginnys-jam-sandwich">Joe &amp; Ginny&#039;s Jam Sandwich</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10810/show/taco-truck-torta" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/taco-truck-torta">Taco Truck Torta</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/joe-ahearn">Joe Ahearn</a></span>
+	     	       <span class='comma'>,</a>               <span class="host"><a href="/person/ginny-benson">Ginny Benson</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 27th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/taco-truck-torta" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10810/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Like all post-party journeys down the block, for that thing the crowd just couldn't fulfill, Benson and Ahearn took this mixtape on the road, taking up residence in guest chefs G Lucas Crane and Pam Finch's digs in Troy, NY. A memorable, tasty snack.</p>
+<span class="read-more"><a href="/show/taco-truck-torta">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+    <div id="node-10811" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/heidi-julavits-the-vanishers" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10811/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/bomb-magazine">BOMB Magazine</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10811/show/heidi-julavits-the-vanishers" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/heidi-julavits-the-vanishers">Heidi Julavits, The Vanishers</a>       </div>
+ 
+       <div class="info">
+                                 <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 27th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/heidi-julavits-the-vanishers" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10811/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>As part of BOMB Maqazine's Fiction For Driving Across America series, Heidi Julavits reads an excerpt from her 2012 novel. The writer talks to Fiona Maazel in the Spring 2012 issue. These segments are co-produced by ARTonAIR.org and BOMB Magazine.</p>
+<span class="read-more"><a href="/show/heidi-julavits-the-vanishers">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+    <div id="node-10809" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/warper-party-banginclude-live-set" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10809/node-image.png" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/clocktower-exhibits-events">Clocktower Exhibits &amp; Events</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10809/show/warper-party-banginclude-live-set" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/warper-party-banginclude-live-set">Warper Party: Banginclude Live Set</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/dj-shakey">DJ Shakey</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 27th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/warper-party-banginclude-live-set" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10809/node-image.png" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>A set by the electronic musician Banginclude--a devotee and activist in the Controllerism movement of alternative devices for manipulating audio and a DJ Shakey associate--performed live at the Warper Party at the Clocktower event on Jan. 12, 2012.</p>
+<span class="read-more"><a href="/show/warper-party-banginclude-live-set">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+    <div id="node-10182" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/oscar-special-michael-r-roskan-and-matthias-schoenaerts-bullhead" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10182/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/beyond-the-subtitles">Beyond the Subtitles</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10182/show/oscar-special-michael-r-roskan-and-matthias-schoenaerts-bullhead" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/oscar-special-michael-r-roskan-and-matthias-schoenaerts-bullhead">Oscar Special: Michael R. Roskan and Matthias Schoenaerts,  Bullhead</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/stephen-schaefer">Stephen Schaefer</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 21st, 2011</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/oscar-special-michael-r-roskan-and-matthias-schoenaerts-bullhead" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10182/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Oscar Special: recorded at the Berlin Film Festival in early 2011 with Michael Roskan, writer, and Matthias Schoenaerts, lead actor, about the Belgian thriller Bullhead, a movie about corrupt cattle farming nominated for the Best Foreign Film Oscar.</p>
+<span class="read-more"><a href="/show/oscar-special-michael-r-roskan-and-matthias-schoenaerts-bullhead">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+    <div id="node-10791" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/old-testament-poetry" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10791/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/new-river-dramatists">New River Dramatists</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10791/show/old-testament-poetry" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/old-testament-poetry">Old Testament Poetry</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/mz-ribalow">M.Z. Ribalow</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, February 27th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/old-testament-poetry" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10791/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Actors Patricia Randell, Aaron Serotsky, and Cynthia Adler read a selection of Old Testament-themed work from four poets--Elizabeth Rosner, Yehoshuah November, Mellisa Range, and Reena Ribalow.</p>
+<span class="read-more"><a href="/show/old-testament-poetry">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+    <div id="node-10598" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/dustin-wong" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10598/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/clocktower-exhibits-events">Clocktower Exhibits &amp; Events</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10598/show/dustin-wong" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/dustin-wong">Dustin Wong</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/joe-ahearn">Joe Ahearn</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, October 3rd, 2011</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/dustin-wong" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10598/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Recorded live in the Clocktower in Sept. 2011, the exceptionally skilled guitarist experimented with layers of intricately finger-picked improvisations and textures built through the masterful and precise use of a battery of effects and loop pedals.</p>
+<span class="read-more"><a href="/show/dustin-wong">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-10 views-row-even">
+    <div id="node-7016" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/new-orleans-tribute" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/7016/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/goodbye-dear-old-stepstone">Goodbye Dear Old Stepstone</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/7016/show/new-orleans-tribute" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/new-orleans-tribute">New Orleans Tribute</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/nathan-salsburg">Nathan Salsburg</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Wednesday, October 26th, 2005</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/new-orleans-tribute" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/7016/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>It's impossible to begin to pay ample tribute to New Orleans music - much less that of Louisiana - in a half hour, so instead, Salsburg humbly offers up some city-specific samples that he holds dear, knowing the surface is far from scratched.</p>
+<span class="read-more"><a href="/show/new-orleans-tribute">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-11 views-row-odd">
+    <div id="node-7497" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+      <div class="meta">
+      
+          </div>
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/dj-ulysses" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/7497/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/dj-culture">DJ Culture</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/7497/show/dj-ulysses" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/dj-ulysses">DJ Ulysses</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/jeannie-hopper">Jeannie Hopper</a></span>
+	                </div>
+	              	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/dj-ulysses" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/7497/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Musical revivalist Ulysses--famous for his energy, creativity and panache--has been a working deejay since 1991, when he started New Orleans' first techno-radio show. He has since relocated to Brooklyn where he runs his own company, Scatalogics.</p>
+<span class="read-more"><a href="/show/dj-ulysses">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-12 views-row-even">
+    <div id="node-7562" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/gulf-coast-music-special" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/7562/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/impossible-music">Impossible Music</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/7562/show/gulf-coast-music-special" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/gulf-coast-music-special">Gulf Coast Music Special</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/david-weinstein">David Weinstein</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Monday, September 12th, 2005</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/gulf-coast-music-special" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/7562/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>A survey of Gulf Coast music assembled in the week following Hurricane Katrina in 2005 including artists  Amédé Ardoin, Napolian Strickland, Dixie Cups, Dennis McGee, Professor Longhair, Allen Toussaint, Louis Armstrong Hot Five, and many more.</p>
+<span class="read-more"><a href="/show/gulf-coast-music-special">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+  <div class="views-row views-row-13 views-row-odd views-row-last">
+    <div id="node-10812" class="node node-teaser node-type-show"><div class="node-inner">
+
+  
+  
+  
+  
+  <div class="content">
+      
+
+
+ 
+<div class="gridview-image">
+   <a href="/show/pachanga-boogaloo-cuba-1960s" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10812/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a></div>
+ 
+ 
+<div class="show-teaser teaser">
+ 
+  <div class="gridview-pointy-arrow arrow-top">&#9650;</div>
+  <div class="wrapper">
+ 
+      
+      <div class="header">
+        <div class="header-inner">
+	  <div class="series"><a href="/series/indigenous-worlds">Indigenous Worlds</a></div>	   <div class="type">
+	      	        
+	      &raquo; <a href="/archive?keys=&amp;type[]=show">Radio Show</a>	      	      </div>
+	     
+        </div>
+     </div>
+
+
+     <div class="inner">        <div class="title">
+	  	    	     <span class="listen" style="height: 22px; width: 16px;"><a href="http://artonair.org/play/10812/show/pachanga-boogaloo-cuba-1960s" onclick="popUpAIR(this.href,'fixed', 570, 440); return false;" target="artonair_music_popup"><img src="http://artonair.org/sites/all/themes/artonair/images/triangle.png" class="listen-imgsm"></a></span> 
+	    	           <a href="/show/pachanga-boogaloo-cuba-1960s">Pachanga &amp; Boogaloo (Cuba 1960s)</a>       </div>
+ 
+       <div class="info">
+                      <div class="hosts">
+             Hosted by
+	     	                      <span class="host"><a href="/person/ned-sublette">Ned Sublette</a></span>
+	                </div>
+	                         <div class="aired_date">
+             Originally aired 
+             <span class="aired_date_itself"><span class="date-display-single">Friday, February 24th, 2012</span></span>
+           </div>
+           	  	  
+       </div>
+
+             <div class="image">
+	  <a href="/show/pachanga-boogaloo-cuba-1960s" class="imagecache imagecache-teaser-archive-thumbnail imagecache-linked imagecache-teaser-archive-thumbnail_linked"><img src="http://artonair.org/sites/default/files/imagecache/teaser-archive-thumbnail/show/10812/node-image.jpg" alt="" title=""  class="imagecache imagecache-teaser-archive-thumbnail" width="100" height="100" /></a>       </div> 
+       
+       <div class="content"> 
+	  <p>Ned Sublette assembled this show to feature the hip Cuban rhythms of 1960; the pachanga along with tastes of bolero, mambo, and boogaloo. This late Feb. 2012 we honor Jimmy Sabater, an architect of boogaloo of that era, who died recently in New York.</p>
+<span class="read-more"><a href="/show/pachanga-boogaloo-cuba-1960s">Read More</a></span>       </div> 
+    </div> 
+
+      
+  </div> <!-- wrapper --> 
+  <div class="gridview-pointy-arrow arrow-bottom">&#9660;</div>
+ 
+
+</div>
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+
+<!-- for addthis analytics -->
+
+<div id="nid-for-javascript" style="display:none;">10806</div>
+
+
+
+  </div>
+
+  
+</div></div> <!-- /node-inner, /node -->
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+          </div> <!-- /#content-top -->
+        
+        
+        <div id="content-area">
+                  </div>
+
+        
+        
+      </div></div> <!-- /#content-inner, /#content -->
+
+      
+      
+              <div id="sidebar-right"><div id="sidebar-right-inner" class="region region-right">
+            <div id="block-block-23" class="block block-block region-odd odd region-count-1 count-1"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="subsite-header" style="text-align:right;">
+<div class="title">Clocktower Gallery</div>
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-views-b3d5cdceba9ea520b71af604cc6a3f20" class="block block-views region-even even region-count-2 count-2"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="view view-clocktowergallery-v3-all view-id-clocktowergallery_v3_all view-display-id-block_5 clocktowergallery-sidebar view-dom-id-clocktowergallery-v3-all-block-5-1">
+    
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/exhibition/canyon-candy"><div class="nowonview-title">Canyon Candy</div></a></span>
+  </div>
+  
+  <div class="views-field-field-image-fid">
+                <div class="field-content"><a href="/exhibition/canyon-candy" class="imagecache imagecache-gallery_frontpage_sidebar_image imagecache-linked imagecache-gallery_frontpage_sidebar_image_linked"><img src="http://artonair.org/sites/default/files/imagecache/gallery_frontpage_sidebar_image/exhibition/10697/node-image_4.jpg" alt="" title=""  class="imagecache imagecache-gallery_frontpage_sidebar_image" width="280" height="160" /></a></div>
+  </div>
+  
+  <span class="views-field-field-summary-value">
+                <div class="field-content"><p>Canyon Candy is a site-specific gallery installation, immersive soundscape and video screening bringing to life a Western-themed music video collaboration between filmmaker Mike Anderson and the band Javelin. Extended through March. Click for more.</p></div>
+  </span>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/residency/the-island-studio-sessions-haroon-mirza"><div class="nowonview-title">The Island Studio Sessions: Haroon Mirza</div></a></span>
+  </div>
+  
+  <div class="views-field-field-image-fid">
+                <div class="field-content"><a href="/residency/the-island-studio-sessions-haroon-mirza" class="imagecache imagecache-gallery_frontpage_sidebar_image imagecache-linked imagecache-gallery_frontpage_sidebar_image_linked"><img src="http://artonair.org/sites/default/files/imagecache/gallery_frontpage_sidebar_image/residency/10805/node-image_0.jpg" alt="" title=""  class="imagecache imagecache-gallery_frontpage_sidebar_image" width="280" height="160" /></a></div>
+  </div>
+  
+  <span class="views-field-field-summary-value">
+                <div class="field-content"><p>A two month studio project featuring Haroon Mirza’s sculptures and installations assembled from an eclectic inventory of objects such as found bits of furniture, electrical appliances and outmoded musical equipment with rhythmically driven sound.</p></div>
+  </span>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/residency/strife-lessons"><div class="nowonview-title">Strife Lessons</div></a></span>
+  </div>
+  
+  <div class="views-field-field-image-fid">
+                <div class="field-content"><a href="/residency/strife-lessons" class="imagecache imagecache-gallery_frontpage_sidebar_image imagecache-linked imagecache-gallery_frontpage_sidebar_image_linked"><img src="http://artonair.org/sites/default/files/imagecache/gallery_frontpage_sidebar_image/residency/10792/node-image.jpg" alt="" title=""  class="imagecache imagecache-gallery_frontpage_sidebar_image" width="280" height="160" /></a></div>
+  </div>
+  
+  <span class="views-field-field-summary-value">
+                <div class="field-content"><p>For her spring 2012 residency in performance art at the Clocktower Gallery, writer and engineer of unsettling fantasies Alaina Stamatis will conduct a series of surreal classes, referred to as "Strife Lessons."</p></div>
+  </span>
+  </div>
+  <div class="views-row views-row-4 views-row-even views-row-last">
+      
+  <div class="views-field-title">
+                <span class="field-content"><a href="/exhibition/the-japanther-phone-booth"><div class="nowonview-title">The Japanther Phone Booth</div></a></span>
+  </div>
+  
+  <div class="views-field-field-image-fid">
+                <div class="field-content"><a href="/exhibition/the-japanther-phone-booth" class="imagecache imagecache-gallery_frontpage_sidebar_image imagecache-linked imagecache-gallery_frontpage_sidebar_image_linked"><img src="http://artonair.org/sites/default/files/imagecache/gallery_frontpage_sidebar_image/exhibition/10367/node-image.jpg" alt="" title=""  class="imagecache imagecache-gallery_frontpage_sidebar_image" width="280" height="160" /></a></div>
+  </div>
+  
+  <span class="views-field-field-summary-value">
+                <div class="field-content"><p>Created as part of their Emerging Artist Residency at the Clocktower, Japather's Phone Booth is an interactive sound sculpture featuring the stories of fellow travelers recorded, and now broadcast, through the receiver of a vintage telephone booth.</p></div>
+  </span>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-25" class="block block-block region-odd odd region-count-3 count-3"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="clocktowergallery-divider">
+<div class="divider-itself"></div>
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-views-popular_pages_this_week-block_1" class="block block-views region-even even region-count-4 count-4"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="view view-popular-pages-this-week view-id-popular_pages_this_week view-display-id-block_1 view-dom-id-popular-pages-this-week-block-1-1">
+        <div class="view-header">
+      <div class="header-title">Most Viewed Pages This Week</div>
+    </div>
+  
+  
+  
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+      
+  <span class="views-field-counter">
+                <span class="field-content">1.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/exhibition/canyon-candy">Canyon Candy</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-2 views-row-even">
+      
+  <span class="views-field-counter">
+                <span class="field-content">2.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/event/the-now-age">The Now Age</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-3 views-row-odd">
+      
+  <span class="views-field-counter">
+                <span class="field-content">3.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/series/the-collectors-forum">The Collectors Forum</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-4 views-row-even">
+      
+  <span class="views-field-counter">
+                <span class="field-content">4.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/series/beyond-the-subtitles">Beyond the Subtitles</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-5 views-row-odd">
+      
+  <span class="views-field-counter">
+                <span class="field-content">5.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/series/off-the-rail">Off The Rail</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-6 views-row-even">
+      
+  <span class="views-field-counter">
+                <span class="field-content">6.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/residency/the-island-studio-sessions-haroon-mirza">The Island Studio Sessions: Haroon Mirza</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-7 views-row-odd">
+      
+  <span class="views-field-counter">
+                <span class="field-content">7.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/show/free-improvisation">&quot;Free&quot; Improvisation</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-8 views-row-even">
+      
+  <span class="views-field-counter">
+                <span class="field-content">8.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/show/anthony-papa-15-years-to-life">Anthony Papa, 15 Years to Life</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-9 views-row-odd">
+      
+  <span class="views-field-counter">
+                <span class="field-content">9.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/show/love-peace-and-soul">Love, Peace and Soul</a></span>
+  </span>
+  </div>
+  <div class="views-row views-row-10 views-row-even views-row-last">
+      
+  <span class="views-field-counter">
+                <span class="field-content">10.</span>
+  </span>
+  
+  <span class="views-field-title">
+                <span class="field-content"><a href="/series/the-interview-show">The Interview Show</a></span>
+  </span>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>   </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-40" class="block block-block region-odd odd region-count-5 count-5"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="clocktowergallery-divider">
+<div class="divider-itself"></div>
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-24" class="block block-block region-even even region-count-6 count-6"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="facebookbadge-title"><a href="http://www.facebook.com/pages/Art-International-Radio/59869563396">Find us on Facebook!</a></div>
+<p><iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fartonair&amp;width=240&amp;colorscheme=light&amp;show_faces=false&amp;stream=false&amp;header=false&amp;height=75" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:240px; height:75px;" allowTransparency="true"></iframe></p>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-30" class="block block-block region-odd odd region-count-7 count-7"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="facebookbadge-title"><a href="http://www.facebook.com/pages/Art-International-Radio/59869563396">Facebook recommends for you:</a></div>
+<p><iframe src="http://www.facebook.com/plugins/recommendations.php?site=http%3A%2F%2Fartonair.org&amp;width=280&amp;height=400&amp;header=true&amp;colorscheme=light&amp;font&amp;border_color" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:280px; height:400px;" allowTransparency="true"></iframe></p>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+        </div></div> <!-- /#sidebar-right-inner, /#sidebar-right -->
+      
+    </div></div> <!-- /#main-inner, /#main -->
+
+          <div id="footer"><div id="footer-inner" class="region region-footer">
+
+        
+          <div id="block-block-17" class="block block-block region-odd odd region-count-1 count-15"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="footer">
+<div class="footer_menu">
+<a href="/about">About</a> // <a href="/support">Support</a> // <b>Follow us on</b> <a href="http://www.facebook.com/pages/Art-International-Radio/59869563396"><img alt='Facebook' src=/sites/all/themes/artonair/images/facebook_logo.jpg></a> <b>or</b> <a href="http://twitter.com/ARTonAIR"><img alt='Twitter' src=/sites/all/themes/artonair/images/twitter_logo.png></a> 
+</div>
+<div class="footer_text">
+Copyright 2012<br />
+AIR, Art International Radio <br />
+The Clocktower, 108 Leonard Street, 13th Floor, New York, NY 10013 <br />
+212.233.1096 | <a href="mailto:info@artonair.org">info@artonair.org</a> <br />
+<br />
+AIR, Art International Radio is a listener-sponsored New York State non-profit corporation, a registered charity,<br />
+and a tax-exempt organization under section 501(c)(3) of the Internal Revenue Code.
+</div>
+</div>  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-29" class="block block-block region-even even region-count-2 count-16"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="credit">
+Site designed and built by <a href="http://dan.taeyounglee.com">Dan Taeyoung Lee</a>.
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+  <div id="block-block-5" class="block block-block region-odd odd region-count-3 count-17"><div class="block-inner">
+
+  
+  <div class="content">
+    <div class="login_link">
+<a href="http://artonair.org/user/login">Login</a>
+</div>
+  </div>
+
+  
+</div></div> <!-- /block-inner, /block -->
+
+      </div></div> <!-- /#footer-inner, /#footer -->
+    
+  </div></div> <!-- /#page-inner, /#page -->
+
+  
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-1385510-2"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+
+<object classid="clsid:25336920-03F9-11CF-8FD0-00AA00686F13" type="text/html" data="/boost-gzip-cookie-test.html" style="width:0px; height:0px; border:0px; position:absolute; top:-1000px; z-index:10;"></object>
+</body>
+</html>
+<!-- Page cached by Boost @ 2012-02-28 12:55:37, expires @ 2012-02-28 13:55:37 -->

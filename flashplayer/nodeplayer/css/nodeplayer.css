@@ -1,0 +1,119 @@
+/* @override 
+	http://staging.artonair.org/flashplayer/nodeplayer/nodeplayer.css
+	http://bu.artonair.org/flashplayer/nodeplayer/css/nodeplayer.css
+*/
+
+a	  {  color: black; text-decoration: none; }
+a:hover	  { text-decoration: underline; }
+body  { font-family: Helvetica Neue, Helvetica, Arial, sans-serif;  font-size: .8em; background-color: #EFEFEF; }
+.all	  { width: 400px; padding: 10px; }
+
+.logos	  { height: 60px;  margin-bottom: 5px; position:relative;}
+.logo	  { position: absolute; font-weight: bold; font-size: 2.85em; bottom:0px; left: 110px; }
+
+.text {  font-size:0.85em; line-height:1.4em; margin: 15px 0px; }
+
+.player  { margin: 10px 0px; }
+
+.site	  { padding-top: 5px; margin-bottom: 5px; font-weight: bold; }
+.title	  { line-height: 1.3em; font-size: .9em; }
+
+
+#container {
+	width: 390px;
+	height: 700px;
+	position: absolute;
+	top: 50%;
+	margin-top: -255px;
+	left: 50%;
+	margin-left: -195px;
+	overflow: hidden;
+	border: 1px solid #ccc;
+	margin-bottom: 3em;
+}
+	
+.box {
+	background-color: white;
+	border: 5px solid #FFF;
+	-webkit-border-radius: 0px; -khtml-border-radius: 0px; -moz-border-radius: 0px; border-radius: 0px;
+	padding: 15px;
+	height: 699px;
+}
+	
+#container .air-logo a img {
+  border: none;
+  text-decoration: none;
+}
+#container .air-logo {
+	text-align: center;
+	padding-bottom: 10px;
+/*	border-bottom: 1px dashed #CCCCCC;*/
+	margin-bottom: 10px;
+}
+
+#playlist_title {
+	font-style: normal !important;
+	font-family: 'frankgoth_cn_btregular', "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
+	}
+#container .nodeplayer {
+	display: block;
+}
+
+.nodeplayer .teaser {
+	overflow: hidden;
+}
+
+.nodeplayer .teaser .wrapper {
+	margin-bottom: 5px;
+	margin-right: 0px;
+}
+
+.nodeplayer .teaser .wrapper .header {
+}
+
+
+.nodeplayer .teaser .links .or-listen {
+	display: none;
+}
+
+.player-playlist-item {
+  height: 28px;
+  font-size: .85em;
+  overflow: hidden;
+}
+
+.player-playlist-item .player-status {
+  float: left;
+  width: 40px;
+  height: 25px;
+  padding-right: 10px;
+  margin-top: 3px;
+  padding-left: 2px;
+  font-size: .7em;
+  text-transform: uppercase;
+  text-align: right;
+  font-weight: bold;
+  color:  #007F93;
+}
+
+.player-playlist-item .player-no {
+  float: left;
+  text-align: right;
+  margin: 1px 5px 0px 5px;
+  font-size: .8em;
+  color: #555;
+}
+
+.player-playlist-item .player-title {
+  display: inline;
+}
+
+.player-playlist-item .player-author {
+  display: inline;
+  line-height: 1.2em;
+}
+
+.player-playlist-item.past { color: #555; }
+.player-playlist-item.past .player-no {	color: #333; }
+.player-playlist-item.now { background-color: #EEEEEE; }
+.player-playlist-item.now .player-title { font-weight: bold; }

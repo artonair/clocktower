@@ -1,0 +1,12 @@
+name = "XSPF Playlist Node"
+description = "Generates an XSPF playlist from node content."
+package = "Media"
+dependencies[] = xspf_playlist
+dependencies[] = xspf_playlist_thumb
+core = 6.x
+; Information added by drupal.org packaging script on 2013-10-26
+version = "6.x-1.0-alpha2+22-dev"
+core = "6.x"
+project = "xspf_playlist"
+datestamp = "1382797577"
+

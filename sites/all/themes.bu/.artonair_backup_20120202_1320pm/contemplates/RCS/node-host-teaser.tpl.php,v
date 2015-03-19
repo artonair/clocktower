@@ -1,0 +1,48 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.40.47;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php global $base_url; ?>
+
+<div class="producer-teaserbox teaserbox"><div class="teaserbox-inner">
+
+  <div class="header">
+    <div class="type"><a href="<?php print $base_url . "/archive/" . $node->type; ?>"><?php print $node->type; ?></a></div>
+  </div>
+
+  <div class="title">
+    <a href="<?php print $base_url . '/' . $node->path; ?>" title="<?php print $node->title ?>"><?php print $node->title; ?></a>
+  </div>
+
+  <?php if($node->field_producer_image[0]['view']): ?>
+    <div class="image">
+      <div class="overlay">&nbsp;</div>	
+      <?php print $node->field_producer_image[0]['view']; ?>
+    </div>
+  <?php endif; ?>
+
+  <div class="textcontent">
+    <?php print $node->field_teaserbox_summary[0]['safe']; ?>
+  </div>
+
+</div></div>
+@

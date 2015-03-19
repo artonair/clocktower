@@ -1,0 +1,94 @@
+head	1.1;
+access;
+symbols;
+locks; strict;
+comment	@# @;
+
+
+1.1
+date	2010.08.25.21.40.47;	author geops1;	state Exp;
+branches;
+next	;
+
+
+desc
+@initial
+@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php include_once('sites/all/themes/artonair/custom_variable.php');  /* mp3 folder path */ ?>
+<?php global $base_url; ?>
+
+<div class="airstream-body bodyview">
+
+  <div class="title body-title">
+    <a href="<?php print $base_url . '/' . $node->path; ?>" title="<?php print $node->title ?>"><?php print $node->title; ?></a>
+  </div>
+  
+  <div class="airstream-textcontent">
+    <?php print $node->content['body']['#value']; ?>
+  </div>
+
+  <div class="airstream-list">
+    <?php $rownumber = 0; ?>
+    <?php foreach ($node->field_airstream_contained_audio as $contained_audio) { ?>
+      <?php $rownumber++; ?>
+      <?php $this_node = node_load($contained_audio['nid']); ?>
+
+      <div class="airstream-listing">
+
+	<div class="rownumber"><?php print $rownumber; ?></div>
+
+	<div class="airstream-box">
+
+	    <div class="image">
+	      <?php if($this_node->field_segment_image[0]['filepath']) {
+		print '<a href="' . $base_url . "/" . $this_node->path . '">' . theme('imagecache', 'airstream_list_thumbnail', $this_node->field_segment_image[0]['filepath']) . '</a>'; 
+	      } ?>
+	    </div>
+
+	  <div class="header">
+	    <div class="type"><a href="<?php print $base_url . "/archive/" . $this_node->type; ?>"><?php print $this_node->type; ?></a></div>
+	    <div class="this_node-status">Popular!</div>
+	  </div>
+
+	  <div class="title">
+	    <a href="<?php print $base_url . '/' . $this_node->path; ?>" title="<?php print $this_node->title ?>"><?php print $this_node->title; ?></a>
+	  </div>
+
+	  <div class="info">
+	      <div class="producers">
+		Produced by
+		<?php if($this_node->type == "segment") { 
+		  foreach ($this_node->field_segment_producer as $oneproducer) { 
+		  $producer_node = node_load($oneproducer['nid']); ?>
+		  <span class="producer"><a href="<?php print $base_url . "/" . $producer_node->path; ?>"><?php print $producer_node->title; ?></a></span>
+		<?php }} else if($this_node->type == "blurb") {
+		   foreach ($this_node->field_blurb_producer as $oneproducer) { 
+		   $producer_node = node_load($oneproducer['nid']); ?>
+		  <span class="producer"><a href="<?php print $base_url . "/" . $producer_node->path; ?>"><?php print $producer_node->title; ?></a></span>
+		<?php }} ?>
+	      </div>
+	      <?php if($this_node->type == "segment") { ?>
+		<div class="series">
+		  Part of the series
+		  <?php $series_node = node_load($this_node->field_segment_series[0]['nid']); ?>
+		  <a href="<?php print $base_url . "/" . $series_node->path; ?>"><?php print $series_node->title; ?></a>
+		</div>
+	      <?php } ?>
+	  </div>
+	  
+	</div>
+      </div>
+    <?php } ?>
+  </div>
+
+
+
+</div>
+@

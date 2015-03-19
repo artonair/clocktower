@@ -1,0 +1,50 @@
+<playlist version="1" xmlns="http://xspf.org/ns/0/"> 
+  <title>ArtOnAir.org :: ART INTERNATIONAL RADIO -  </title> 
+  <image>http://www.artonair.org/images/art_radio_logo.png</image>
+  <info>http://www.artonair.org</info>
+  <annotation>ART INTERNATIONAL RADIO PLAYLIST</annotation>
+ 
+  <tracklist>
+ 
+   <item> 
+    <title>Show and Guest Introduction: David Humphrey hosts Angela Dufresne</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk01.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Malcom Riffkin's Pretty: Dog Faced Hermans</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk02.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>The Night Collectors: Les Rallizes Danudas '77 Live</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk03.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Jealou s Kids: Mu Afro Finger And Gel</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk04.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host and Guest Interview: David Humphrey hosts Angela Dufresne</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk05.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Bialero: Sonny Sharrock/Black Woman Jazz</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk06.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Host and Guest Interview: David Humphrey hosts Angela Dufresne</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk07.mp3</location>
+   </item> 
+ 
+   <item> 
+    <title>Fireball: Transmission featuring Jonathan Kane</title>
+    <location>http://www.artonair.org/archives/mp3/sbtmtsv_43_tk08.mp3</location>
+   </item> 
+ 
+ </tracklist> 
+</playlist> 

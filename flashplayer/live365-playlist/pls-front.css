@@ -1,0 +1,16 @@
+.playlistbody {
+  background-image: none !important; 
+  background-color: transparent !important;
+  width: 360px;
+}
+
+#branding_area {
+  display: none;
+}
+
+.playlist .doneplaying img, .playlist .nowplaying img {
+  display: none;
+}
+
+.nowplaying { color: #67A !important; font-weight: normal !important; }
+.doneplaying { color: #BCF !important; display: none; }

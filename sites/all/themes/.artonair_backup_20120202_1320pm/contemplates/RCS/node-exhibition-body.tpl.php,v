@@ -1,0 +1,283 @@
+head	1.1;
+access;
+symbols;
+locks
+	dan:1.1; strict;
+comment	@# @;
+
+
+1.1
+date	2011.01.22.23.07.53;	author dan;	state Exp;
+branches;
+next	;
+
+
+desc
+@@
+
+
+1.1
+log
+@Initial revision
+@
+text
+@<?php include_once('sites/all/themes/artonair/custom_functions/custom_variable.php');  /* mp3 folder path */ ?>
+<?php include_once('sites/all/themes/artonair/custom_functions/default_image.php');  /* function for displaying default images */ ?>
+<?php $listen_url = "http://artonair.el.net/play/" . $node->nid . "/" . $node->path; ?> 
+
+
+<?php global $base_url; 
+
+
+   $vgvr = views_get_view_result('archive_popular', 'default'); 
+   $node_status = "";
+   foreach($vgvr as $vresult) {
+      if($vresult->nid == $node->nid) $node_status = "Popular!";
+   }
+
+?>
+
+<div class="<?php print $node->type; ?>-body bodyview">
+
+
+  <div class="header-section">
+
+  <?php if($node->type != "exhibition") { ?>
+      <div class="breadcrumbs">
+	    <div class="crumb"><?php print l("Archive", "archive"); ?></div>
+	    <?php if($node->field_series[0]['view']) { ?> 
+	      <div class="crumb">
+	      >>
+	      <?php print $node->field_series[0]['view']; ?> 
+	      </div>
+	    <?php } ?>
+	    <div class="crumb">
+	      >>
+	      <?php print l(node_get_types('name', $node), "archive", array('query' => 'keys=&type[]=' . $node->type)); ?>
+	    </div>
+      </div>
+  <?php } ?>
+
+  </div> <!-- header-section -->
+
+  <div class="content-section">
+    <div class="left-column">
+
+
+      <div class="image-section">
+      <?php if($node->type != "news") { ?>
+	<?php if($node->field_image[0]['view']) {
+	      foreach($node->field_image as $one_image) {
+	      ?><div class="image"><?php
+	      print $one_image['view'];
+	      ?><div class="image-description"><?php print $one_image['data']['description']; ?> </div></div><?php
+	  }
+	} else {
+	  /* print default image here. must  conform to terms of imagecache bodyview_thumbnail's dimensions. (250px wide, 350px max tall) */ 
+	  print defaultImage($node->type, "body");
+        } ?>
+      <?php } ?>
+      </div>
+
+      <?php /* if(user_access("manipulate all queues")) { ?>
+	<div class="backend-nodequeue-add">
+	  <div class="backend-label">Admin Links</div>
+	  <?php print theme('links', nodequeue_link('node', node_load($nid)));  ?>
+	</div>
+     <?php } decided not to put this in after all -- delete if sure. */ ?>
+
+    </div> <!-- left-column -->
+
+    <div class="right-column">
+
+      <?php  if($node->field_audio_path[0]['safe']) {   ?>
+	<div class="listen"><div class="listen-button">
+	  <a href="<?php print $listen_url; ?>" onclick="popUpAIR(this.href,'fixed',570, 400); return false;" target="artonair_music_popup">&#9654;</a>
+	</div></div>
+      <?php   } ?>
+
+      <div class="title">
+	<?php if($node->field_series[0]['view']) { ?><div class="series-title"><?php print $node->field_series[0]['view']; ?>:</div><?php } ?>
+	<?php if($node->type == "news") { print l($node->title, $node->path); } 
+	else { print $node->title;  } ?>
+      </div>
+
+      <?php if($node->type == "news") {  ?>
+      <div class="news_slider">
+	<?php print views_embed_view("news_slider_shows", "block_1", $node->nid); ?>
+      </div>
+      <?php } ?>
+
+      <div class="info">
+	  <?php if($node->field_host[0]['view']) { ?>
+	  <div class="hosts">
+	    Hosted by
+	    <?php $hostno = 0; foreach ($node->field_host as $one_host) { ?>
+	      <?php if($hostno > 0) print "<span class='comma'>,</a>"; ?>
+	      <span class="host"><?php print $one_host['view']; ?></span>
+	    <?php $hostno++; } ?>
+	  </div>
+	  <?php } ?>
+
+	  <?php if(($node->field_aired_date[0]['value']) && $node->type != "exhibition") { ?>
+	  <div class="aired_date">
+	    Originally aired on
+	    <span class="aired_date_itself"><?php print $node->field_aired_date[0]['view']; ?></span>
+	  </div>
+	  <?php } ?>
+
+	  <?php if($node->type == "exhibition") { 
+	    if($node->field_artists[0]['value']) {  ?>
+	      <div class="artists-list">By
+		<?php $artistcount = 0;
+		  foreach($node->field_artists as $one_artist) {
+		  if($artistcount++ > 0) print ", ";
+		  print $one_artist['view'];
+		} ?>
+	      </div> 
+	    <?php
+	    } 
+	    if($node->field_dates[0]['value']) { ?>
+	    <div class="exhibited_date">
+	      On exhibition from 
+	      <span class="exhibited_date_itself"><?php print_r($node->field_dates[0]['view']); ?></span>
+	    </div>
+	    <?php 
+	    }
+
+ 
+	  } ?>
+
+      </div>
+
+      <div class="content">
+	<?php print $node->content['body']['#value']; ?>
+      </div>
+      
+
+      <?php if($node->type == "show") { ?>
+    
+	<?php /* we don't really use this
+if($node->field_audio_path[0]['safe']) { $audio_file_url = $air_mp3s_url . "/" . trim($node->field_audio_path[0]['safe']); }
+          else if($node->field_audio_file[0]['filepath']) { $audio_file_url = $node->field_audio_file[0]['filepath']; }
+	  if the audio path is specified in the node, use that, as it takes precedence. otherwise, use the uploaded file. */  
+      //  $audio_file_url is the url to the audio file! ?>
+      <?php } ?>
+       
+      <div class="share-like">
+	<div class="addthis">
+	  <!-- AddThis Button BEGIN -->
+	  <div class="addthis_toolbox addthis_default_style">
+	      <a class="addthis_button_compact">Share</a>
+	  </div>
+	  <!-- AddThis Button END -->
+
+	</div>
+	<div class="twitter">
+	  <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="artonair">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	</div>
+	<div class="fblike">
+	  <iframe src="http://www.facebook.com/plugins/like.php?href=<?php print urlencode(url($node->path, array('absolute' => true))); ?>&amp;layout=standard&amp;show_faces=false&amp;width=250&amp;action=like&amp;colorscheme=light&amp;height=35" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:250px; height:35px;" allowTransparency="true"></iframe>
+	</div>
+
+      </div>
+
+
+    </div> <!-- right-column -->
+  </div> <!-- content-section -->
+
+  <?php if($node->type == "news") {  ?>
+  <div class="in_this_news">
+    <?php print views_embed_view("in_this_news", "default", $node->nid); ?>
+  </div>
+  <?php } ?>
+
+
+  <?php $tags_display = views_embed_view('tags_for_node', 'default', $node->nid);  ?>
+  <?php if($node->type != "exhibition" && $node->type != "news") { ?>
+
+  <div class="tags-section">
+    <div class="left-column">
+      <div class="label">Tags</div>
+    </div>
+    <div class="right-column">
+      <div class="tags"><?php print $tags_display; ?> </div>
+    </div>
+  </div> <!-- tags-section -->
+  <?php  } ?>
+
+
+  <?php if($node->type == "show" && $node->field_series[0]['view']) { ?>
+  <div class="also-in-the-series-section">
+    <div class="left-column">
+      <div class="label">Also in the Series</div>
+      <div class="gridlist-chooser">
+	<a class="view-choice-grid choice chosen">Grid view</a> / <a class="view-choice-list choice">List view</a>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="series-title"><?php print $node->field_series[0]['view']; ?></div>
+      <div class="also-in-the-series-browse smallgrid gridview gridlist-choice-apply gridlist-choice-dontremember">
+	<?php print views_embed_view('also_in_this_series', 'default', $node->field_series[0]['nid'], $node->nid); ?>
+      </div>
+    </div>
+  </div> <!-- also-in-the-series -->
+  <?php } ?>
+
+
+  <?php if($node->type == "series") { ?>
+
+  <div class="in-this-series-section">
+    <div class="left-column">
+      <div class="label">In this Series</div>
+      <div class="gridlist-chooser">
+	<a class="view-choice-grid choice chosen">Grid view</a> / <a class="view-choice-list choice">List view</a>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="series-title"><?php print $node->field_series[0]['view']; ?></div>
+      <div class="in-this-series-browse smallgrid gridview gridlist-choice-apply"> <!-- the gridlist choice applies to this div -->
+        <?php print views_embed_view('series_contents', 'default', $node->nid); ?>
+      </div>
+    </div>
+  </div> <!-- in-this-series -->
+  <?php } ?>
+
+
+  <?php if($node->type == "host") { ?>
+
+  <div class="by-this-host-section">
+    <div class="left-column">
+      <div class="label">Shows and Series<br /> by <?php print $node->title; ?></div>
+      <div class="gridlist-chooser">
+	<a class="view-choice-grid choice chosen">Grid view</a> / <a class="view-choice-list choice">List view</a>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <div class="by-this-host-browse smallgrid gridview gridlist-choice-apply"> <!-- the gridlist choice applies to this div -->
+        <?php print views_embed_view('by_this_host', 'default', $node->nid); ?>
+      </div>
+    </div>
+  </div> <!-- by-this-host -->
+
+  <?php } ?>
+
+  <?php  if($node->disqus) { ?>
+  <div class="comments-section">
+    <div class="left-column">
+      <div class="label">Comments</div>
+    </div>
+  </div>
+  <?php }  ?>
+
+</div>
+
+<!-- for addthis analytics -->
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=artonair"></script>
+
+
+
+@
