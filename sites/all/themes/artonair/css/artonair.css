@@ -32,7 +32,7 @@
 
 
   body
-  { 
+  {
     margin: 0;
     padding: 10px;
       background-color: #f7f7f7;
@@ -50,7 +50,7 @@
 
 
   #page
-  { 
+  {
   	background-color: #f7f7f7;
 	padding-bottom: 80px;
 	position: relative;
@@ -58,7 +58,7 @@
   }
 
   #page.active
-  { 
+  {
 	left: 210px;
 	position: relative;
   }
@@ -71,7 +71,7 @@
 #page.active .menu-link {
     left: 210px;
 	}
-	
+
 #nav-bar {
     margin-left: -210px; /* "#menu" width */
     margin-top: 61px;
@@ -82,10 +82,10 @@
     left: 0;
     bottom: 0;
     z-index: 300; /* so the menu or its navicon stays above all content */
-    overflow-y: auto;
+    overflow-y: none;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 40px;
-}	
+}
 
 /* -- Dynamic Button For Responsive Menu -------------------------------------*/
 
@@ -145,7 +145,7 @@ small screens.
 
 
 
-	
+
   #page-inner
   {
   }
@@ -231,10 +231,10 @@ small screens.
   {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1024px; 
+    max-width: 1024px;
   	width: 80%;
-	 overflow: hidden; 
-	 margin-top: 77px; 
+	 overflow: hidden;
+	 margin-top: 77px;
   	padding-left: 10%;
   	padding-right: 10%;
   }
@@ -456,12 +456,12 @@ ul.menu li .menu a {
     text-align: center;
     width: 100%;
     padding-top: 75px;
-    padding-bottom: 1px; 
+    padding-bottom: 1px;
   	}
   #closure-blocks .inner, #closure-blocks .social /* Wrapper for any blocks placed in the closure region */
   {
   margin-right: 25px;
-  margin-left: 25px; 
+  margin-left: 25px;
   }
 
 /** Drupal nodes **/
@@ -502,10 +502,10 @@ ul.menu li .menu a {
   }
 
   .node-teaser /* A node displayed as teaser */
-  { 
+  {
 
   }
-  
+
   .bodyview .node-teaser {
 
   	}
@@ -753,22 +753,22 @@ ul.menu li .menu a {
   }
 
    #block-menu-secondary-links li.expanded/* "Secondary links" block */
-  { 
+  {
 	padding-right: 60px;
 	float:left;
 	list-style: none;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 12px;
-  } 
-  
+  }
+
   #block-menu-secondary-links {
   padding-left: 10px;
   width:730px;
   float: left;
   z-index: 200;
   }
-  
+
   #block-menu-secondary-links .menu {
   padding:0;}
 
@@ -779,15 +779,15 @@ ul.menu li .menu a {
   letter-spacing: normal;
   margin: 3px 0;
   }
-  
+
   #block-block-43 {
-	padding-top: 50px;	
+	padding-top: 50px;
   }
-  
+
   #block-block-44 {
 	padding-top: 50px;
 	}
-  
+
 
 
   #block-node-0 /* "Syndicate" block for primary RSS feed */
@@ -828,7 +828,7 @@ ul.menu li .menu a {
 
 #block-block-16 { /* search block */
 	}
-	
+
 #block-block-17 .block-inner { /* footer contact info block */
     font-size: .875em;
 	padding-bottom: 0;
@@ -836,24 +836,24 @@ ul.menu li .menu a {
 }
 
 
-  
+
 #block-block-37 /* "staff/personel" block for about page */
 	{
 	font-size: 0.85em;
 	line-height: 1.6em;
 	}
-	
+
 #block-block-37 .page-subhead {
 	font-size: 1.3em;
 	}
-	
+
 #block-block-35 /* "events" header block for events page */
 	{
 	width: 630px;
 	margin-bottom: 25px;
-	}	
-	
-#block-block-38 
+	}
+
+#block-block-38
 	{
 	font-size: 0.85em;
 	line-height: 1.6em;
@@ -863,7 +863,7 @@ ul.menu li .menu a {
 	visibility: hidden;
 	display: none;
 	}
-	
+
 #block-block-41 {
 	display:inline-block;
 	width: 200px;
@@ -871,7 +871,7 @@ ul.menu li .menu a {
 	right:0;
 	z-index: 200;
 	}
-	
+
 
 
 #block-block-46 {
@@ -888,23 +888,23 @@ ul.menu li .menu a {
 	border-width: 1px;
     font-size: 0.85em;
     padding: 10px;
-	}	
+	}
 .view-news-related {
 	background-color: #eee;
 	padding:3px;
 	}
-	
+
 #block-views-staffpicks-block_1, #block-views-most_viewed_sidebar-block_1, #block-views-5f9e6022f352066d22a58291b0f09e97 {
 	background-color: #EEEEEE;
 	padding: 3px;
 	margin-bottom: 35px;
 	}
-	
+
 #block-views-staffpicks-block_1	.view-content, #block-views-most_viewed_sidebar-block_1 .view-content, #block-views-5f9e6022f352066d22a58291b0f09e97 .view-content {
 	background-color: #fff;
 	padding-top: 5px;
 	}
-	
+
 /** Drupal boxes **/
   /* Wrapper for Comment form, Comment viewing options, Menu admin, and
    * Search results.
@@ -1059,7 +1059,7 @@ ul.menu li .menu a {
 /**   form tbody
   {
     border-top: 1px solid #FFF;
-  }**/ 
+  }**/
 
   form th
   {
@@ -1110,10 +1110,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1024px; 
+    max-width: 1024px;
   	width: 90%;
-	overflow: hidden; 
-	margin-top: 77px; 
+	overflow: hidden;
+	margin-top: 77px;
   	padding-left: 5%;
   	padding-right: 5%;
   }
