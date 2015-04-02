@@ -82,7 +82,7 @@
     left: 0;
     bottom: 0;
     z-index: 300; /* so the menu or its navicon stays above all content */
-    overflow-y: auto;
+    overflow-y: none;
     -webkit-overflow-scrolling: touch;
     margin-bottom: 40px;
 }
