@@ -62,8 +62,6 @@
 <link rel="stylesheet" href="<?php print $URL; ?>/style.css" type="text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.5">
-<?php $file = file_load($node->field_body_image['und'][0]['fid']); ?>
-<meta property="og:image" content="<?php print file_create_url($file->uri); ?>"/>
 
 </head>
 
