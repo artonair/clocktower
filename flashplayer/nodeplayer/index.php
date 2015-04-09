@@ -52,6 +52,12 @@
 ?>
 
 <html>
+<script>
+console.log("node");
+console.log($node);
+console.log("result");
+console.log($result);
+</script>
 
 <head>
 
