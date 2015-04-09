@@ -4,11 +4,11 @@
 //  $DRUPAL_URL = "http://clocktower.org/drupal";
 //  $PATH_ROOT = "/var/www/vhosts/artonair.org/clocktower.org";
 
-  $URL_ROOT = 'http://'.$_SERVER['SERVER_NAME'].'/drupal';
-  $DRUPAL_URL = 'http://'.$_SERVER['SERVER_NAME'].'/drupal';
+$URL_ROOT = 'http://'.$_SERVER['SERVER_NAME'].':8888/';
+  $DRUPAL_URL = 'http://'.$_SERVER['SERVER_NAME'].':8888/';
   $PATH_ROOT = $_SERVER['DOCUMENT_ROOT'];
 
-  $DRUPAL_PATH = $PATH_ROOT . "/drupal";
+  $DRUPAL_PATH = $PATH_ROOT;
   $URL = $URL_ROOT . "/flashplayer/nodeplayer";
 
   $nid = strip_tags($_GET["nid"]);
@@ -54,7 +54,12 @@
 <html>
 
 <head>
-
+<script>
+console.log("result");
+console.log($result);
+console.log("node");
+console.log($node);
+</script>
 <title>
   <?php print $node->title; ?>
 </title>

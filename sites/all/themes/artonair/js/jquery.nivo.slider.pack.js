@@ -5,7 +5,7 @@
  * Copyright 2010, Gilbert Pellegrom
  * Free to use and abuse under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * May 2010 - Pick random effect from specified set of effects by toronegro
  * May 2010 - controlNavThumbsFromRel option added by nerd-sh
  * May 2010 - Do not start nivoRun timer if there is only 1 slide by msielski
