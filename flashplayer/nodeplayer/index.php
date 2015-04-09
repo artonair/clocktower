@@ -54,12 +54,6 @@ $URL_ROOT = 'http://'.$_SERVER['SERVER_NAME'].':8888/';
 <html>
 
 <head>
-<script>
-console.log("result");
-console.log($result);
-console.log("node");
-console.log($node);
-</script>
 <title>
   <?php print $node->title; ?>
 </title>
