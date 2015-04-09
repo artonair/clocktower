@@ -53,8 +53,8 @@
 
 <html>
 <script>
-console.log("next node");
-console.log($nextnode);
+console.log("nid");
+console.log($nid);
 console.log("result");
 console.log($result);
 </script>
