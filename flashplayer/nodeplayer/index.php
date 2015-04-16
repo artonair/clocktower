@@ -211,7 +211,7 @@
       Host: <span class="host"><?php print(node_load($node->field_host[0])->title); ?></span>
     </div>
 
-    <div class="player-controls">
+    <div class="player-controls group">
       <div class="previous buttons">
         <div class="previous-show">
           <div></div>
