@@ -148,24 +148,27 @@ body {
 /* Top Section */
 
 section.top {
-  display: flex;
-  display: -webkit-flex;
+  min-width: 330px;
+  max-width: 100%;
   padding-top: 15px;
   padding-bottom: 30px;
 }
 
 .logo {
-  width: 213.5px;
-  height: 192.5px;
+  width: 213px;
+  height: 192px;
+  float: left;
 }
 
 .popup-buttons {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
-  flex: 1;
-  -webkit-flex: 1;
+  display: block;
+  float: right;
+  padding: 30px 20px;
+  margin: auto;
+}
+
+.more-info {
+  padding-bottom: 40px;
 }
 
 .more-info, .share {
@@ -208,10 +211,7 @@ section.top {
 /* Bottom Section */
 
 section.bottom {
-  display: flex;
-  display: -webkit-flex;
-  flex-direction: column;
-  -webkit-flex-direction: column;
+  min-width: 330px;
 }
 
 #current-track {

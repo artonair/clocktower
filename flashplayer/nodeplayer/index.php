@@ -4,11 +4,11 @@
 //  $DRUPAL_URL = "http://clocktower.org/drupal";
 //  $PATH_ROOT = "/var/www/vhosts/artonair.org/clocktower.org";
 
-  $URL_ROOT = 'http://'.$_SERVER['SERVER_NAME'].'/drupal';
-  $DRUPAL_URL = 'http://'.$_SERVER['SERVER_NAME'].'/drupal';
-  $PATH_ROOT = $_SERVER['DOCUMENT_ROOT'];
+$URL_ROOT = 'http://'.$_SERVER['SERVER_NAME'].':8888/';
+$DRUPAL_URL = 'http://'.$_SERVER['SERVER_NAME'].':8888/';
+$PATH_ROOT = $_SERVER['DOCUMENT_ROOT'];
 
-  $DRUPAL_PATH = $PATH_ROOT . "/drupal";
+$DRUPAL_PATH = $PATH_ROOT;
   $URL = $URL_ROOT . "/flashplayer/nodeplayer";
 
   $nid = strip_tags($_GET["nid"]);
@@ -147,7 +147,7 @@
     </div>
 
   </div>
-  <section class="top">
+  <section class="top group">
 
     <a href="http://clocktower.org" target="_new">
       <img class="logo" src="<?php print $URL; ?>/clocktowerlogo.png"/>
@@ -170,7 +170,7 @@
   </section>
 
 
-  <section class="bottom">
+  <section class="bottom group">
 
     <audio id="current-track"></audio>
 
