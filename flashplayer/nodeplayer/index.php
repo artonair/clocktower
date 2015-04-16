@@ -110,6 +110,23 @@
 
 </script>
 
+<script>
+  // Automatically adjusts width of popup button container
+  $(document).ready(function() {
+    $popupButtons = $(".popup-buttons");
+    resize($popupButtons);
+
+    $(window).resize(function() {
+      resize($popupButtons);
+    });
+
+    function resize($object) {
+      var popupWidth = $(".top").width() - $(".logo").width() - 50;
+      $object.css('width', popupWidth);
+    };
+  });
+</script>
+
 <script src="<?php print $URL; ?>/player.js"></script>
 
 <body>
