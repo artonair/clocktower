@@ -232,7 +232,7 @@ ul.menu .projects a:hover,
 .section-exhibition ul.pager a:hover,
 .section-event ul.pager a:hover,
 .section-residency ul.pager a:hover   {
-	color: #ef4135; /* RED */
+	background-color: #ef4135; /* RED */
 }
 
 
@@ -399,7 +399,7 @@ h6.host-types,
 .views-field-title .field-content > a:hover,
 .also-list .sidebar-header h3 a:hover,
 .views-accordion-item .node-teaser a.imagecache:hover  {
-	color: #009ddc; /* BLUE */
+	background-color: #009ddc; /* BLUE */
 }
 /* PEOPLE COLORS*/
 
@@ -474,7 +474,7 @@ ul.quicktabs_tabs.quicktabs-style-basic li.active a,
 .also-list .donate.block.item h3 a:hover,
 .node-teaser.node-type-news .read-more a:hover
  {
-	color: #FBCE29; /*#ffe513; /* YELLOW */
+	background-color: #FBCE29; /*#ffe513; /* YELLOW */
 
 	}
 
