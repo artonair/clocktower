@@ -78,7 +78,7 @@
     width: 210px;
     position: absolute;
     background-color: #f6f6f6;
-    top: 0;
+    top: -60px;
     left: 0;
     bottom: 0;
     z-index: 300; /* so the menu or its navicon stays above all content */
