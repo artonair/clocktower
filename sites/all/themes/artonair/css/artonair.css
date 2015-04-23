@@ -76,7 +76,7 @@
     margin-left: -210px; /* "#menu" width */
     margin-top: 61px;
     width: 210px;
-    position: fixed;
+    position: absolute;
     background-color: #f6f6f6;
     top: 0;
     left: 0;

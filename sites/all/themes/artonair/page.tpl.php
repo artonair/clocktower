@@ -89,19 +89,19 @@
   <script type="text/javascript" src="<?php print base_path() . path_to_theme(); ?>/js/jquery-1.11.0.min.js"></script>
   <script type="text/javascript">
    	var jQuery11 = jQuery.noConflict();
-  </script>  
+  </script>
 
-  
-   <?php if(($node->type == "show") && ($node->field_audio_path[0]['safe']))  { 
-    // this is for facebook share -- for more info go to http://developers.facebook.com/docs/share  ?> 
-    <meta name="title" content="<?php print $node->title; ?>" /> 
+
+   <?php if(($node->type == "show") && ($node->field_audio_path[0]['safe']))  {
+    // this is for facebook share -- for more info go to http://developers.facebook.com/docs/share  ?>
+    <meta name="title" content="<?php print $node->title; ?>" />
     <?php if($node->field_summary[0]['safe']) { ?>
-    <meta name="description" content="<?php print strip_tags($node->field_summary[0]['safe']); ?>" /> 
+    <meta name="description" content="<?php print strip_tags($node->field_summary[0]['safe']); ?>" />
     <?php } ?>
     <link rel="image_src" href="<?php print imagecache_create_url("teaser-archive-thumbnail", $node->field_image[0]['filepath']); ?>" />
     <!-- <link rel="audio_src" href="<?php print $artonair_mp3folder_http . "/" . trim($node->field_audio_path[0]['safe']); ?>" /> -->
     <meta name="audio_title" content="<?php print $node->title; ?>" />
-    <meta name="audio_artist" content="clocktower.org" /> 
+    <meta name="audio_artist" content="clocktower.org" />
     <meta name="audio_type" content="Content-Type header field" />
   <?php } ?>
     <meta name="site_name" content="Clocktower Productions & Radio" />
@@ -110,7 +110,7 @@
 
 	<!-- cycle -->
 	<script type="text/javascript" src="<?php print base_path() . path_to_theme(); ?>/js/jquery.cycle2.min.js"></script>
-	
+
 	<!-- noconflict script -->
 	<script type="text/javascript">
 		//noconflict below
@@ -123,8 +123,8 @@
 			swipe : 1,
 			prev : "#prev",
         	next : "#next",
-		});		
-		
+		});
+
 
 //		$('.banner-news').cycle('pause');
 
@@ -159,7 +159,7 @@
     			<?php endif; ?>
 
 <div id="nav-bar">
-<div id="nav-bar-inner" class="clear-block">    			
+<div id="nav-bar-inner" class="clear-block">
 				  <?php if ($logo || $site_name || $site_slogan): ?>
         			<div id="logo-title">
 			          <?php if ($logo): ?>
@@ -189,28 +189,21 @@
 
         </div> <!-- /#logo-title -->
       <?php endif; ?>
-    	
+
     	<div id="menu">
 			<?php
 			$tree = menu_tree_page_data('primary-links');
-			echo menu_tree_output($tree); 
+			echo menu_tree_output($tree);
 			?>
 		</div>
-		
+
       <?php if ($header): ?>
         <div id="nav-bar-blocks" class="region region-nav-bar">
-          
-          <?php print $header; ?>
-  	
-    <div class="social">
-	
-	<div class="fb-like" data-href="https://facebook.com/clocktowernyc" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
 
-	<div class="twitter-follow"><a href="https://twitter.com/Clocktower_NYC" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @Clocktower_NYC</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-	</div>
-	</div><!-- /#social -->
-	
+          <?php print $header; ?>
+
+
+
         </div> <!-- /#header-blocks -->
       <?php endif; ?>
 
@@ -224,29 +217,29 @@
     </div>
 
 </div>
- <div id="page-inner">  
+ <div id="page-inner">
     		<div id="header">
 				<div id="listen-bar">
 				<div id="nowplaying-custom">
 					<div class="nowplaying-playinfo">
 						<h6 class="nowplaying-title">
-								
-							<?php global $base_url; ?><a href="/drupal/flashplayer/live365" onclick="popUpAIR										(this.href,'fixed',250,480);return false;" target="artonair_music_popup"><img src="<?php print $base_url; ?>/sites/all/themes/artonair/images/audio-icon.gif"><span>Listen to Clocktower Radio </span></a> 					
+
+							<?php global $base_url; ?><a href="/drupal/flashplayer/live365" onclick="popUpAIR										(this.href,'fixed',250,480);return false;" target="artonair_music_popup"><img src="<?php print $base_url; ?>/sites/all/themes/artonair/images/audio-icon.gif"><span>Listen to Clocktower Radio </span></a>
 
 						</h6><!-- /.nowplaying-title -->
 							<iframe class="nowplaying-iframe" marginwidth="0" marginheight="0" frameborder="no" src="<?php print url(path_to_theme() . "/custom_functions/live365parser.php"); ?>"></iframe>
 					</div><!-- /.nowplaying-playinfo -->
 				</div><!-- /#nowplaying-custom -->
-				
+
         <h6 class="listen">
 					<span style="header">Listen with</span>
-<?php global $base_url; ?> <a href="http://audio.artonair.org/audio/mp3/pls/ArtOnAir-ClocktowerGalleryRadio.pls">MP3 / iTunes</a> 
+<?php global $base_url; ?> <a href="http://audio.artonair.org/audio/mp3/pls/ArtOnAir-ClocktowerGalleryRadio.pls">MP3 / iTunes</a>
 					</h6> --> <!-- /.listen-->
 
 				</div><!-- /#listen-bar -->
-    		    
+
     </div> <!-- /#header -->
- 
+
     <?php if ($help_area): ?>
     <div id="help_area" class="region region-help_box">
       <?php print $help_area; ?>
@@ -353,20 +346,20 @@
         <?php endif; ?>
 
         <?php print $footer; ?>
-        
-	
+
+
       </div></div> <!-- /#footer-inner, /#footer -->
     <?php endif; ?>
 
 
   </div></div> <!-- /#main-inner, /#main -->
 
-   
+
 
 
   <?php if ($closure_region): ?>
     <div id="closure-blocks" class="region region-closure">
-    
+
     	    <div class="inner">
 
 
@@ -374,9 +367,9 @@
   <?php endif; ?>
 
   <?php print $closure; ?>
- 
+
  <div id='toTop'><i class="icon icon-up"></i></div>
-    
+
   </div> <!-- /#page-inner,  -->
 </div> <!--/#page -->
 
