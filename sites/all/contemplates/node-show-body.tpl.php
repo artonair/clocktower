@@ -132,7 +132,7 @@
 
 			<?php if($node->type != "news") { ?>
         <div class="social">
-			<div class="addthis_toolbox addthis_default_style facebook"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a></div>
+			<div class="addthis_toolbox addthis_default_style facebook"><a class="addthis_button_facebook_share" fb:share:layout="button_count"></a></div>
 			<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-520a6a3258c56e49"></script>
 
 			<div class="twitter">
