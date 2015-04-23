@@ -523,6 +523,10 @@ html.js span.views-throbbing , .ahah-progress .throbber {
 	padding: 10px 0 2px 0;
 	}
 
+  #mc_embed_signup input.email {
+    width: 100% !important;
+  }
+
 
 /* 3-COL LAYOUT*/
 
@@ -1661,9 +1665,8 @@ h3.sidebar-header {
 	}
 
 #mc_embed_signup {
-	width: 80% !important;
-	margin-left: auto;
-	margin-right: auto;
+	width: 160px !important;
+  margin-left: 25px;
 	}
 #mc_embed_signup .button {
     background-color: #000000 !important;
