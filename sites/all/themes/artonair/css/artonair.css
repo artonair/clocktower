@@ -65,7 +65,7 @@
 
 #page.active #nav-bar {
     width: 210px;
-    left: 210px;
+    left: 0px;
     border-right: 1px solid #000;
     }
 #page.active .menu-link {
@@ -1103,7 +1103,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
 
     #page.active .menu-link {
-        left: 0px;
+        left: 210px;
     }
 
  #main
