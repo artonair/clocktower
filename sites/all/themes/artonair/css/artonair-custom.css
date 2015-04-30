@@ -3535,14 +3535,14 @@ padding: 1px; /* somehow banner is hidden otherwise */
 
 }
 
- @media screen and (max-width: 480px) {
+ @media screen and (max-device-width:480px), screen and (max-width: 480px) {
  	.nowplaying-iframe {
  		display: none;
  	}
  }
 
 
- @media screen and (max-width: 879px) {
+ @media screen and (max-device-width:879px), screen and (max-width: 879px) {
 
  	#listen-bar {
  		border-bottom: 1px solid #000;
@@ -3572,7 +3572,7 @@ padding: 1px; /* somehow banner is hidden otherwise */
 
 
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-device-width:1030px), screen and (max-width: 1030px) {
 
 	.masonry .item,
 	.front .masonry .item.views-row-first,
