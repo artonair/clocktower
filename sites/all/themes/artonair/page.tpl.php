@@ -232,8 +232,8 @@
 				</div><!-- /#nowplaying-custom -->
 
         <h6 class="listen">
-					<span style="header">Listen with</span>
-<?php global $base_url; ?> <a href="http://audio.artonair.org/audio/mp3/pls/ArtOnAir-ClocktowerGalleryRadio.pls">MP3 / iTunes</a>
+					<span style="header"></span>
+<?php global $base_url; ?> <a href="https://itunes.apple.com/us/podcast/clocktower-podcasts/id934512735">Subscribe on iTunes</a>
 					</h6> --> <!-- /.listen-->
 
 				</div><!-- /#listen-bar -->
