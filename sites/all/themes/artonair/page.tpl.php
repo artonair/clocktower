@@ -233,7 +233,7 @@
 
         <h6 class="listen">
 					<span style="header"></span>
-<?php global $base_url; ?> <a href="https://itunes.apple.com/us/podcast/clocktower-podcasts/id934512735">Subscribe on iTunes</a>
+<?php global $base_url; ?> <a href="https://itunes.apple.com/us/podcast/clocktower-podcasts/id934512735">Subscribe to our Podcast</a>
 					</h6> --> <!-- /.listen-->
 
 				</div><!-- /#listen-bar -->
