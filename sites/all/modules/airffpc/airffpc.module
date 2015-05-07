@@ -61,7 +61,6 @@ function template_preprocess_airffpc_view_podcast_feed(&$vars) {
       'itunes:email' => variable_get('site_mail', ini_get('sendmail_from')),
     ),
     'itunes:author' => 'Clocktower Radio',
-    'itunes:image' => 'http://clocktower.org/sites/default/files/artonair_logo.png',
   );
 
   $vars['namespaces'] = drupal_attributes($style->namespaces);
