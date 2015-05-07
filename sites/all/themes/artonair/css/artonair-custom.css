@@ -3536,9 +3536,7 @@ padding: 1px; /* somehow banner is hidden otherwise */
 }
 
  @media screen and (max-device-width:480px), screen and (max-width: 480px) {
- 	.nowplaying-iframe {
- 		display: none;
- 	}
+
  }
 
 
