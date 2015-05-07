@@ -60,8 +60,9 @@ function template_preprocess_airffpc_view_podcast_feed(&$vars) {
     'itunes:owner' => array(
       'itunes:email' => variable_get('site_mail', ini_get('sendmail_from')),
     ),
+    'itunes:author' => 'Clocktower Radio',
   );
-  
+
   $vars['namespaces'] = drupal_attributes($style->namespaces);
   $vars['channel'] = format_rss_channel($title, $vars['link'], $description, $items, $language->language, $args);
 

@@ -4,7 +4,7 @@
  * Much of the output here is based on the Apple Podcast standard.  Details
  * can be found here:
  * http://www.apple.com/itunes/store/podcaststechspecs.html
- * 
+ *
  * Note: We need a custom style plugin because the default RSS plugin does
  * not permit additional elements to be added to the feed.
 */

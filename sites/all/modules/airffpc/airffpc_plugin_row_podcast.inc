@@ -123,10 +123,6 @@ class airffpc_plugin_row_podcast extends views_plugin_row_node_rss {
             'value' => str_replace('&amp;', '&', $item->teaser), //DTLEDIT
           );
           $file_extra[] = array(
-            'key' => 'itunes:author',
-            'value' => str_replace('&amp;', '&', 'Clocktower Radio'), //DTLEDIT
-          );
-          $file_extra[] = array(
             'key' => 'guid',
             'value' => url($file_fileurl, array('absolute' => 'true')), //DTLEDIT
             'attributes' => array('isPermaLink' => 'false'),
