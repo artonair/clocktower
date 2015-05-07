@@ -72,6 +72,10 @@
     left: 210px;
 	}
 
+  #page.active #logo-image {
+    display: hidden;
+  }
+
 #nav-bar {
     margin-left: -210px; /* "#menu" width */
     margin-top: 61px;
@@ -1093,7 +1097,6 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
     #nav-bar {
         left: 210px;
-        position: fixed;
     }
 
     .menu-link {
