@@ -32,7 +32,7 @@ class airffpc_plugin_row_podcast extends views_plugin_row_node_rss {
         $item = node_invoke($item, 'view', $teaser, FALSE);
       }
       else {
-        $item = node_prepare($item, $teaser); 
+        $item = node_prepare($item, $teaser);
       }
 
       // Allow modules to change $node->teaser before viewing.
@@ -112,7 +112,7 @@ class airffpc_plugin_row_podcast extends views_plugin_row_node_rss {
           );
           /*$file_extra[] = array(
             'key' => 'itunes:author',
-            //'value' => $info['tags']['id3v2']['artist'][0], 
+            //'value' => $info['tags']['id3v2']['artist'][0],
           ); DTLEDIT */
           /* $file_extra[] = array(
             'key' => 'itunes:subtitle',
@@ -121,6 +121,10 @@ class airffpc_plugin_row_podcast extends views_plugin_row_node_rss {
           $file_extra[] = array(
             'key' => 'itunes:summary',
             'value' => str_replace('&amp;', '&', $item->teaser), //DTLEDIT
+          );
+          $file_extra[] = array(
+            'key' => 'itunes:author',
+            'value' => str_replace('&amp;', '&', 'Clocktower Radio'), //DTLEDIT
           );
           $file_extra[] = array(
             'key' => 'guid',
