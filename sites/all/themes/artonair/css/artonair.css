@@ -1093,6 +1093,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
     }
     #nav-bar {
         left: 210px;
+        position: fixed;
     }
 
     .menu-link {
