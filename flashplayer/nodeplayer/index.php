@@ -34,7 +34,7 @@
   echo("<script>console.log($result)</script>");
   echo("<script>console.log($resultcount)</script>");
   echo("<script>console.log('nid:')</script>");
-  echo("<script>console.log($nud)</script>");
+  echo("<script>console.log($nid)</script>");
   $playlist = $DRUPAL_URL . "/sites/all/themes/artonair/custom_functions/node_playlist_xspf.php?nid=" . $nid;
   $full_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
@@ -44,6 +44,9 @@
   if($resultcount > 1) {
 
     for($i = 0; $i < $resultcount; $i++) {
+      $showid = $result[$i]->node_node_data_field_included_shows_nid;
+      echo("<script>console.log('showid:')</script>");
+      echo("<script>console.log($showid)</script>");
       if($nid == $result[$i]->node_node_data_field_included_shows_nid) {
         echo("<script>console.log($i)</script>");
         if($i < ($resultcount - 1)){
