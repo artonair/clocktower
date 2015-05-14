@@ -790,7 +790,7 @@ h3.accordion-header-active {
 
 .bodyview .also-list, .bodyview .also-list.related {
 	clear:both;
-	padding: 55px 0;
+	padding-bottom: 55px;
 	}
 
 .front .also-list .block,
