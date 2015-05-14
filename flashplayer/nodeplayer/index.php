@@ -53,9 +53,9 @@
       }
     }
   }
-  echo("<script>console.log('Prevnode)</script>");
+  echo("<script>console.log('Prevnode')</script>");
   echo("<script>console.log($prevnode)</script>");
-  echo("<script>console.log('Nextnode)</script>");
+  echo("<script>console.log('Nextnode')</script>");
   echo("<script>console.log($nextnode)</script>");
 
 
