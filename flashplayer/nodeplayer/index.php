@@ -29,6 +29,8 @@
   $node = node_load($nid);
   $result = views_get_view_result("series_contents", $_SESSION['series']['nid']);
   $resultcount = count($result);
+  echo("<script>console.log($_SESSION)</script>");
+  echo("<script>console.log($result)</script>");
   echo("<script>console.log($resultcount)</script>");
 
   $playlist = $DRUPAL_URL . "/sites/all/themes/artonair/custom_functions/node_playlist_xspf.php?nid=" . $nid;
