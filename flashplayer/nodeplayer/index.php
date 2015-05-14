@@ -27,7 +27,7 @@
   include_once(path_to_theme() . '/custom_functions/custom_variable.php');
 
   $node = node_load($nid);
-  $result = views_get_view_result("series_contents", "grid_related_shows", $_SESSION['series']['nid']);
+  $result = views_get_view_result("series_contents", $_SESSION['series']['nid']);
   $resultcount = count($result);
   echo("<script>console.log($resultcount)</script>");
 
