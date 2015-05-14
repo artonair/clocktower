@@ -33,7 +33,8 @@
   echo("<script>console.log($nidd)</script>");
   echo("<script>console.log($result)</script>");
   echo("<script>console.log($resultcount)</script>");
-
+  echo("<script>console.log('nid:')</script>");
+  echo("<script>console.log($nud)</script>");
   $playlist = $DRUPAL_URL . "/sites/all/themes/artonair/custom_functions/node_playlist_xspf.php?nid=" . $nid;
   $full_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
