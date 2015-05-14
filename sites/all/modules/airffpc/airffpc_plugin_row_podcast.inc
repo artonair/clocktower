@@ -44,8 +44,7 @@ class airffpc_plugin_row_podcast extends views_plugin_row_node_rss {
     $extra = node_invoke_nodeapi($item, 'rss item');
 
     $sqid = 4; /* this is the subqueue for podccasts; hardcoded in. */ //DTL ADD
-    $pubDateuse = db_result(db_query("SELECT timestamp FROM {nodequeue_nodes} WHERE sqid = %d AND nid = %d", $sqid, $item->nid)); //DTLADD
-    if(!$pubDateuse) $pubDateuse = strtotime($item->field_aired_date[0]['value']); //DTLADD
+    $pubDateuse = strtotime($item->field_aired_date[0]['value']); //DTLADD
 
 
     $extra = array_merge($extra,
