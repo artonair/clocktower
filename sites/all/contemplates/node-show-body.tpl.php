@@ -313,7 +313,7 @@
     <div class="also-list masonry">
 
       	<div class="series-contents">
-      	  <?php print views_embed_view('series_contents', 'grid_related_shows', $node->nid); ?>
+      	  <?php print views_embed_view("series_contents", "grid_related_shows", $node->nid); ?>
       	</div>
 
     </div><!-- also-list -->
