@@ -29,7 +29,7 @@
   $node = node_load($nid);
   $result = views_get_view_result("series_contents", $_SESSION['series']['nid']);
   $resultcount = count($result);
-  echo("<script>console.log($_SESSION)</script>");
+  echo("<script>console.log($_SESSION['series']['nid'])</script>");
   echo("<script>console.log($result)</script>");
   echo("<script>console.log($resultcount)</script>");
 
