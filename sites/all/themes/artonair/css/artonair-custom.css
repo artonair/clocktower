@@ -3308,7 +3308,9 @@ body.archive #header #header-inner {
 
 #block-fuzzysearch-0 input[type="text"] {
   padding: 8px 0;
-  width: 130px;
+  width: 150px;
+  border: 1px solid #999;
+  margin-top: 7px;
 }
 
 #block-fuzzysearch-0 input[type="submit"] {
