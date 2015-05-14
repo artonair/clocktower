@@ -40,17 +40,17 @@
   $prevnode = -1;
   $nextnode = -1;
 
-  if(count($result) > 1) {
+  if($resultcount > 1) {
 
-    for($i = 0; $i < count($result); $i++) {
+    for($i = 0; $i < $resultcount; $i++) {
       if($nid == $result[$i]->node_node_data_field_included_shows_nid) {
         echo("<script>console.log($i)</script>");
-        if($i < (count($result) - 1)){
+        if($i < ($resultcount - 1)){
           $prevnode = $result[$i+1]->node_node_data_field_included_shows_nid;
           if($result[$i-1]){
             $nextnode = $result[$i-1]->node_node_data_field_included_shows_nid;
           }
-        } elseif($i == (count($result) - 1)) {
+        } elseif($i == ($resultcount - 1)) {
           $nextnode = $result[$i-1]->node_node_data_field_included_shows_nid;
         }
       }
