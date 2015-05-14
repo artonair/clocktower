@@ -282,7 +282,7 @@
       </div>
 
       <div class="series-contents">
-		<?php print views_embed_view('also_in_this_series', 'grid_related_shows', $node->field_series[0]['nid'], $node->nid); ?>
+		<?php print views_embed_view("series_contents", "grid_related_shows", $node->nid); ?>
       </div>
 		</div><!-- also-list -->
 
