@@ -3303,12 +3303,12 @@ body.archive #header #header-inner {
 
 #block-fuzzysearch-0 {
   margin-left: 32px;
-  padding: 8px 0;
-  width: 130px;
 }
 
-#block-fuzzysearch-0 h2 {
-  display: none;
+
+#block-fuzzysearch-0 input[type="text"] {
+  padding: 8px 0;
+  width: 130px;
 }
 
 #block-fuzzysearch-0 input[type="submit"] {
