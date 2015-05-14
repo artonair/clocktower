@@ -50,11 +50,10 @@ class airffpc_plugin_row_podcast extends views_plugin_row_node_rss {
 
     $extra = array_merge($extra,
       array(
-        array('key' => 'pubDate', 'value' => gmdate('r', $item->created)),
-      else $pubDateuse = $item->field_aired_date[0]['timestamp'];
-        array('key' => 'pubDate', 'value' => gmdate('r', $pubDateuse)), //DTLEDIT - done by when the node is added to the nodequeue.
-         The author should be an email address. Need to add this in.
-        array('key' => 'author', 'value' => $item->name),
+        array('key' => 'pubDate', 'value' => gmdate('r', $pubDateuse)),
+
+        // The author should be an email address. Need to add this in.
+        //array('key' => 'author', 'value' => $item->name),
       )
     );
     foreach ($extra as $element) {
