@@ -3302,7 +3302,9 @@ body.archive #header #header-inner {
 /* @group Archive View */
 
 #block-fuzzysearch-0 {
-  margin-left: 20px;
+  margin-left: 32px;
+  padding: 8px 0;
+  width: 130px;
 }
 
 #block-fuzzysearch-0 h2 {
