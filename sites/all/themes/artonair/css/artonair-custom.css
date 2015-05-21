@@ -1521,7 +1521,6 @@ body.front .view-new-this-week .content-section .right-column .title a{
 	}
 
 #listen-bar a:hover {
-	background-color: #009ddc;
 }
 #nowplaying-custom {
 	height: 40px;
@@ -1805,7 +1804,6 @@ margin-top: -5px;
 	font-size: 1.25em;
 	border: 1px solid #000;
 	color: #000;
-	text-transform: none;
 	font-family: 'frankgoth_cn_btregular', "Franklin Gothic", "ITC Franklin Gothic", Arial, sans-serif;
 	padding-left: 10px;
 	background-color: #fff;
@@ -1813,9 +1811,24 @@ margin-top: -5px;
 
 #search-box .form-text.idleField {
 	color: #000;
-	text-transform: uppercase;
-	border-color: #f6f6f6;
-	background-color: #f6f6f6;
+	border-color: 1px solid #000;
+	background-color: #fff;
+}
+
+::-webkit-input-placeholder {
+   color: #000;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #000;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #000;
+}
+
+:-ms-input-placeholder {
+   color: #000;
 }
 
 
