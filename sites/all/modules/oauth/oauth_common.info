@@ -18,9 +18,9 @@ files[] = includes/DrupalOAuthConsumer.inc
 files[] = includes/DrupalOAuthClient.inc
 files[] = includes/OAuthSignatureMethod_HMAC.inc
 
-; Information added by drupal.org packaging script on 2011-04-06
-version = "6.x-3.0-beta4"
+; Information added by Drupal.org packaging script on 2014-03-07
+version = "6.x-3.0-beta5"
 core = "6.x"
 project = "oauth"
-datestamp = "1302103016"
+datestamp = "1394221372"
 

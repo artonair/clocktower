@@ -270,7 +270,7 @@ function oauth_common_form_authorize_submit(&$form, &$form_state) {
   }
 
   // Add services
-  if ($values['full_access']) { // TODO: Full access should be a configurable auth level
+  if (!empty($values['full_access'])) { // TODO: Full access should be a configurable auth level
     $token->services = array('*');
   }
   elseif (!empty($values['levels'])) {
@@ -286,7 +286,9 @@ function oauth_common_form_authorize_submit(&$form, &$form_state) {
     // Pick the callback url apart and add the token parameter
     $callback = parse_url($consumer->callback_url);
     $query = array();
-    parse_str($callback['query'], $query);
+    if (!empty($callback['query'])) {
+      parse_str($callback['query'], $query);
+    }
     $query['oauth_token'] = $token->key;
     $callback['query'] = http_build_query($query, 'idx_', '&');
 
@@ -327,7 +329,7 @@ function oauth_common_callback_request_token() {
     $req = DrupalOAuthRequest::from_request();
     $context = oauth_common_context_from_request($req);
     if (!$context) {
-      throw new Exception('No OAuth context found');
+      throw new OAuthException('No OAuth context found');
     }
     $server = new DrupalOAuthServer($context);
     print $server->fetch_request_token($req);
@@ -346,7 +348,7 @@ function oauth_common_callback_access_token() {
     $req = DrupalOAuthRequest::from_request();
     $context = oauth_common_context_from_request($req);
     if (!$context) {
-      throw new Exception('No OAuth context found');
+      throw new OAuthException('No OAuth context found');
     }
     $server = new DrupalOAuthServer($context);
     $access_token = $server->fetch_access_token($req);
