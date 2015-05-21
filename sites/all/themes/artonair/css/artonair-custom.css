@@ -1801,7 +1801,7 @@ margin-top: -5px;
 
 #search-box .form-text {
 	height: 30px;
-	width: 150px;
+	width: 200px;
 	font-size: 1.25em;
 	border: 1px solid #000;
 	color: #000;
@@ -3301,21 +3301,6 @@ body.archive #header #header-inner {
 
 /* @group Archive View */
 
-#block-fuzzysearch-0 {
-  margin-left: 32px;
-}
-
-
-#block-fuzzysearch-0 input[type="text"] {
-  padding: 8px 5px;
-  width: 150px;
-  border: 1px solid #999;
-  margin-top: 7px;
-}
-
-#block-fuzzysearch-0 input[type="submit"] {
-  display: none;
-}
 
 table.views-view-grid {
 	margin-top: 0px;

@@ -392,6 +392,10 @@ ul.menu li .menu a {
 
   #search-box /* Wrapper for the search form */
   {
+    display: block;
+    float: right;
+    margin-right: 38px;
+    margin-top: 12px;
   }
 
   #edit-search-theme-form-1-wrapper label /* Label that says "Search this site:" */

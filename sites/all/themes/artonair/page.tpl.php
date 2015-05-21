@@ -231,6 +231,16 @@
 					</div><!-- /.nowplaying-playinfo -->
 				</div><!-- /#nowplaying-custom -->
 
+        <div id="search-box">
+        <form action="/drupal/search"  accept-charset="UTF-8" method="get">
+        <div class="submit-button"><input type="image" src="<?php print url(path_to_theme() . '/images/menu_searchbutton.gif'); ?>"  id="edit-submit" value="Search"  class="form-submit" /></div>
+         <div class="form-item" id="edit-search-theme-form-1-wrapper">
+         <input type="text" maxlength="128" name="keys" id="edit-search-theme-form-1" size="15" placeholder="Search" title="Enter the terms you wish to search for."  class="form-text" />
+         </div>
+
+         </form>
+         </div>
+
 				</div><!-- /#listen-bar -->
 
     </div> <!-- /#header -->

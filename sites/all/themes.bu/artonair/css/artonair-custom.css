@@ -1,7 +1,7 @@
 
 /* View this in CSSEdit for folders and stuff! */
 
-/* @override 
+/* @override
 	http://artonair.org/newsite.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?W
 	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?0
 	http://staging.artonair.org/sites/all/themes/artonair/css/artonair-custom.css?w
@@ -64,7 +64,7 @@
 */
 
 /* Special Yellow
-#FFD200 
+#FFD200
 Special Yellow (Darker)
 #ECC100
 Special Cyan (for on black)
@@ -76,7 +76,7 @@ Special Cyan (darker)
 Special Cyan (even darker)
 #007F93
 Special tinted cyan (darker)
-#A7D0EB 
+#A7D0EB
 Special tinted cyan
 #E3F7FA
 Special black
@@ -138,8 +138,8 @@ p {	margin-top: 0px; }
 .pager,
 h1,h2,h3,
 /*.node-type-exhibition .exhibition-teaser .title,*/
-.artists-list, 
-.curators-list, 
+.artists-list,
+.curators-list,
 .header .type,
 .view-archive-index-people .view-content .views-field-title,
 .view-archive-index-series .view-content .views-field-title,
@@ -149,7 +149,7 @@ h1,h2,h3,
 .archive-menu-block,
 .bodyview .content-section .listen .listen-display .text,
 .view-residency-related-events .header-title,
-.page-subhead, .views-field-field-exhibition-type-value, .view-events-accordion .views-field-title, .subscribe-header, #mc_embed_signup .clear, .page-events-archive .view-dom-id-clocktowergallery-v3-clone-event-page-2-1 .views-field-title, .listview .views-field-title, .list-view .views-field-title,.condensed-view .views-field-title,  .view-radio-category-index .series-title, .series-grid .series-title { 
+.page-subhead, .views-field-field-exhibition-type-value, .view-events-accordion .views-field-title, .subscribe-header, #mc_embed_signup .clear, .page-events-archive .view-dom-id-clocktowergallery-v3-clone-event-page-2-1 .views-field-title, .listview .views-field-title, .list-view .views-field-title,.condensed-view .views-field-title,  .view-radio-category-index .series-title, .series-grid .series-title {
 	font-family:  'MuseoSlab500', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 	font-weight: normal !important;
 }
@@ -315,7 +315,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 	padding-top: 15px;
 	overflow: hidden;
 	margin-bottom: 10px;
-	
+
 }
 
 #help_box .icon {
@@ -363,7 +363,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 	position: relative;
 	z-index: 100;
 	height: 100px;
-	background-color: white;		
+	background-color: white;
 
 }
 
@@ -617,7 +617,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 /* @group Links */
 
 #header .air_header_menu .menu_links {
-	float: left;	
+	float: left;
 	width: 160px;
 	margin-top: 2px;
 }
@@ -723,7 +723,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 #search-box .form-text {
 	height: 17px;
 	float: right;
-	width: 150px;
+	width: 250px;
 	font-size: 0.8em;
 	text-align: right;
 }
@@ -758,7 +758,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 #block-nice_menus-1 ul.nice-menu-down ul li	{
 	border:none !important;
 	}
-	
+
 #block-nice_menus-1 ul.nice-menu, ul.nice-menu ul {
 	z-index: 200 !important;
 	}
@@ -769,7 +769,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 	border-left:3px solid #fff;
 	border-top:1px solid #eee !important;
 	}
-	
+
 #block-nice_menus-1 ul.nice-menu li.menuparent ul, #block-nice_menus-1 ul.nice-menu li.menuparent ul {
 	border-bottom: 3px solid #EEEEEE;
 	border-left: 3px solid #EEEEEE;
@@ -777,7 +777,7 @@ body.front .view-new-this-week .content-section .right-column .title {
     margin-left: -3px;
     margin-top: 16px;
     border-top: none;
-	}	
+	}
 #block-nice_menus-1 ul.nice-menu ul li a {
 	font-family: "Helvetica Neue", Helvetica, Arial, Geneva, sans-serif !important;
 	text-transform: uppercase;
@@ -791,7 +791,7 @@ body.front .view-new-this-week .content-section .right-column .title {
     font-family: 'MuseoSlab500',"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
     font-weight: normal !important;
     font-size: 1.6em;
-}    
+}
 #block-nice_menus-1 ul.nice-menu-down .menuparent li.over a{
 	background-color: #fff !important;
 	}
@@ -870,11 +870,11 @@ body.front .view-new-this-week .content-section .right-column .title {
     width: 165px;
     background-image: "http://artonair.org/sites/default/files/imagecache/default_bodyview_thumbnail/page/9564/air-0018.jpg";
     }
-    
+
 .nodeplayer .over-type {
 	width:100px;
 	}
-  
+
 .nodeplayer .over-type .type {
 	visibility: hidden;
 	}
@@ -935,7 +935,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 
 .bodyview .listview .views-row-first {
 	border-top: none;}
-	
+
 .bodyview .listview .views-row-last {
 	border-bottom: 1px solid #ccc;}
 
@@ -949,7 +949,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 .nodeplayer .teaser .inner .series {
 	margin-right: 0px;
 	}
-	
+
 .teaser.hovering .wrapper .header  {
 	border-bottom: 1px solid #ccc;
 }
@@ -974,13 +974,13 @@ body.front .view-new-this-week .content-section .right-column .title {
 	float: left;
 	margin-right: 3px;
 }
-	
-	
+
+
 .teaser .wrapper .header a {
 	color:#323232;
 }
 
-.teaser .wrapper .header a:hover { 
+.teaser .wrapper .header a:hover {
 	color: #78F0FF;
 }
 
@@ -1028,7 +1028,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 
 .teaser .wrapper .header .listen a:hover {
 	color: white;
-	
+
 	background-color: #46C8DC;
 	text-decoration: none;
 	-webkit-border-radius: 5px; -khtml-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
@@ -1258,13 +1258,13 @@ body.front .view-new-this-week .content-section .right-column .title {
 	float: left;
 	max-height: 165px;
 	max-width: 165px;
-	
+
 }
 
 .bodyview .gridview-image img {
 	width: 165px;
 	height: 165px;
-	
+
 }
 
 .nodeplayer .gridview-image img {
@@ -1275,7 +1275,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 
 /* !!! this is where the size of the image for sidebarview is designated */
 /*.smallgrid .gridview-image img {
-	width: 100px; height: 100px; 
+	width: 100px; height: 100px;
 }*/
 
 .gridview .gridview-image {
@@ -1373,11 +1373,11 @@ body.front .view-new-this-week .content-section .right-column .title {
 /* @group Archive's List view */
 
 .archive .listview .teaser .wrapper {
-	 /* width is only limited for an archive page 
+	 /* width is only limited for an archive page
 
 	 width: 240px;
  	height: 290px;*/
- 	
+
  	height: 165px;
  	margin-bottom: 0 !important;
  	float: none !important;
@@ -1391,7 +1391,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 
 .archive .listview .teaser .wrapper .inner {
 	padding-right: 5px;
-	
+
 	/* height: 260px;  */ /* listview .teaser .wrapper height - header height - links height */
 }
 
@@ -1483,7 +1483,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 	color: #323232;
 }
 
-.bodyview .breadcrumbs a:hover { 
+.bodyview .breadcrumbs a:hover {
 	color: #78F0FF;
 }
 
@@ -1507,14 +1507,14 @@ body.front .view-new-this-week .content-section .right-column .title {
 .show-body .title .series-title {
 	max-width:360px;
 	}
-	
+
 /* @end */
 
 /* @group content-section */
 
 .bodyview .content-section {
 	margin-bottom: 20px;
-	padding-bottom: 10px; 
+	padding-bottom: 10px;
 	/* the padding is to not have the overflow happen because images end up being surrounded with a strange few pixels of margin-bottom */
 	overflow: hidden;
 	/* and this of course is a hack to stretch the div as high as the floats */
@@ -1525,32 +1525,32 @@ body.front .view-new-this-week .content-section .right-column .title {
 	}
 .bodyview .content-section .right-column {
 }
-	
+
 /* @group image-section */
 
 .bodyview .content-section .image-section {
-	text-align: right;	
+	text-align: right;
 }
 
 .event-bodyview .image-section {
-	text-align: center !important;	
+	text-align: center !important;
 	background-color: #EEEEEE;
 }
 
 .event-bodyview .image-section .title {
 	padding-bottom: 4px;
     padding-left: 6px;
-    text-align: left;	
+    text-align: left;
 }
 .event-bodyview .image-section .type a {
-	color: #323232; 
+	color: #323232;
 	}
 .event-bodyview .image-section .type a:hover {
-	opacity:.7; 
+	opacity:.7;
 	}
 
 .event-bodyview .image-section .type {
-	text-align: left;	
+	text-align: left;
     font-size: 0.7em;
     letter-spacing: 1px;
     padding-left: 6px;
@@ -1572,13 +1572,13 @@ body.front .view-new-this-week .content-section .right-column .title {
 .event-bodyview .image-section .slideshow .text-launch{
 	padding-right: 18px;
 	}
-	
+
 .event-bodyview .image-section .slideshow .text-launch-img{
 	position: absolute;
 	right:0;
 	top:0;
 	}
-	
+
 .event-bodyview .image-section .type .slideshow .view-content img {
   opacity:0;
   position:absolute;
@@ -1608,7 +1608,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 	font-size: .8em;
 	line-height: 1.5em;
 	color: #767676;
-	text-align: right;	
+	text-align: right;
 	margin-top: 0px;
 }
 
@@ -1684,7 +1684,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 #sidebar-right-inner h3 {
 	margin-top:4px;
 	}
-	
+
 #sidebar-right-inner .listen-imgsm {
 	width: 30px;
 	padding-left: 12px;
@@ -1822,7 +1822,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 
 .bodyview .gridlist-chooser .chosen {
 	background-color: #46C8DC !important;
-	color:  white;	
+	color:  white;
 }
 
 
@@ -1836,7 +1836,7 @@ body.front .view-new-this-week .content-section .right-column .title {
 
 /* @group also-in-the-series-section */
 
-/* for a series */ 
+/* for a series */
 
 .bodyview .also-in-the-series-section {
 	overflow: hidden;
@@ -2027,7 +2027,7 @@ li.comment_forbidden {
 #comments .comment .submitted-section .posted-by-user {
 	display: inline;
 	font-weight: bold;
-}	
+}
 
 #comments .comment .submitted-section .new {
 }
@@ -2047,7 +2047,7 @@ li.comment_forbidden {
 	font-size: .85em;
 	background-color: #DDD;
 	padding: 10px 10px 0px 10px;
-} 
+}
 
 #comments .comment .content-section p {
 	margin: 0px 0px 0px 0px;
@@ -2105,7 +2105,7 @@ li.comment_forbidden {
 
 .clocktowergallery-page .node-type-exhibition .gridview-image {
 	float: left;
-	margin-right: 15px !important;	
+	margin-right: 15px !important;
 }
 
 .node-type-exhibition .image {
@@ -2175,7 +2175,7 @@ display: block;
 
 .clocktowergallery-page .node-type-event .gridview-image {
 	float: left;
-	margin-right: 15px !important;	
+	margin-right: 15px !important;
 }
 
 .node-type-event .image {
@@ -2249,7 +2249,7 @@ display: inline;
 
 .clocktowergallery-page .node-type-residency .gridview-image {
 	float: left;
-	margin-right: 15px !important;	
+	margin-right: 15px !important;
 }
 
 .node-type-residency .image {
@@ -2308,7 +2308,7 @@ display: block;
 
 .node-type-page #content-header {
 	width: 630px;
-    
+
 }
 
 .node-type-page #content-header .title {
@@ -2325,7 +2325,7 @@ display: block;
 .node-type-page .page-subhead {
 	font-size: 1.3em;
 	}
-	
+
 
 /* @end */
 
@@ -2338,7 +2338,7 @@ display: block;
 
 /* @group Listed views */
 
-	
+
 .list-view {
   margin-right:auto;
   max-width:720px;
@@ -2390,7 +2390,7 @@ display: block;
 .bodyview .list-view .teaser .read-more {
 	font-size: 1.2em !important;
 	}
-		
+
 .list-view .views-field-field-host-nid {
 	font-size: .8em;
 	line-height: 1.3em;
@@ -2412,11 +2412,11 @@ display: block;
 	padding-top: 6px;
 	height:75px;
 	}
-	
+
 .list-view .views-row-last {
 	border-bottom: 1px solid #ccc !important;
 	}
-	
+
 .list-view .view-footer {
 	text-align: right;
 	margin-top: 50px;
@@ -2426,7 +2426,7 @@ display: block;
 .list-view .view-header {
 	font-size: .8em;
 	}
-		
+
 .list-view .views-field-field-artists-value {
 	font-size: .8em;
 	line-height: 1.3em;
@@ -2436,7 +2436,7 @@ display: block;
 	display: inline;
 	padding-right: 6px;
 	}
-	
+
 .list-view .play {
 	width:42px;
 	right:5px;
@@ -2452,21 +2452,21 @@ display: block;
 	   -moz-transition: opacity 1s;
 	   -webkit-transition: opacity 1.5s;
 	   -o-transition: opacity 1s;
-	} */	
+	} */
 
 .list-view .content-type a:hover {
 	text-decoration: none;
 	color: #007F93;
 	}
-	
+
 .radio-icon {
 	position: absolute;
 	right: 2px;
 	visibility: hidden;
 	display: none;
 	}
-	
-	
+
+
 /* @end */
 /* content type overlay */
 .overlay-type {
@@ -2495,9 +2495,9 @@ display: block;
    }
 
 /* @end */
-	
+
 /* @group condensed sidebar */
-	
+
 .condensed-view {
 
 }
@@ -2526,7 +2526,7 @@ display: block;
 .condensed-view .views-field-field-image-fid img {
 	width:46px;
 	}
-	
+
 .condensed-view .series-title {
 	font-size: 0.7em;
 	text-transform: uppercase;
@@ -2541,18 +2541,18 @@ display: block;
     margin-top: -15px;
     padding-right: 4px;
 	}
-	
+
 .condensed-view .show-title {
 	font-size: 0.8em;
 	font-family: "Helvetica Neue",Helvetica,Arial,Geneva,sans-serif;
 	font-weight: bold;
 	}
-	
+
 .condensed-view h3.title {
 	padding: 8px 4px 4px 4px;
 	color: #555;
 	}
-	
+
 .view-dom-id-events-accordion-block-1-1 h3 {
 	padding-left: 5px;
 	}
@@ -2575,10 +2575,10 @@ display: block;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	float:right;
-	font-size: .8em;	
+	font-size: .8em;
 	margin-top: -8px;
 	}
-	
+
 .clocktowergallery-sidebar .date-display-single {
 	font-size: .85em;
 	font-weight: bold;
@@ -2647,12 +2647,12 @@ display: block;
 	margin: 10px 10px 0px 0px;
 	font-weight: bold;
 	float: left;
-	width: 10px; 
+	width: 10px;
 }
 
 
 .node-type-airstream .airstream-body .airstream-box {
-	margin: 0px 0px 10px 20px; 
+	margin: 0px 0px 10px 20px;
 	/*margin-left is width of rownumber + its margin */
 }
 
@@ -2779,11 +2779,11 @@ playlist-listing {
 	margin: 10px 10px 0px 0px;
 	font-weight: bold;
 	float: left;
-	width: 20px; 
+	width: 20px;
 }
 
 .playlist-view .playlist-view-item {
-	margin: 0px 20px 10px 30px; 
+	margin: 0px 20px 10px 30px;
 	/*margin-left is width of rownumber + its margin */
 	padding: 10px;
 	border: 1px solid black;
@@ -2977,12 +2977,12 @@ playlist-listing {
 .view.clocktowergallery-page .view-header .archive-view-title {
 	font-size: 1.5em;
 	margin-bottom: 5px;
-}	
+}
 
 .category-view-title {
 	font-size: 1.5em;
 	margin-bottom: 5px;
-}	
+}
 
 .view.clocktowergallery-page .view-header .archive-view-subtitle {
 	font-size: 0.85em;
@@ -3016,7 +3016,7 @@ playlist-listing {
 /* @group Gallery View Page */
 
 .view-clocktowergallery-v3-all.view-display-id-page_1 .nowonview-title {
-text-align: left;	
+text-align: left;
 }
 
 .view-clocktowergallery-v3-all.view-display-id-page_1 .views-row {
@@ -3145,7 +3145,7 @@ display: none !important;
 
 
 .nivoslider .nivo-caption p {
-	
+
 }
 
 .nivoslider .nivo-caption .series {
@@ -3179,7 +3179,7 @@ display: none !important;
 }
 .nivoslider .nivo-controlNav {
   display: none;
-} 
+}
 
 
 .view-gallery-slider {
@@ -3217,7 +3217,7 @@ display: none !important;
 }
 
 /*.page-clocktower-gallery-v3 .nivoslider .nivo-caption .type:after {
-    content: ":";  
+    content: ":";
 } */
 
 
@@ -3239,7 +3239,7 @@ display: none !important;
 /* @group Divider - Clocktower Gallery  */
 
 .clocktowergallery-divider {
-	margin: 20px 0px;	
+	margin: 20px 0px;
 }
 
 
@@ -3384,7 +3384,7 @@ ul.pager li.pager-item {
 }
 
 ul.pager li a {
-	color: #007F93;	
+	color: #007F93;
 	padding: 3px 4px;
 }
 
@@ -3394,7 +3394,7 @@ ul.pager li.pager-current {
 }
 
 ul.pager li a:hover {
-	background-color: #CCC;	
+	background-color: #CCC;
 	color:  white;
 
 }
@@ -3414,12 +3414,12 @@ ul.pager li a:hover {
 	margin-bottom: 15px;
       height: 250px;
 }
- 
- 
+
+
 #nivoslider {
 	position: relative;
 }
- 
+
 /* @group Caption */
 
 #nivoslider img {
@@ -3454,7 +3454,7 @@ ul.pager li a:hover {
 
 
 .nivoslider .nivo-caption p {
-	
+
 }
 
 .nivoslider .nivo-caption .series {
@@ -3488,7 +3488,7 @@ ul.pager li a:hover {
 }
 .nivoslider .nivo-controlNav {
   display: none;
-} 
+}
 
 
 /* @end */
@@ -3511,7 +3511,7 @@ body.archive #header {
 	height: 140px;
 	margin-top: -35px;
 	padding-top: 20px;
-	width: 960px; // width of page 
+	width: 960px; // width of page
 	background-color: white;
 }
 
@@ -3524,7 +3524,7 @@ body.archive #header #header-inner {
 	margin-top: 150px;
 }
 
-.archive #sidebar-left { 
+.archive #sidebar-left {
 	margin-top: 150px;
 	z-index: 99;
 }
@@ -3546,7 +3546,7 @@ body.archive #header #header-inner {
 /* @group View-header */
 
 .archive .view-header {
-	margin-top: 0px;	
+	margin-top: 0px;
 	height:  35px;
 	position: relative;
 }
@@ -3572,7 +3572,7 @@ body.archive #header #header-inner {
 .archive-view-header-type {
 	font-weight: bold;
 	font-style: italic;
-}	
+}
 
 .archive-view-header-keys {
 	font-weight: bold;
@@ -3601,7 +3601,7 @@ body.archive #header #header-inner {
 
 .archive .gridlist-chooser .chosen {
 	background-color: #46C8DC !important;
-	color:  white !important;	
+	color:  white !important;
 }
 
 
@@ -3616,7 +3616,7 @@ body.archive #header #header-inner {
 .view-dom-id-archive-index-people-block-1-1 tr {
 	width: 730px;
 	}
-	
+
 .view-dom-id-archive-index-people-block-1-1 td {
 padding: 0 30px 0 0;
 margin-bottom: -10px;
@@ -3625,11 +3625,11 @@ margin-bottom: -10px;
 .view-dom-id-archive-index-people-block-1-1 a {
 	font-family:  Tahoma,Verdana,Arial,Helvetica,"Bitstream Vera Sans",sans-serif;
 	font-weight: normal !important;
-	font-size: 1.1em;} 
+	font-size: 1.1em;}
 
 #block-views-archive_index_people-block_1 {
 	border-bottom: 1px solid #ccc;
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
 	position: relative;
 }
 
@@ -3642,7 +3642,7 @@ width: 45%;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 5px;
 	margin-top: 0px;
-	margin-bottom: 15px;	
+	margin-bottom: 15px;
 	position: relative;
 	font-family: 'MuseoSlab500',"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
 	color: #323232;
@@ -3656,10 +3656,10 @@ width: 100%;}
 #block-block-39 a {
 	font-family:  Tahoma,Verdana,Arial,Helvetica,"Bitstream Vera Sans",sans-serif;
 	font-weight: normal !important;
-	font-size: 0.9em;} 
+	font-size: 0.9em;}
 
 #block-block-39 {
-	margin-bottom: 25px;	
+	margin-bottom: 25px;
 	position: relative;
 }
 
@@ -3671,7 +3671,7 @@ width: 100%;}
 	margin-right: 10px;
 }*/
 
-	
+
 .view-events-accordion .view-empty p {
 	font-size: .85em;
 	}
@@ -3700,7 +3700,7 @@ width: 100%;}
 	margin-bottom: 0 !important;
 	}
 
-/* @end */	
+/* @end */
 
 /* @group Archive Category Accordion View */
 
@@ -3779,7 +3779,7 @@ clear:both;}
 .archive-menu-block .archive-menu-inner a {
 	display: block;
 	padding: 2px 4px;
-	
+
 }
 
 .archive-menu-block .archive-menu-inner a:hover {
@@ -3793,7 +3793,7 @@ clear:both;}
 	background-color: #ccc;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
-	-khtml-border-radius: 5px;	
+	-khtml-border-radius: 5px;
 	border-radius: 5px;
 	color: white;
 }
@@ -3919,7 +3919,7 @@ clear:both;}
  	width: 240px !important;
  	height: auto !important;
  	}
- 	
+
 
  .view-radio-category-index .views-field-field-summary-value {
  	left: 0;
@@ -3931,7 +3931,7 @@ clear:both;}
     height: 160px;
     overflow: hidden;
  	}
- 	
+
  	.view-radio-category-index .views-field-field-summary-value .summary a {
     background-color: #fff;
     height: 85%;
@@ -3941,9 +3941,9 @@ clear:both;}
     width: 220px;
     color: #000;
  	}
- 	
 
- 	
+
+
  .view-radio-category-index .views-accordion-item .accordion-header, .view-radio-category-index h3.accordion-header {
  	padding: 8px !important;
  	border-bottom: 1px solid #ccc !important;
@@ -3960,11 +3960,11 @@ clear:both;}
     opacity: 0.9;
     padding: 6px 10px;
  	}
- 	
+
 .view-radio-category-index .archive-view-title {
 	font-size: 0.9em;
 	}
-	
+
 .view-radio-category-index	h3.accordion-header-active .arrow {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -4044,7 +4044,7 @@ clear:both;}
 	padding: 4px;
 	color: #AAA;
 	-webkit-border-radius: 7px;
-	-khtml-border-radius: 7px;	
+	-khtml-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
 
@@ -4059,14 +4059,14 @@ clear:both;}
 
 #views-exposed-form-archive-page-1 .bef-checkboxes label.hovered-label {
 	background-color: #B7F0F0 !important;
-	color: #777;	
+	color: #777;
 }
 
 
 
 #views-exposed-form-archive-page-1 .bef-checkboxes label.checked-label.hovered-label {
 	background-color: #B7F0F0 !important;
-	color: #777;	
+	color: #777;
 }
 
 /* @end */
@@ -4104,7 +4104,7 @@ table.views-view-grid {
 	margin-top: 15px;
 	text-align: center;
 	-webkit-border-radius: 7px;
-	-khtml-border-radius: 7px;	
+	-khtml-border-radius: 7px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
 	font-size: 1em;
@@ -4112,7 +4112,7 @@ table.views-view-grid {
 }
 
 .view.archive .view-content {
-	/* margin-right: -30px;  a hack so that the marign-right of the rightmost column doesn't break the float */ 
+	/* margin-right: -30px;  a hack so that the marign-right of the rightmost column doesn't break the float */
 }
 
 /* @end */
@@ -4156,7 +4156,7 @@ table.views-view-grid {
 .archive .listview .row-first {
 	border-top: 1px solid #ccc;
 	}
-	
+
 .archive .listview .row-first .col-1 {
 	padding-top: 10px;
 	}
@@ -4167,7 +4167,7 @@ table.views-view-grid {
 	overflow:hidden;
 	position: relative;
 	}
-	
+
 .series-grid .over{
 	position: absolute;
 	top:0;
@@ -4190,7 +4190,7 @@ table.views-view-grid {
     opacity: 0.8;
     padding: 6px 10px;
 	}
-	
+
 .series-grid .summary a	{
     background-color: #FFFFFF;
     color: #000000;
@@ -4204,11 +4204,11 @@ table.views-view-grid {
 .sidebar-right .series-grid .summary a	{
 font-size: .8em;
     }
-    
+
 .sidebar-right .series-grid .series-title {
 	font-size: 1.1em;
 	}
-	
+
 .sidebar-right .series-grid {
 	margin-bottom: 15px;
 	}
@@ -4385,7 +4385,7 @@ color: #323232;
 .view-dom-id-archive-index-series-categories2-block-1-1 td {
 	width: 40%;
 	}
-	
+
 .view-dom-id-archive-index-series-categories2-block-1-1 .view-content {
   line-height:1.3em;
   margin-bottom:50px;
@@ -4440,7 +4440,7 @@ border-bottom-color:#ccc;
 
 .footer .footer_menu a {
 	color: #767676;
-	font-weight: bold;	
+	font-weight: bold;
 }
 
 .footer .footer_menu a:hover {
@@ -4539,7 +4539,7 @@ border-bottom-color:#ccc;
 }
 
 .backend-nodequeue-add .backend-label {
-	
+
 }
 
 
@@ -4603,32 +4603,32 @@ display: none;}
 #block-quicktabs-testquicktab .content {
 width: 630px;}
 
-	
+
 #block-block-42 .subscribe-header {
 	font-size: 1.1em;
     line-height: 1.3em;
     margin-bottom: 0.667em;
     margin-top: 0.667em;
 	}
-	
-/* EVENT ARCHIVE VIEW */	
+
+/* EVENT ARCHIVE VIEW */
 .page-events-archive .view-dom-id-clocktowergallery-v3-clone-event-page-2-1 .field-content p {
 	font-size: .85em;
 	line-height: 1.6em;
 	}
- 
+
 .page-events-archive .view-dom-id-clocktowergallery-v3-clone-event-page-2-1 .views-field-title-1 {
 	text-transform: uppercase;
 	font-size: .9em;
-	}  	
-	
+	}
+
 .support {
  	font-size: 11px;
  	font-style: italic;
  }
- 
- 
 
- 
+
+
+
  /* @end */
 dkj
