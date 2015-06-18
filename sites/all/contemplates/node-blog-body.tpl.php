@@ -246,6 +246,7 @@
     <?php print views_embed_view("in_this_news", "featured_radio", $node->nid); ?>
   	</div>
 
+
   	<div class="soundcloud item">
   		<?php $block = (object) module_invoke('block', 'block', 'view', "60");
 		print theme('block',$block); ?>
@@ -331,6 +332,11 @@
     </div>
 
     </div>
+        <div class="also-list related">
+
+    	<?php print views_embed_view('clocktower_related_radio', 'related_to_event', $node->nid); ?>
+
+      </div> <!-- also-list -->
 
   <?php } ?>
 
