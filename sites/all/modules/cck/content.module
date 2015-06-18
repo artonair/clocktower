@@ -176,7 +176,7 @@ function content_theme() {
   $path = drupal_get_path('module', 'content') .'/theme';
  /** require_once "./$path/theme.inc";
 */
-require_once "sites/all/modules/cck/theme/theme.inc";
+require_once "/var/www/vhosts/artonair.org/clocktower.org/drupal/sites/all/modules/cck/theme/theme.inc";
   return array(
     'content_field' => array(
       'template' => 'content-field',
