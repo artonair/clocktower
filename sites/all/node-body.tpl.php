@@ -53,7 +53,7 @@
 							 $args = array($node->nid);
 							 $view->set_display('default', $args); // like 'block_1'
 							 $view->render();   ?>
-							<h6 class="dates"><?php print sizeof($view->result);?> Programs</h6>
+							<h6 class="dates"><?php print sizeof($view->result);?>Programs</h6>
 	     		<?php } ?>
 
 

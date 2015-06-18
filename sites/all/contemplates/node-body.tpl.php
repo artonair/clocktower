@@ -53,7 +53,9 @@
 							 $args = array($node->nid);
 							 $view->set_display('default', $args); // like 'block_1'
 							 $view->render();   ?>
+               <?php if($node->field_host_type[0][view] !== "Artist") { ?>
 							<h6 class="dates"><?php print sizeof($view->result);?> Programs</h6>
+              <?php } ?>
 	     		<?php } ?>
 
 
