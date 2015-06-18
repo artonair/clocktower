@@ -329,14 +329,10 @@
     <div class="by-this-host-browse smallgrid listview gridlist-choice-apply"> <!-- the gridlist choice applies to this div -->
         <?php print views_embed_view('by_this_host', 'of_this_host', $node->nid); ?>
         <?php print views_embed_view('by_this_host', 'block_2', $node->nid); ?>
+        <?php print views_embed_view('clocktower_related_radio', 'related_to_event', $node->nid); ?>
     </div>
 
     </div>
-        <div class="also-list related">
-
-    	<?php print views_embed_view('clocktower_related_radio', 'related_to_event', $node->nid); ?>
-
-      </div> <!-- also-list -->
 
   <?php } ?>
 
