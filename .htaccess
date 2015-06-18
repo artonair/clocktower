@@ -56,7 +56,7 @@ DirectoryIndex index.php
   php_value mbstring.http_input             pass
   php_value mbstring.http_output            pass
   php_value mbstring.encoding_translation   0
-  php_value include_path '.:/var/www/vhosts/artonair.org/clocktower.org/drupal:/var/www/vhosts/artonair.org/autio.artonair/audio'	
+  php_value include_path '.:/var/www/vhosts/artonair.org/clocktower.org/drupal:/var/www/vhosts/artonair.org/autio.artonair/audio'
 </IfModule>
 
 # Requires mod_expires to be enabled.
