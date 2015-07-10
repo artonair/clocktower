@@ -36,13 +36,13 @@
   }
 
   $node = node_load($nid);
-  $result = views_get_view_result("series_contents", "grid_related_shows", $_SESSION['series']['nid']);
-  $resultcount = count($result);
   $nidd = $_SESSION['series']['nid'];
+  $result = views_get_view_result("series_contents", "grid_related_shows", $nidd);
+  $resultcount = count($result);
   $playlist = $DRUPAL_URL . "/sites/all/themes/artonair/custom_functions/node_playlist_xspf.php?nid=" . $nid;
   $full_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
   debug_to_console($nidd);
-  debug_to_console($resultcount);
+
 
 
   $prevnode = -1;
@@ -51,8 +51,6 @@
   if($resultcount > 1) {
     for($i = 0; $i < $resultcount; $i++) {
       $showid = $result[$i]->node_node_data_field_included_shows_nid;
-      debug_to_console($showid);
-      debug_to_console($nid);
       if($nid == $result[$i]->node_node_data_field_included_shows_nid) {
         if($i < ($resultcount - 1)){
           $prevnode = $result[$i+1]->node_node_data_field_included_shows_nid;
