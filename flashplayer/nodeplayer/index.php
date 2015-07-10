@@ -49,8 +49,8 @@
   $nextnode = -1;
 
   if($resultcount > 1) {
-    debug_to_console($prevnode);
     for($i = 0; $i < $resultcount; $i++) {
+      debug_to_console($i);
       $showid = $result[$i]->node_node_data_field_included_shows_nid;
       if($nid == $result[$i]->node_node_data_field_included_shows_nid) {
         if($i < ($resultcount - 1)){
