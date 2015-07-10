@@ -26,12 +26,24 @@
 
   include_once(path_to_theme() . '/custom_functions/custom_variable.php');
 
+
+  function debug_to_console( $data ) {
+      if ( is_array( $data ) )
+          $output = "<script>console.log( 'Debug Objects: " . implode( ',', $data) . "' );</script>";
+      else
+          $output = "<script>console.log( 'Debug Objects: " . $data . "' );</script>";
+      echo $output;
+  }
+
   $node = node_load($nid);
   $result = views_get_view_result("series_contents", "grid_related_shows", $_SESSION['series']['nid']);
   $resultcount = count($result);
   $nidd = $_SESSION['series']['nid'];
   $playlist = $DRUPAL_URL . "/sites/all/themes/artonair/custom_functions/node_playlist_xspf.php?nid=" . $nid;
   $full_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+  debug_to_console($nidd);
+  debug_to_console($resultcount);
+
 
   $prevnode = -1;
   $nextnode = -1;
