@@ -51,8 +51,8 @@
   if($resultcount > 1) {
     for($i = 0; $i < $resultcount; $i++) {
       $showid = $result[$i]->node_node_data_field_included_shows_nid;
-      debug_to_console($showid);
       if($nid == $result[$i]->node_node_data_field_included_shows_nid) {
+        debug_to_console($nid);
         if($i < ($resultcount - 1)){
           $prevnode = $result[$i+1]->node_node_data_field_included_shows_nid;
           if($result[$i-1]){
