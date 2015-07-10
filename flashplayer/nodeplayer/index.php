@@ -49,7 +49,7 @@
   $nextnode = -1;
 
   if($resultcount > 1) {
-
+    debug_to_console($prevnode);
     for($i = 0; $i < $resultcount; $i++) {
       $showid = $result[$i]->node_node_data_field_included_shows_nid;
       if($nid == $result[$i]->node_node_data_field_included_shows_nid) {
@@ -64,7 +64,6 @@
       }
     }
   }
-  debug_to_console($prevnode);
 ?>
 
 <html>
