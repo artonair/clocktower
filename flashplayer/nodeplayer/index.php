@@ -41,7 +41,7 @@
   $resultcount = count($result);
   $playlist = $DRUPAL_URL . "/sites/all/themes/artonair/custom_functions/node_playlist_xspf.php?nid=" . $nid;
   $full_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-  debug_to_console($node);
+  debug_to_console($node->field_series[LANGUAGE_NONE][0]['value']);
 
 
 
