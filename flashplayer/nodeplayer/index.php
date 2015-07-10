@@ -64,6 +64,7 @@
       }
     }
   }
+  debug_to_console($prevnode);
 ?>
 
 <html>
