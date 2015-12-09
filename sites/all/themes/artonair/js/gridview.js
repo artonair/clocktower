@@ -1,4 +1,4 @@
-// this script is called for GRIDVIEW 
+// this script is called for GRIDVIEW
 // an exists() function already defined in script.js, which is called on every page.
 
 $(document).ready(function() {
@@ -10,8 +10,8 @@ $(document).ready(function() {
       var archiveview = false;
       if($(this).parents(".archive").length>0) archiveview = true; //archiveview
 
-      $(this).parent().addClass('hovering'); /* mark teaser as hovering/displayable */ 
-      var pos = $(this).position(); 
+      $(this).parent().addClass('hovering'); /* mark teaser as hovering/displayable */
+      var pos = $(this).position();
       var height = $(this).height(); /*calculate height and width of thumbnail */
       var width = $(this).width(); /*calculate height and width of thumbnail */
       /* add offset and position teaser underneath thumbnail */
@@ -31,12 +31,12 @@ $(document).ready(function() {
         $(this).parent().children(".teaser").css({"left": (pos.left - 5) + "px", "top": (pos.top + height) + "px" }); /* the 5 is the border-left of the image */
       }
 
-    }, function() { 
+    }, function() {
       $(this).parent().removeClass('hovering');
     });
 
 /*
-  $(".gridview .teaser-archive").hover(function() {  // get thumbnail 
+  $(".gridview .teaser-archive").hover(function() {  // get thumbnail
       gridhoverteaser = true;
 alert(gridhoverimage + " " + gridhoverteaser);
   }, function() {

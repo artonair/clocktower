@@ -35,9 +35,9 @@
 }
 
 .remodal-wrapper p {
-  margin-left: 233px;
-  margin-top: 30px;
-  width: 290px;
+  margin-left: 209px;
+  margin-top: 6px;
+  width: 350px;
 }
 /* Default theme styles of the modal dialog */
 
@@ -164,7 +164,7 @@
   text-align: center;
   width: 80px;
   float: left;
-  margin: 15px 0 10px 340px;
+  margin: 0 0 10px 340px;
 }
 
 .listen-now:hover {

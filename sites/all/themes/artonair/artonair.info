@@ -110,6 +110,8 @@ scripts[] = js/jquery-ui-1.7.3.min.js
 ; cycle
 ; scripts[] = js/jquery.cycle.all.js
 
+scripts[] = js/artonair-popup.js
+
 ; all general scripts for the site
 scripts[] = js/script.js
 
