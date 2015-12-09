@@ -43,6 +43,8 @@ stylesheets[all][]   = zen.css
 stylesheets[all][]   = typography/museoslab/stylesheet.css
 
 stylesheets[all][]   = css/artonair-custom.css
+stylesheets[all][]   = css/remodal.css
+stylesheets[all][]   = css/remodal-default-theme.css
 
   ; Set the conditional stylesheets that are processed by IE.
 conditional-stylesheets[if IE][all][] = css/ie.css
@@ -51,14 +53,14 @@ conditional-stylesheets[if IE][all][] = css/ie.css
 
 
 
-; nivoslider 
-; scripts[] = /js/jquery.nivo.slider.pack.js 
+; nivoslider
+; scripts[] = /js/jquery.nivo.slider.pack.js
 ; this is actually loaded by each views theme, so not needed here
 
-; masonry 
+; masonry
 scripts[] = js/masonry.pkgd.min.js
 
-; menu 
+; menu
 scripts[] = js/menu.js
 
 ; search
@@ -71,13 +73,13 @@ scripts[] = js/jquery.cookie.js
 ;scripts[] = js/help_box.js
 
 ; scripts for popup
-scripts[] = js/popupair.js 
+scripts[] = js/popupair.js
 
 ; scripts for playlist
-scripts[] = js/playlist.js 
+scripts[] = js/playlist.js
 
-; grid view 
-scripts[] = js/gridview.js 
+; grid view
+scripts[] = js/gridview.js
 
 ; related nodes
 scripts[] = js/related.js
@@ -88,18 +90,18 @@ scripts[] = js/gridlist-chooser.js
 ; archive series overlay
 scripts[] = js/archive_series_overlay.js
 
-; vanilla 
+; vanilla
 scripts[] = js/vanilla.js
 
-; pure side-menu 
+; pure side-menu
 scripts[] = js/ui.js
 
-; responsive slides 
+; responsive slides
 scripts[] = js/responsiveslides.js
 
-scripts[] = js/jquery-ui-1.7.3.min.js 
+scripts[] = js/jquery-ui-1.7.3.min.js
 
-; unslider 
+; unslider
 ; scripts[] = js/unslider.js
 
 ;1.11.0 jquery ?

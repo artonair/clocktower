@@ -86,7 +86,8 @@
   <?php print $scripts; ?>
 
   <!-- jquery noconflict -->
-  <script type="text/javascript" src="<?php print base_path() . path_to_theme(); ?>/js/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="<?php print base_path() . path_to_theme(); ?>/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="<?php print base_path() . path_to_theme(); ?>/js/remodal.js"></script>
   <script type="text/javascript">
    	var jQuery11 = jQuery.noConflict();
   </script>
