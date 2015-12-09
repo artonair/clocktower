@@ -47,6 +47,7 @@
   margin-bottom: 10px;
   padding: 35px;
   max-width: 650px !important;
+  min-height: 220px;
 
   transform: translate3d(0, 0, 0);
 
@@ -180,7 +181,7 @@
 .listen-logo {
   position: absolute;
   width: 180px;
-  top: 38px;
+  top: 28px;
   left: 20px;
 }
 
