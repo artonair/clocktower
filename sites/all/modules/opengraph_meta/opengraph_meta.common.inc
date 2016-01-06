@@ -44,7 +44,7 @@ class OpenGraphMeta {
   /** Db field name for optional tags (not to be used by external code) */
   const __OPTIONAL_DB_FIELD = 'optional';
 
-  
+
   /** Singleton instance. */
   private static $instance = NULL;
 
@@ -134,7 +134,7 @@ class OpenGraphMeta {
       // if node given then override defaults
       $ret[self::TITLE] = $full_view ? drupal_get_title() : $node->title;
       $body = OpenGraphMetaDrupalLayer::get_node_body($node);
-      $ret[self::DESCRIPTION] = !empty($body) ? drupal_substr(strip_tags($body),0,200) : $node->title;
+      $ret[self::DESCRIPTION] = !empty($body) ? drupal_substr(strip_tags($body),0,-1) : $node->title;
       $ret[self::TYPE] = $this->settings_obj->get(OPENGRAPH_META_VAR_CONTENT_TYPE_.$node->type,'');
       $ret[self::IMAGE] = $this->settings_obj->get(OPENGRAPH_META_VAR_FALLBACK_IMG, '');
 
@@ -330,7 +330,7 @@ class OpenGraphMeta {
   public function warn($msg) {
     watchdog('opengraph_meta', $msg, array(), WATCHDOG_WARNING);
   }
-  
+
 
   /**
    * FOR TESTING PURPOSES ONLY!
