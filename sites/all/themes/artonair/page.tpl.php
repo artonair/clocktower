@@ -221,16 +221,6 @@
  <div id="page-inner">
     		<div id="header">
 				<div id="listen-bar">
-				<div id="nowplaying-custom">
-					<div class="nowplaying-playinfo">
-						<h6 class="nowplaying-title">
-
-							<?php global $base_url; ?><a href="/drupal/flashplayer/live365" onclick="popUpAIR										(this.href,'fixed',250,480);return false;" target="artonair_music_popup"><img src="<?php print $base_url; ?>/sites/all/themes/artonair/images/audio-icon.gif"><span>Listen to Clocktower Radio </span></a>
-
-						</h6><!-- /.nowplaying-title -->
-							<iframe class="nowplaying-iframe" marginwidth="0" marginheight="0" frameborder="no" src="<?php print url(path_to_theme() . "/custom_functions/live365parser.php"); ?>"></iframe>
-					</div><!-- /.nowplaying-playinfo -->
-				</div><!-- /#nowplaying-custom -->
 
         <div id="search-box">
         <form action="/drupal/search"  accept-charset="UTF-8" method="get">
