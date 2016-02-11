@@ -27,8 +27,6 @@
 
 <body bgcolor="#FFFFFF" scroll="yes">
   <iframe src="https://mixlr.com/users/4612494/embed" width="100%" height="180px" scrolling="no" frameborder="no" marginheight="0" marginwidth="0"></iframe><small><a href="http://mixlr.com/clocktower" style="color:#1a1a1a;text-align:left; font-family:Helvetica, sans-serif; font-size:11px;">Clocktower is on Mixlr</a></small>
-  <a href="#" onclick="window.open('/flashplayer/live365', 'newwindow', 'width=650, height=180'); return false;">Click here to open new window</a>
-
 </body>
 </html>
 
