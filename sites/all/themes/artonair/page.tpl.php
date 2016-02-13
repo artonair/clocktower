@@ -221,7 +221,9 @@
  <div id="page-inner">
     		<div id="header">
 				<div id="listen-bar">
-
+        <?php if ($listen_bar): ?>
+          <?php print $listen_bar; ?>
+        <?php endif; ?>
         <div id="search-box">
         <form action="/drupal/search"  accept-charset="UTF-8" method="get">
         <div class="submit-button"><input type="image" src="<?php print url(path_to_theme() . '/images/menu_searchbutton.gif'); ?>"  id="edit-submit" value="Search"  class="form-submit" /></div>

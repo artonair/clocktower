@@ -134,6 +134,7 @@ regions[content_bottom] = content bottom
 regions[header]         = header
 regions[footer]         = footer
 regions[closure_region] = closure
+regions[listen_bar] = listen bar
 
   ; Various page elements output by the theme can be toggled on and off. The
   ; "features" control which of these check boxes display on the
