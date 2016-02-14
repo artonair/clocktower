@@ -287,6 +287,9 @@ small screens.
     margin-bottom: 30px;
 	text-transform: uppercase;
 }
+#block-block-67 {
+  margin: 0;
+}
 #content-header .type {
 	display: none;
 	}
